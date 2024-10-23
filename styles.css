@@ -95,11 +95,26 @@ header a {
 }
 
 .first-section nav {
-    margin-left: 150px;
+    margin: 0px 150px 50px;
 }
 
 .first-section h1 {
     font-size: 54px;
     color: #f4f4f4;
     font-weight: 600;
+}
+
+.first-section hr {
+    background-color: #ff6524;
+    width: 520px;
+    height: 3px;
+    border: none;
+    margin: 0;
+}
+
+.first-section h2 {
+    margin: 10px 0;
+
+    font-size: 22px;
+    color: #f4f4f4;
 }
