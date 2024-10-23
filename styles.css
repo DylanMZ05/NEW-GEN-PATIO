@@ -20,18 +20,23 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
+
+    background-image: url(media/Bradon-Rose/Newgenpatio_1-3.jpg);
+    background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
 
 .background-video {
-    position: fixed; /* Fija el video en la pantalla */
-    top: 50%; /* Centra el video verticalmente */
-    left: 50%; /* Centra el video horizontalmente */
-    min-width: 100%; /* Asegura que el video cubra todo el ancho */
-    min-height: 100%; /* Asegura que el video cubra toda la altura */
-    width: auto; /* Permite que el ancho se ajuste automáticamente */
-    height: auto; /* Permite que la altura se ajuste automáticamente */
-    z-index: -1; /* Coloca el video detrás del contenido */
-    transform: translate(-50%, -50%); /* Centra el video ajustando por la mitad */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
 }
 
 h1, h2, h3, h4, h5, h6 {
