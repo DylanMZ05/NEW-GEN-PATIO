@@ -92,9 +92,8 @@ header ul {
 header ul li {
     margin: 0 15px;
     font-size: 16px;
-    font-weight: 300;
-
-    text-shadow: 0px 0px 3px #000;
+    font-weight: 400;
+    letter-spacing: 2px;
 }
 
 header ul li:last-child {
@@ -115,15 +114,17 @@ header a {
 
 
 .first-section {
+
     background-color: #00000049;
     height: 100vh;
     width: 100vw;
 
     display: flex;
-    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
-.first-section nav {
+.first-section__txt {
     margin: 0px 150px 50px;
 }
 
@@ -153,10 +154,20 @@ header a {
     text-shadow: 0px 0px 3px #000;
 }
 
+.first-section__social-media {
+    margin-top: 100px;
+    margin-bottom: -280px;
+    margin-left: 25px;
+}
+
 .color-black {
     color: #000;
 }
 
 .shadow-none {
     text-shadow: none;
+}
+
+.margin-none {
+    margin: 0;
 }
