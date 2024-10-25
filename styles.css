@@ -394,25 +394,29 @@ footer h4 {
     margin-bottom: 20px;
 }
 
+.form-container {
+    display: flex;
+}
+
 .container {
-    width: 680px;
+    width: 300px;
 }
 
 .entryarea {
     position: relative;
     height: 80px;
-    line-height: 80px;
+    line-height: 45px;
 }
 
 input {
     position: absolute;
     width: 100%;
     outline: none;
-    font-size: 2.2em;
-    padding: 0 30px;
-    line-height: 80px;
-    border-radius: 10px;
-    border: 2px solid #f0ffff;
+    font-size: 16px;
+    padding: 0 30px 2px 10px;
+    line-height: 20px;
+    border: none;
+    border-bottom: 2px solid #f0ffff;
     background: transparent;
     transition: 0.1s ease;
     z-index: 1111;
@@ -420,30 +424,47 @@ input {
 
 .labelline {
     position: absolute;
-    font: 1.6em;
+    font: 16px;
     columns: #f0ffff;
-    padding: 0 25px;
-    margin: 0 20px;
-    background-color: #1c2841;
+    padding: 0 25px 0 0;
+    margin: -15px 20px 0;
+    background-color: #116274;
     transition: 0.2s ease;
 }
 
 input:focus,
 input:valid {
-    color: #66ff00;
-    border: 4px solid #66ff00;
+    color: #fff;
+    border: none;
+    border-bottom: 2px solid #000;
 }
 
 input:focus + .labelline,
 input:valid + .labelline{
-    color: #66ff00;
-    height: 30px;
-    line-height: 30px;
-    transform: translate(-15px, -16px) scale(0.88);
+    color: #000;
+    height: 15px;
+    line-height: 15px;
+    transform: translate(0px, -8px) scale(0.88);
     z-index: 1111;
+    border: none;
 }
 
 
+.mt-15 {
+    margin-top: 15px;
+}
+
+.mb-15 {
+    margin-bottom: 15px;
+}
+
+.ml-15 {
+    margin-left: 15px;
+}
+
+.mr-15 {
+    margin-right: 15px;
+}
 
 .white-button {
     text-decoration: none;
