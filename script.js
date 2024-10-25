@@ -11,3 +11,4 @@ window.addEventListener('scroll', function() {
     let scrollPosition = window.pageYOffset;
     document.querySelector('.third-section').style.backgroundPositionY = -(scrollPosition * 0.2) + 'px';
 });
+
