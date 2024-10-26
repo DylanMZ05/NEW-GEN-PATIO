@@ -883,6 +883,10 @@ footer hr {
     .second-section__apply h4{
         font-size: 24px;
     }
+
+    .third-section {
+        background-size: 150%; /* Acerca la imagen al hacer zoom */
+    }
 }
 
 @media (max-width: 1180px) {
@@ -996,6 +1000,12 @@ footer hr {
     }
 }
 
+@media (max-width: 800px) {
+    .third-section {
+        background-size: 200%;
+    }
+}
+
 @media (max-width: 767px) {
 
     .first-section {
@@ -1035,6 +1045,17 @@ footer hr {
         flex-direction: column;
     }
 
+    .second-section__image-grid img {
+        width: 100%;
+        height: 50vw;
+    }
+
+
+
+
+    .third-section {
+        background-size: 350%; /* Acerca la imagen al hacer zoom */
+    }
 
 
 
@@ -1072,5 +1093,11 @@ footer hr {
 
     .desktop {
         display: none;
+    }
+}
+
+@media (max-width: 470px) {
+    .third-section {
+        background-size: 600%; /* Acerca la imagen al hacer zoom */
     }
 }
