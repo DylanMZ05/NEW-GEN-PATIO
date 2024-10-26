@@ -1227,6 +1227,10 @@ footer hr {
         margin-left: 15px;
     }
 
+    footer hr {
+        width: 103.5vw;
+    }
+
     .desktop {
         display: none;
     }
@@ -1307,6 +1311,11 @@ footer hr {
     }
 
 
+
+    footer hr {
+        width: 104.2vw;
+    }
+
     .desktop {
         display: none;
     }
@@ -1346,5 +1355,13 @@ footer hr {
 
     .fifth-section__opinion  {
         margin: 0;
+    }
+
+    footer hr {
+        width: 105.8vw;
+    }
+
+    .desktop {
+        display: none;
     }
 }
