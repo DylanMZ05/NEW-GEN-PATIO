@@ -35,14 +35,8 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    max-width: 100%;
-
-    background-image: url(media/Bradon-Rose/Newgenpatio_1-3.jpg);
-    background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    width: 100%;
 }
-
 
 .background-video {
     position: fixed;
@@ -171,24 +165,33 @@ header.scrolled ul li:last-child a {
 
     display: flex;
     justify-content: center;
+    align-items: baselinec;
     flex-direction: column;
 }
 
+.first-section__container {
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    padding-bottom: 15px;
+}
+
 .first-section__txt {
-    margin: 35vh 10vw 50px;
+    margin-left: 30px;
 }
 
 .first-section h1 {
-    font-size: 54px;
+    font-size: 85px;
     color: #f4f4f4;
     font-weight: 600;
+
 
     text-shadow: 0px 0px 3px #000;
 }
 
 .first-section hr {
     background-color: #ff6524;
-    width: 570px;
+    width: 850px;
     height: 3px;
     border: none;
     margin: 0;
@@ -198,7 +201,7 @@ header.scrolled ul li:last-child a {
 .first-section h2 {
     margin: 10px 0;
 
-    font-size: 22px;
+    font-size: 34px;
     color: #f4f4f4;
 
     text-shadow: 0px 0px 3px #000;
@@ -908,6 +911,18 @@ footer hr {
 }
 
 @media (max-width: 1180px) {
+    .first-section h1 {
+        font-size: 65px;
+    }
+    
+    .first-section hr {
+        width: 660px;
+    }
+    
+    .first-section h2 {
+        font-size: 26px;
+    }
+
     .second-section__apply h4{
         font-size: 1.8vw;
     }
@@ -1123,12 +1138,17 @@ footer hr {
         width: 103vw;
     }
 
-    .footer__end p {
-        margin-right: 13vw;
+    .footer__end {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column-reverse;
+        margin-right: 10vw;
+        width: 80vw;
     }
 
-    .footer__end div {
-        margin-left: 13vw;
+    .footer__end img {
+        width: 25px;
     }
 }
 
