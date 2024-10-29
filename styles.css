@@ -662,7 +662,6 @@ header.scrolled ul li:last-child a {
 .faq-container {
     width: 80%;
     max-width: 600px;
-    height: 450px;
 }
 
 .faq {
@@ -696,7 +695,7 @@ header.scrolled ul li:last-child a {
 }
 
 .faq.open .faq-answer {
-    max-height: 100px; /* Establece un max-height adecuado para la animación */
+    max-height: max-content; /* Establece un max-height adecuado para la animación */
     padding: 15px; /* Restaura el padding cuando se abre */
 }
 
@@ -714,7 +713,7 @@ header.scrolled ul li:last-child a {
 
 .faq-image img {
     width: 400px;
-    height: 400px;
+    height: 520px;
     object-fit: cover;
 }
 
