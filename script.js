@@ -39,3 +39,27 @@ scrollingText.addEventListener('mouseleave', resumeAnimation);
 // Para dispositivos móviles: detener y reanudar al tocar
 scrollingText.addEventListener('touchstart', stopAnimation);
 scrollingText.addEventListener('touchend', resumeAnimation);
+
+
+
+function toggleFaq(element) {
+    const faq = element.parentElement;
+
+    const allFaqs = document.querySelectorAll('.faq');
+    allFaqs.forEach(f => {
+        if (f !== faq && f.classList.contains('open')) {
+            f.classList.remove('open');
+            f.querySelector('.arrow').innerHTML = "&#9654;"; // Restablecer la flecha
+        }
+    });
+
+    // Alternar el FAQ actual
+    faq.classList.toggle('open');
+    const arrow = element.querySelector('.arrow');
+
+    if (faq.classList.contains('open')) {
+        arrow.innerHTML = "&#9660;"; // Cambiar la flecha hacia abajo
+    } else {
+        arrow.innerHTML = "&#9654;"; // Cambiar la flecha hacia la derecha
+    }
+}

@@ -270,7 +270,7 @@ header.scrolled ul li:last-child a {
 }
 
 .second-section__apply div {
-    animation: slideText 20s linear infinite; /* Animación continua */
+    animation: slideText 40s linear infinite;
 }
 
 

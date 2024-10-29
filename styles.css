@@ -226,13 +226,83 @@ header.scrolled ul li:last-child a {
 
 
 
-.second-section {
+.services-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background-color: var(--color-2);
+
+    padding: 0 0 50px 0;
+
+    border-bottom: 2px solid #a2a2a261;
+}
+
+.services-section__txt {
+    width: 80vw;
+
+    text-align: center;
+}
+
+.services-section__txt h3{
+    font-size: 46px;
+    font-weight: 500;
+}
+
+.services-section__txt p{
+    margin: 15px 5vw 20px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.services-section__img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    max-width: 1300px;
+}
+
+.services-section__img-container nav {
+    margin: 0 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.services-section__img-container img {
+    height: 20vw;
+    max-height: 300px;
+    width: 25vw;
+    max-width: 350px;
+
+    object-fit: cover;
+
+    border-radius: 16px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);    
+}
+
+.services-section__img-container p {
+    font-size: 30px;
+    font-weight: 600;
+
+    text-align: center;
+}
+
+
+
+
+
+.gallery-section {
     background-color: #fff;
 
     margin-bottom: 0;
+    border-bottom: 1px solid #7d7d7dbb;
 }
 
-.second-section__apply {
+.gallery-section__apply {
     overflow: hidden;
     white-space: nowrap;
     background-color: var(--color-1);
@@ -241,25 +311,25 @@ header.scrolled ul li:last-child a {
     justify-content: center;
     align-items: center;
 
-    
+    width: 100vw;
 }
 
-.second-section__apply {
+.gallery-section__apply {
     color: #f4f4f4;
     
     font-size: 16px;
     font-weight: 500;
 }
 
-.second-section__apply a {
+.gallery-section__apply a {
     color: var(--color-2);
     text-decoration: none;
 
     margin: 7px 7px;
 }
 
-.second-section__apply div {
-    animation: slideText 20s linear infinite; /* Animación continua */
+.gallery-section__apply div {
+    animation: slideText 40s linear infinite; /* Animación continua */
 }
 
 
@@ -274,29 +344,30 @@ header.scrolled ul li:last-child a {
 
 
 
-.second-section__projects {
+.gallery-section__projects {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 
     text-align: center;
+
+    background-color: var(--color-2);
+
 }
 
-.second-section__projects h4 {
-    margin: 50px 15px 0;
-    
+.gallery-section__projects h4 {    
     font-size: 46px;
     font-weight: 500;
 }
 
-.second-section__projects p {
+.gallery-section__projects p {
     margin: 15px 25vw 10px;
 
     font-size: 16px;
 }
 
-.second-section__projects a {
+.gallery-section__projects a {
     margin: 25px 15px;
 
     font-size: 24px;
@@ -312,7 +383,7 @@ header.scrolled ul li:last-child a {
     border-radius: 50px;
 }
 
-.second-section__image-grid {
+.gallery-section__image-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     width: 100%;
@@ -320,7 +391,7 @@ header.scrolled ul li:last-child a {
 
 }
 
-.second-section__image-grid img {
+.gallery-section__image-grid img {
     width: 100%;
     height: 20vw;
     object-fit: cover;
@@ -343,6 +414,7 @@ header.scrolled ul li:last-child a {
 
     
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+
 
     width: 100vw;
 }
@@ -377,65 +449,8 @@ header.scrolled ul li:last-child a {
 }
 
 
-.fourth-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 
-    background-color: #f4f4f4;
 
-    padding: 0 0 50px 0;
-}
-
-.fourth-section__txt {
-    width: 80vw;
-
-    text-align: center;
-}
-
-.fourth-section__txt h3{
-    font-size: 46px;
-    font-weight: 500;
-
-    margin: 50px 15px 0;
-}
-
-.fourth-section__txt p{
-    margin: 15px 5vw 20px;
-    font-size: 16px;
-    font-weight: 500;
-}
-
-.fourth-section__img-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.fourth-section__img-container nav {
-    margin: 0 3vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.fourth-section__img-container img {
-    height: 30vw;
-    width: 40vw;
-    object-fit: cover;
-
-    border-radius: 16px;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);    
-}
-
-.fourth-section__img-container p {
-    font-size: 36px;
-    font-weight: 600;
-
-    text-align: center;
-}
 
 
 
@@ -454,11 +469,14 @@ header.scrolled ul li:last-child a {
 
 .fifth-section h2 {
     color: #f4f4f4;
-
-    margin: 50px 10px 0;
-
-    font-size: 46px;
+    font-size: 18px;
     font-weight: 500;
+}
+
+.fifth-section h3 {
+    color: var(--color-2);
+    font-size: 44px;
+    font-weight: 600;
 }
 
 .fifth-section__container {
@@ -500,7 +518,7 @@ header.scrolled ul li:last-child a {
 }
 
 .fifth-section__button {
-    margin-bottom: 50px;
+    margin: 50px;
 }
 
 .fi {
@@ -632,6 +650,73 @@ header.scrolled ul li:last-child a {
     }
 }
 
+
+.faq-img-cont {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+
+    width: 80vw;
+}
+
+.faq-container {
+    width: 80%;
+    max-width: 600px;
+    height: 450px;
+}
+
+.faq {
+    width: 500px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff;
+    color: #fff;
+}
+
+.faq-answer {
+    max-height: 0; /* Inicialmente oculto */
+    overflow: hidden; /* Ocultar el contenido que excede */
+    padding: 0 15px; /* Padding lateral */
+    font-size: 14px;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: max-height 0.4s ease, padding 0.3s ease; /* Transiciones para max-height y padding */
+}
+
+.faq.open .faq-answer {
+    max-height: 100px; /* Establece un max-height adecuado para la animación */
+    padding: 15px; /* Restaura el padding cuando se abre */
+}
+
+.arrow {
+    transition: transform 0.3s ease;
+}
+
+.faq.open .faq-answer {
+    display: block;
+}
+
+.faq.open .arrow {
+    transform: rotate(180deg);
+}
+
+.faq-image img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
 
 
 
@@ -862,6 +947,13 @@ footer hr {
     border-radius: 50px;
 }
 
+.sub-title {
+    margin: 50px 0 25px;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    color: var(--color-1);
+}
+
 .column {
     display: flex;
     align-items: center;
@@ -888,7 +980,7 @@ footer hr {
 }
 
 @media (max-width: 1350px) {
-    .second-section__apply h4{
+    .gallery-section__apply h4{
         font-size: 24px;
     }
 
@@ -923,7 +1015,7 @@ footer hr {
         font-size: 26px;
     }
 
-    .second-section__apply h4{
+    .gallery-section__apply h4{
         font-size: 1.8vw;
     }
 
@@ -1029,7 +1121,7 @@ footer hr {
 
 
 
-    .second-section__apply a {
+    .gallery-section__apply a {
         padding: 7.5px 17px;
         font-size: 14px;
     }
@@ -1200,11 +1292,11 @@ footer hr {
 
 
 
-    .second-section__projects p {
+    .gallery-section__projects p {
         margin: 15px 10vw 10px;
     }
 
-    .second-section__image-grid img {
+    .gallery-section__image-grid img {
         width: 100%;
         height: 50vw;
     }
@@ -1233,8 +1325,31 @@ footer hr {
 
 
 
-    .fourth-section__img-container p {
-        font-size: 28px;
+    .services-section__img-container p {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+
+    .services-section {
+        padding: 0;
+    }
+
+    .services-section__img-container {
+        display: block;
+        width: 90vw;
+    }
+    
+
+    .services-section__img-container img {
+        width: 70vw;
+        max-width: 90vw;
+        height: 40vw;
+        max-height: 1000px;
+        object-fit: cover;
+    }
+
+    .services-section__txt p{
+        margin: 15px 0 20px;
     }
 
 
@@ -1275,15 +1390,15 @@ footer hr {
     }
 
 
-    .second-section__projects h4 {
+    .gallery-section__projects h4 {
         font-size: 36px;
     }
 
-    .second-section__projects p {
+    .gallery-section__projects p {
         margin: 15px 5vw 10px;
     }
 
-    .second-section__projects a {
+    .gallery-section__projects a {
         font-size: 16px;
     }
 
@@ -1292,35 +1407,8 @@ footer hr {
     }
 
     .third-section__txt h3,
-    .fourth-section__txt h3 {
+    .services-section__txt h3 {
         font-size: 36px;
-    }
-
-
-
-    .fourth-section {
-        padding: 0;
-    }
-
-    .fourth-section__img-container {
-        display: block;
-    }
-
-    .fourth-section__img-container img {
-        width: 90vw;
-        height: 50vw;
-        object-fit: cover;
-
-        border-radius: 0;
-    }
-
-    .fourth-section__txt p{
-        margin: 15px 0 20px;
-    }
-
-    .fourth-section__img-container p {
-        font-size: 22px;
-        margin: 5px 0 20px;
     }
 
 
