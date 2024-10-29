@@ -259,7 +259,7 @@ header.scrolled ul li:last-child a {
 }
 
 .second-section__apply div {
-    animation: slideText 10s linear infinite; /* Animación continua */
+    animation: slideText 20s linear infinite; /* Animación continua */
 }
 
 
@@ -270,6 +270,10 @@ header.scrolled ul li:last-child a {
     100% {
         transform: translateX(-80vw);
     }
+}
+
+.paused {
+    animation-play-state: paused;
 }
 
 
