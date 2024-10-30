@@ -1025,6 +1025,14 @@ footer hr {
     .fifth-section__opinion p {
         font-size: 14px;
     }
+
+    .faq-container {
+        width: 500px;
+    }
+
+    .faq-image {
+        display: none;
+    }
 }
 
 
@@ -1351,7 +1359,12 @@ footer hr {
         margin: 15px 0 20px;
     }
 
+    .faq-container {
+        margin-bottom: 50px;
+    }
 
+    .faq {
+    }
 
     .form-container {
         display: block;
@@ -1417,7 +1430,13 @@ footer hr {
         margin-top: 5px;
     }
 
+    .faq-container {
+        width: 90vw;
+    }
 
+    .faq {
+        width: 90vw;
+    }
 
     footer hr {
         width: 104.2vw;
