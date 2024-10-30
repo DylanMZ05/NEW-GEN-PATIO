@@ -723,8 +723,6 @@ footer hr {
     background: rgba( 0, 0, 0, 0.6 );
     backdrop-filter: blur( 1.5px );
     -webkit-backdrop-filter: blur( 1.5px );
-    border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 .index-1000 {
