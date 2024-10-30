@@ -238,9 +238,14 @@ header.scrolled ul li:last-child a {
 
 
 .second-section {
-    background-color: #fff;
-
     margin-bottom: 0;
+}
+
+.second-section__background {
+    background-image: url(media/Meco/Z91_2272-HDR.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .second-section__apply {
@@ -291,19 +296,21 @@ header.scrolled ul li:last-child a {
 
 .second-section__about {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
 
-    text-align: center;
+    text-align: start;
 
-    padding: 50px 6vw 0;
+    color: var(--color-2);
+
+    padding: 50px 6vw;
 }
 
 .second-section__about-container {
     display: flex;
     justify-content: space-around;
-    width: 100%;
+    width: 80vw;
 
     max-width: 1350px;
 
@@ -335,9 +342,7 @@ header.scrolled ul li:last-child a {
     font-weight: 500;
 }
 
-.second-section__about-txt p {
-    width: 700px;
-}
+
 
 .second-section__about-txt p,
 .second-section__about-txt-2 p {
@@ -542,6 +547,11 @@ input:valid + .labelline{
     border-radius: 50px;
 }
 
+.footer__div-2 {
+    margin-right: 56px;
+    margin-bottom: 5px;
+}
+
 footer h5 {
     font-size: 24px;
     font-weight: 500;
@@ -554,6 +564,11 @@ footer p {
     font-weight: 300;
     
     line-height: 1.5;
+}
+
+footer a {
+    color: var(--color-2);
+    text-decoration: none;
 }
 
 .footer__txt {
@@ -704,14 +719,25 @@ footer hr {
     background-color: #00000030;
 }
 
+.blur-cover {
+    background: rgba( 0, 0, 0, 0.6 );
+    backdrop-filter: blur( 1.5px );
+    -webkit-backdrop-filter: blur( 1.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
 
 .index-1000 {
     z-index: 1000;
 }
 
+.movile {
+    display: none;
+}
+
 @media (max-width: 1350px) {
-    .second-section__apply h4{
-        font-size: 24px;
+    .second-section__about-txt p{
+        width: 100%;
     }
 
     @keyframes slideText {
@@ -723,12 +749,12 @@ footer hr {
         }
     }
 
-    .third-section {
-        background-size: 150%; /* Acerca la imagen al hacer zoom */
-    }
-
     .footer__end {
         margin-right: 0;
+    }
+
+    .movile {
+        display: none;
     }
 }
 
@@ -745,16 +771,18 @@ footer hr {
         font-size: 26px;
     }
 
-    .second-section__apply h4{
-        font-size: 1.8vw;
+    .second-section__about-container {
+        align-items: center;
+        flex-direction: column-reverse;
     }
 
-    .fi {
-        font-size: 18px;
+    .second-section__about-img {
+        width: 80vw;
+        margin: 50px 0 0;
     }
 
-    .fifth-section__opinion p {
-        font-size: 14px;
+    .fourth-section p {
+        width: 80vw;
     }
 }
 
@@ -787,16 +815,6 @@ footer hr {
         margin: 15px 25px;
     }
 
-    .over-header a {
-        font-size: 14px;
-        font-weight: 500;
-        text-decoration: none;
-        text-align: center;
-        color: #000;
-        padding: 7px 17px;
-        background-color: var(--color-2);
-        border-radius: 50px;
-    }
 
     .over-header p {
         color: var(--color-2);
@@ -808,11 +826,27 @@ footer hr {
         color: var(--color-3);
     }
 
+    .header-phone a {
+        color: var(--color-2) !important;
+        margin-top: 2px;
+    }
+
+    .header-button a {
+        font-size: 14px;
+        font-weight: 500;
+        text-decoration: none;
+        text-align: center;
+        color: #000;
+        padding: 7px 17px;
+        background-color: var(--color-2);
+        border-radius: 50px;
+    }
+
     nav ul {
         display: none;
         flex-direction: column;
         position: fixed;
-        top: 135px;
+        top: 145px;
         right: 0;
         background-color: var(--color-2);
         width: 200px;
@@ -1043,8 +1077,9 @@ footer hr {
 
 
 
-    .third-section {
-        background-size: 350%; /* Acerca la imagen al hacer zoom */
+
+    .third-section__img-container img {
+        width: 90vw;
     }
 
     #slides {
@@ -1074,6 +1109,10 @@ footer hr {
     }
 
     .desktop {
+        display: none;
+    }
+
+    .hidden {
         display: none;
     }
 }
@@ -1118,39 +1157,11 @@ footer hr {
         font-size: 36px;
     }
 
-
-
-    .fourth-section {
-        padding: 0;
-    }
-
-    .fourth-section__img-container {
-        display: block;
-    }
-
     .fourth-section__img-container img {
-        width: 90vw;
-        height: 50vw;
-        object-fit: cover;
-
-        border-radius: 0;
-    }
-
-    .fourth-section__txt p{
-        margin: 15px 0 20px;
-    }
-
-    .fourth-section__img-container p {
-        font-size: 22px;
-        margin: 5px 0 20px;
+        width: 80vw;
     }
 
 
-
-
-    .fifth-section__opinion {
-        margin-top: 5px;
-    }
 
 
 

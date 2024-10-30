@@ -409,6 +409,7 @@ header.scrolled ul li:last-child a {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-size: 200%;
 
     margin: 0;
     padding: 0;
@@ -842,6 +843,11 @@ footer p {
     width: 33%;
 }
 
+.footer__div-2 {
+    margin-right: 56px;
+    margin-bottom: 5px;
+}
+
 footer hr {
     border: none; /* Elimina el borde predeterminado */
     border-top: 2px solid rgba(229, 229, 229, 0.493);
@@ -871,6 +877,11 @@ footer hr {
 
 .footer__end p {
     margin: 0;
+}
+
+footer a {
+    color: var(--color-2);
+    text-decoration: none;
 }
 
 
@@ -978,6 +989,9 @@ footer hr {
     background-color: #00000030;
 }
 
+.movile {
+    display: none;
+}
 
 .index-1000 {
     z-index: 1000;
@@ -1069,7 +1083,12 @@ footer hr {
         margin: 15px 25px;
     }
 
-    .over-header a {
+    .header-phone a {
+        color: var(--color-2) !important;
+        margin-top: 2px;
+    }
+
+    .header-button a {
         font-size: 14px;
         font-weight: 500;
         text-decoration: none;
@@ -1079,6 +1098,7 @@ footer hr {
         background-color: var(--color-2);
         border-radius: 50px;
     }
+
 
     .over-header p {
         color: var(--color-2);
@@ -1094,7 +1114,7 @@ footer hr {
         display: none;
         flex-direction: column;
         position: fixed;
-        top: 135px;
+        top: 145px;
         right: 0;
         background-color: var(--color-2);
         width: 200px;
@@ -1273,7 +1293,7 @@ footer hr {
     }
 
     .first-section__txt {
-        margin: 30vh 3vw 50px;
+        margin: 30vh 3vw -30px;
 
         display: flex;
         justify-content: center;
