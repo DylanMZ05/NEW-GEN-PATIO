@@ -1560,7 +1560,7 @@ footer a {
     width: 400px;
     height: 3px;
     border: none;
-    margin: 5px 0;
+    margin: 0 0 5px 0;
 }
 
 .op__hero-txt h2 {
@@ -1604,13 +1604,28 @@ footer a {
 .op__second-sub-container img,
 .op__second-sub-container-2 img{
     width: 500px;
+    height: 300px;
+    object-fit: cover;
+    
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
 .op__second-sub-container h4,
 .op__second-sub-container-2 h4 {
     font-size: 24px;
     font-weight: 800;
-    margin: 5px 0 25px;
+    margin-top: 5px;
+}
+
+.op__second-sub-container hr,
+.op__second-sub-container-2 hr {
+    width: 100px;
+    height: 2px;
+    border: none;
+    background-color: var(--color-1);
+
+    margin: 10px 1px;
 }
 
 .op__second-sub-container p,
@@ -1644,7 +1659,29 @@ footer a {
 }
 
 @media (max-width: 1100px) {
-    
+    .op__second-container {
+        width: 900px;
+    }
+
+    .op__second-container img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+}
+
+@media (max-width: 900px) {
+    .op__second-container {
+        width: 95vw;
+    }
+
+    .op__second-container img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
 }
 
 @media (max-width: 767px) {
@@ -1659,6 +1696,47 @@ footer a {
     .op__hero-txt h2 {
         font-size: 25px;
     }
+
+
+
+
+    .op__second-sub-container {
+        flex-direction: column;    
+    }
+
+    .op__second-sub-container-2 {
+        flex-direction: column-reverse;
+    }
+
+    .op__second-sub-container,
+    .op__second-sub-container-2 {
+        margin: 15px 0;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+    }
+
+    .op__second-sub-txt {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+    }
+
+    .op__second-sub-container img,
+    .op__second-sub-container-2 img {
+        width: 90vw;
+        max-width: 500px;
+
+        margin: 15px auto 0;
+    }
+
+    .op__second-sub-container hr,
+    .op__second-sub-container-2 hr {
+        width: 400px;
+        margin: 15px auto;
+    }
 }
 
 @media (max-width: 500px) {
@@ -1667,10 +1745,19 @@ footer a {
     }
     
     .op__hero-txt hr {
-        width: 300px;
+        width: 200px;
     }
     
     .op__hero-txt h2 {
         font-size: 22px;
+    }
+
+
+
+    
+    .op__second-sub-container hr,
+    .op__second-sub-container-2 hr {
+        width: 250px;
+        margin: 15px auto;
     }
 }
