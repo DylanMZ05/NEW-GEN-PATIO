@@ -741,100 +741,105 @@ header.scrolled ul li:last-child a {
     height: 450px;
 }
 
+.sixth-section iframe {
+    width: 100vw;
+    height: 100%;
+}
+
 
 
 
 footer {
-  background-color: var(--color-1);
-  padding: 20px 0;
-  color: white;
+    background-color: var(--color-1);
+    padding: 20px 0;
+    color: white;
 }
 
 footer h4 {
-  font-size: 64px;
-  font-weight: 400;
-  margin-bottom: 20px;
+    font-size: 64px;
+    font-weight: 400;
+    margin-bottom: 20px;
 }
 
 .footer-margin {
-  margin: 0 25px;
+    margin: 0 25px;
 }
 
 .footer-form-container {
-  display: flex;
+    display: flex;
 }
 
 .custom-form-container {
-  width: 300px;
+    width: 300px;
 }
 
 .custom-entry-area {
-  position: relative;
-  height: 70px;
-  line-height: 45px;
-  margin-top: 10px;
+    position: relative;
+    height: 70px;
+    line-height: 45px;
+    margin-top: 10px;
 }
 
 input {
-  position: absolute;
-  width: 200px;
-  outline: none;
-  font-size: 16px;
-  padding: 0 30px 2px 10px;
-  line-height: 20px;
-  border: none;
-  border-bottom: 2px solid #f0ffff;
-  background: transparent;
-  transition: 0.1s ease;
-  z-index: 900;
+    position: absolute;
+    width: 200px;
+    outline: none;
+    font-size: 16px;
+    padding: 0 30px 2px 10px;
+    line-height: 20px;
+    border: none;
+    border-bottom: 2px solid #f0ffff;
+    background: transparent;
+    transition: 0.1s ease;
+    z-index: 900;
 }
 
 .custom-label-line {
-  position: absolute;
-  font: 16px;
-  color: #f0ffff;
-  padding: 0 25px 0 0;
-  margin: -15px 20px 0;
-  background-color: var(--color-1);
-  transition: 0.2s ease;
+    position: absolute;
+    font: 16px;
+    color: #f0ffff;
+    padding: 0 25px 0 0;
+    margin: -15px 20px 0;
+    background-color: var(--color-1);
+    transition: 0.2s ease;
 }
 
 input:focus,
 input:valid {
-  color: #fff;
-  border: none;
-  border-bottom: 2px solid #000;
+    color: #fff;
+    border: none;
+    border-bottom: 2px solid #000;
 }
 
 input:focus + .custom-label-line,
 input:valid + .custom-label-line {
-  color: #000;
-  height: 15px;
-  line-height: 15px;
-  transform: translate(0px, 5px) scale(0.88);
-  z-index: 900;
-  border: none;
+    color: #000;
+    height: 15px;
+    line-height: 15px;
+    transform: translate(0px, 5px) scale(0.88);
+    z-index: 900;
+    border: none;
 }
 
 .footer-button {
-  font-size: 16px;
-  text-decoration: none;
-  text-align: center;
-  color: #000;
-  padding: 10px 30px;
-  background-color: #f4f4f4;
-  border-radius: 50px;
+    font-size: 16px;
+    text-decoration: none;
+    text-align: center;
+    color: #000;
+    padding: 10px 30px;
+    background-color: #f4f4f4;
+    border-radius: 50px;
 }
 
 .footer-div-2 {
-  margin-right: 56px;
-  margin-bottom: 5px;
+    margin-right: 56px;
+    margin-bottom: 5px;
 }
 
 footer h5 {
-  font-size: 24px;
-  font-weight: 500;
-  margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
 }
 
 footer p {
