@@ -211,6 +211,10 @@ header.scrolled ul li:last-child a {
     margin: 19vh 15px 0;
 }
 
+.first-section__social-media div {
+    margin: 2.5px 0;
+}
+
 
 .color-black {
     color: #000;
