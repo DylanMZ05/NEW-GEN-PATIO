@@ -73,7 +73,7 @@ header {
     left: 50%;
     transform: translateX(-50.1%);
 
-    z-index: 1000;
+    z-index: 10000;
     transition: background-color 0.3s ease;
 }
 
@@ -422,6 +422,15 @@ header.scrolled ul li:last-child a {
     flex-wrap: wrap;
     justify-content: center;
     gap: 0;
+
+    background-color: var(--color-2);
+
+}
+
+.flex-gallery h4 {
+    margin: 25px 0 0;
+    font-weight: 600;
+
 }
 
 .carousel-item {
@@ -434,12 +443,14 @@ header.scrolled ul li:last-child a {
 }
 
 .carousel-item img {
-    flex: 1 1 33.33%;
-    width: 33.155%;
+    width: 33%;
+    border-radius: 3px;
     height: 300px;
     object-fit: cover;
     margin: 0 !important;
     padding: 0 !important;
+
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 
     margin-bottom: 4px !important;
 }
@@ -1084,6 +1095,15 @@ footer hr {
     margin: 20px auto 30px;
 }
 
+.blue-hr-2 {
+    width: 50px;
+    background-color: var(--color-1);
+    height: 2px;
+    border-radius: 50px;
+
+    margin: 10px auto 15px;
+}
+
 .white-hr {
     width: 50px;
     background-color: var(--color-2);
@@ -1091,6 +1111,11 @@ footer hr {
     border-radius: 50px;
 
     margin: 20px auto 30px;
+}
+
+.common-hr {
+    background-color: var(--color-2);
+    margin: 0;
 }
 
 .index-1000 {
