@@ -243,7 +243,7 @@ header.scrolled ul li:last-child a {
 
     padding: 0 0 50px 0;
 
-    border-bottom: 2px solid #a2a2a261;
+    border-bottom: 1px solid #a2a2a261;
 
     position: relative;
     z-index: 900;
@@ -374,10 +374,11 @@ header.scrolled ul li:last-child a {
 .gallery-section__projects h4 {    
     font-size: 46px;
     font-weight: 500;
+    margin: 0;
 }
 
 .gallery-section__projects p {
-    margin: 15px 25vw 10px;
+    margin: 0px 25vw 10px;
 
     font-size: 16px;
 }
@@ -475,11 +476,12 @@ header.scrolled ul li:last-child a {
 .our-promise__txt h4 {
     font-size: 46px;
     font-weight: 500;
+    margin: 0;
 }
 
 .our-promise p {
     font-size: 16px;
-    margin: 15px 0 30px;
+    margin: 0px 0 30px;
 }
 
 .our-promise__txt a {
@@ -817,7 +819,7 @@ header.scrolled ul li:last-child a {
 
 
 .sixth-section {
-    height: 560px;
+    height: 540px;
     position: relative;
 
     background-color: var(--color-2);
@@ -827,7 +829,7 @@ header.scrolled ul li:last-child a {
     z-index: 920;
     position: relative;
     padding-bottom: 1px;
-    height: 160px;
+    height: 140px;
 
     background-color: var(--color-2);
 }
@@ -839,15 +841,6 @@ header.scrolled ul li:last-child a {
     padding: 50px 0 0;
 
     text-align: center;
-}
-
-.sixth-section hr {
-    width: 50px;
-    background-color: var(--color-1);
-    height: 3px;
-    border-radius: 50px;
-
-    margin: 20px auto 30px;
 }
 
 .sixth-section iframe {
@@ -1076,14 +1069,33 @@ footer hr {
     margin-right: 25px;
 }
 
+/* MARGIN 50PX */
+
+.mt-50 {
+    margin-top: 50px;
+}
+
+.mb-50 {
+    margin-bottom: 50px;
+}
+
+.ml-50 {
+    margin-left: 50px;
+}
+
+.mr-50 {
+    margin-right: 50px;
+}
+
 .white-button {
     text-decoration: none;
     text-align: center;
 
     color: var(--color-3) !important;
 
-    padding: 7px 17px;
+    padding: 12px 25px;
     background-color: var(--color-2) !important;
+    font-weight: 500;
 
     border-radius: 50px;
 }
@@ -1127,10 +1139,10 @@ footer hr {
 .blue-hr {
     width: 50px;
     background-color: var(--color-1);
-    height: 3px;
+    height: 2px;
     border-radius: 50px;
 
-    margin: 20px auto 30px;
+    margin: 10px auto 15px;
 }
 
 .blue-hr-2 {
@@ -1145,14 +1157,15 @@ footer hr {
 .white-hr {
     width: 50px;
     background-color: var(--color-2);
-    height: 3px;
+    height: 2px;
     border-radius: 50px;
 
-    margin: 20px auto 30px;
+    margin: 10px auto 15px;
 }
 
 .common-hr {
     background-color: var(--color-2);
+    height: 1px;
     margin: 0;
 }
 
@@ -1547,6 +1560,10 @@ footer hr {
         margin-bottom: 50px;
     }
 
+    footer h4 {
+        font-size: 36px;
+    }
+
     .desktop {
         display: none;
     }
@@ -1643,7 +1660,7 @@ footer hr {
     
     .footer-form-container {
         justify-content: center;
-        margin-left: 10vw;
+        margin-left: 0vw;
     }
     
     .footer-form:first-child {
@@ -1652,6 +1669,10 @@ footer hr {
     
     .footer-form {
         margin: 0;
+    }
+
+    .footer-button {
+        margin-left: 00vw;
     }
     
     .third-section {
@@ -1670,6 +1691,14 @@ footer hr {
         display: none;
     }
 }
+
+
+
+
+
+
+
+
 
 /*OUR PROMISE*/
 
@@ -1727,6 +1756,8 @@ footer hr {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    background-color: var(--color-2);
 }
 
 .op__second-container {
@@ -1918,4 +1949,30 @@ footer hr {
     header a {
         font-size: 14px;
     }
+}
+
+
+
+/* PATIOS-PERGOLAS STYLES */
+
+.pp__second-img__container {
+    width: 100vw;
+    display: flex;
+}
+
+.pp__second-txt__container {
+    padding: 50px 0;
+    max-width: 1100px;
+    text-align: center;
+}
+
+.pp__second-txt__container h4 {
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.pp__second-img__container img {
+    width: 33.33%;
+    height: 300px;
+    object-fit: cover;
 }
