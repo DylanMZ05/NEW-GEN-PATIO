@@ -28,6 +28,11 @@ body {
     color: #333;
     background-color: #f4f4f4;
 
+    background-image: url(../media/Bradon-Rose/Newgenpatio_1-10\(more-pixel\).jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
     overflow-x: hidden;
 }
 
@@ -73,7 +78,7 @@ header {
     left: 50%;
     transform: translateX(-50.1%);
 
-    z-index: 1000;
+    z-index: 10000;
     transition: background-color 0.3s ease;
 }
 
@@ -153,7 +158,195 @@ header.scrolled ul li:last-child a {
 
 
 
+
+
+
+
 .first-section {
+
+    background-color: #00000049;
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.first-section__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 15px;
+}
+
+.first-section__txt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    text-align: center;
+}
+
+.first-section h1 {
+    font-size: 85px;
+    color: #f4f4f4;
+    font-weight: 600;
+
+
+    text-shadow: 0px 0px 3px #000;
+}
+
+.first-section hr {
+    background-color: #ff6524;
+    width: 600px;
+    height: 3px;
+    border: none;
+    margin: 0;
+}
+
+.first-section h2 {
+    margin: 10px 0;
+
+    font-size: 38px;
+    font-weight: 500;
+    color: #f4f4f4;
+
+    text-shadow: 0px 0px 3px #000;
+}
+
+
+
+.color-black {
+    color: #000;
+}
+
+.shadow-none {
+    text-shadow: none;
+}
+
+.margin-none {
+    margin: 0;
+}
+
+
+
+.second-section {
+    margin-bottom: 0;
+}
+
+.second-section__background {
+    background-image: url(../media/Meco/Z91_2272-HDR.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.second-section__apply {
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: var(--color-1);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+
+.second-section__apply {
+    color: #f4f4f4;
+    
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.second-section__apply a {
+    color: var(--color-2);
+    text-decoration: none;
+
+    margin: 7px 7px;
+}
+
+.second-section__apply div {
+    animation: slideText 40s linear infinite;
+}
+
+
+@keyframes slideText {
+    0% {
+        transform: translateX(90vw);
+    }
+    100% {
+        transform: translateX(-80vw);
+    }
+}
+
+.paused {
+    animation-play-state: paused;
+}
+
+
+
+.second-section__about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    text-align: start;
+
+    color: var(--color-2);
+
+    padding: 50px 6vw;
+}
+
+.second-section__about-container {
+    display: flex;
+    justify-content: space-around;
+    width: 80vw;
+
+    max-width: 1350px;
+
+
+    margin: 50px 0;
+}
+
+.second-section__about-img {
+    background-image: url(../media/Bradon-Rose/Newgenpatio_1-4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    width: 425px;
+    margin-right: 45px;
+}
+
+.second-section__about-img img {
+    width: 350px;
+    padding: 15px;
+
+    filter: drop-shadow(10px 10px 15px rgba(255, 255, 255, 0.3));
+}
+
+
+.second-section__about-txt h4,
+.second-section__about-txt-2 h4 {
+    font-size: 46px;
+    font-weight: 500;
+}
+
+
+
+.second-section__about-txt p,
+.second-section__about-txt-2 p {
+    font-size: 16px;
+}
+
+.second-section__about-txt-2 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -161,15 +354,153 @@ header.scrolled ul li:last-child a {
 
     text-align: center;
 
-    height: 100vh;
+    margin-right: 50px;
 }
 
-.first-section h4 {
+.second-section__about-txt-2 div {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 10px;
+}
+
+.second-section__about-txt-2 i {
+    font-size: 24px;
+    color: var(--color-1);
+    margin-right: 10px;
+}
+
+.second-section__about-img_2 img {
+    width: 700px;
+}
+
+
+
+
+
+.third-section {
+    margin: 0;
+    padding: 0;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100vw;
+}
+
+.third-section__txt {
+    width: 70vw;
+    padding: 50px 0;
+
+    text-align: center;
+
+    color: var(--color-3);
+}
+
+.third-section__txt p {
+    font-weight: 500;
+
+    line-height: 1.25;
+}
+
+.third-section__img-container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.third-section__img-container img {
+    margin: .22vw;
+    width: 33vw;
+    height: 400px;
+    object-fit: cover
+}
+
+.third-section__img-container img:first-child {
+    margin-left: 0;
+}
+
+.third-section__img-container img:last-child {
+    margin-right: 0;
+}
+
+
+
+
+
+.fourth-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    text-align: center;
+
+    background-color: var(--color-2);
+
+    padding: 50px 0 50px 0;
+}
+
+.fourth-section h4 {
+    font-size: 46px;
+    font-weight: 500;
+}
+
+.fourth-section__img-container img {
+    margin: 50px 15px;
+}
+
+
+
+
+
+.sixth-section {
+    height: 560px;
+    position: relative;
+
+    background-color: var(--color-2);
+}
+
+.sixth-section__txt {
+    z-index: 1010;
+    position: relative;
+    padding-bottom: 1px;
+    height: 160px;
+
+    background-color: var(--color-2);
+}
+
+.sixth-section h4 {
+    font-size: 46px;
+    font-weight: 500;
+
+    padding: 50px 0 0;
+
     text-align: center;
 }
 
+.sixth-section hr {
+    width: 50px;
+    background-color: var(--color-1);
+    height: 3px;
+    border-radius: 50px;
 
+    margin: 20px auto 30px;
+}
 
+.sixth-section iframe {
+    width: 100vw;
+    height: 470px;
+    position: absolute;
+    z-index: 10;
+    transform: translateY(-69px);
+    border-bottom: 2px solid var(--color-1);
+}
 
 
 
@@ -252,6 +583,11 @@ input:valid + .labelline{
     border-radius: 50px;
 }
 
+.footer__div-2 {
+    margin-right: 56px;
+    margin-bottom: 5px;
+}
+
 footer h5 {
     font-size: 24px;
     font-weight: 500;
@@ -264,6 +600,11 @@ footer p {
     font-weight: 300;
     
     line-height: 1.5;
+}
+
+footer a {
+    color: var(--color-2);
+    text-decoration: none;
 }
 
 .footer__txt {
@@ -286,7 +627,7 @@ footer p {
 }
 
 footer hr {
-    border: none;
+    border: none; /* Elimina el borde predeterminado */
     border-top: 2px solid rgba(229, 229, 229, 0.493);
 
     width: 100vw;
@@ -302,7 +643,7 @@ footer hr {
 }
 
 .footer__end a {
-    text-decoration: none;
+    text-decoration: none; /* Elimina el subrayado */
     color: inherit;
 }
 
@@ -394,13 +735,6 @@ footer hr {
     border-radius: 50px;
 }
 
-.sub-title {
-    margin: 50px 0 25px;
-    letter-spacing: 1.5px;
-    font-weight: 600;
-    color: var(--color-1);
-}
-
 .column {
     display: flex;
     align-items: center;
@@ -421,19 +755,69 @@ footer hr {
     background-color: #00000030;
 }
 
+.blur-cover {
+    background: rgba( 0, 0, 0, 0.6 );
+    backdrop-filter: blur( 1.5px );
+    -webkit-backdrop-filter: blur( 1.5px );
+}
 
 .index-1000 {
     z-index: 1000;
 }
 
+.movile {
+    display: none;
+}
+
 @media (max-width: 1350px) {
+    .second-section__about-txt p{
+        width: 100%;
+    }
+
+    @keyframes slideText {
+        0% {
+            transform: translateX(125%);
+        }
+        100% {
+            transform: translateX(-125%);
+        }
+    }
+
     .footer__end {
         margin-right: 0;
+    }
+
+    .movile {
+        display: none;
     }
 }
 
 @media (max-width: 1180px) {
+    .first-section h1 {
+        font-size: 65px;
+    }
     
+    .first-section hr {
+        width: 660px;
+    }
+    
+    .first-section h2 {
+        font-size: 26px;
+    }
+
+    .second-section__about-container {
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+
+    .second-section__about-img {
+        width: 80vw;
+        margin: 50px 0 0;
+    }
+
+    .fourth-section p {
+        width: 80vw;
+    }
 }
 
 
@@ -465,16 +849,6 @@ footer hr {
         margin: 15px 25px;
     }
 
-    .over-header a {
-        font-size: 14px;
-        font-weight: 500;
-        text-decoration: none;
-        text-align: center;
-        color: #000;
-        padding: 7px 17px;
-        background-color: var(--color-2);
-        border-radius: 50px;
-    }
 
     .over-header p {
         color: var(--color-2);
@@ -486,11 +860,27 @@ footer hr {
         color: var(--color-3);
     }
 
+    .header-phone a {
+        color: var(--color-2) !important;
+        margin-top: 2px;
+    }
+
+    .header-button a {
+        font-size: 14px;
+        font-weight: 500;
+        text-decoration: none;
+        text-align: center;
+        color: #000;
+        padding: 7px 17px;
+        background-color: var(--color-2);
+        border-radius: 50px;
+    }
+
     nav ul {
         display: none;
         flex-direction: column;
         position: fixed;
-        top: 135px;
+        top: 145px;
         right: 0;
         background-color: var(--color-2);
         width: 200px;
@@ -529,7 +919,7 @@ footer hr {
 
 
 
-    .gallery-section__apply a {
+    .second-section__apply a {
         padding: 7.5px 17px;
         font-size: 14px;
     }
@@ -660,11 +1050,52 @@ footer hr {
 
 @media (max-width: 767px) {
 
-    .gallery-section__projects p {
+    .first-section {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        text-align: center;
+    }
+
+    .first-section__txt {
+        margin: 30vh 3vw 50px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .first-section h1 {
+        font-size: 46px;
+    }
+
+    .first-section h2 {
+        font-size: 32px;
+        width: 500px;
+        margin-bottom: 20vh;
+    }
+
+    .first-section hr {
+        width: 500px;
+    }
+
+    .first-section__social-media {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+    }
+
+
+
+
+    .second-section__projects p {
         margin: 15px 10vw 10px;
     }
 
-    .gallery-section__image-grid img {
+    .second-section__image-grid img {
         width: 100%;
         height: 50vw;
     }
@@ -681,8 +1112,9 @@ footer hr {
 
 
 
-    .third-section {
-        background-size: 350%; /* Acerca la imagen al hacer zoom */
+
+    .third-section__img-container img {
+        width: 90vw;
     }
 
     #slides {
@@ -693,36 +1125,11 @@ footer hr {
 
 
 
-    .services-section__img-container p {
-        font-size: 36px;
-        margin-bottom: 10px;
+    .fourth-section__img-container p {
+        font-size: 28px;
     }
 
-    .services-section {
-        padding: 0;
-    }
 
-    .services-section__img-container {
-        display: block;
-        width: 90vw;
-    }
-    
-
-    .services-section__img-container img {
-        width: 70vw;
-        max-width: 90vw;
-        height: 40vw;
-        max-height: 1000px;
-        object-fit: cover;
-    }
-
-    .services-section__txt p{
-        margin: 15px 0 20px;
-    }
-
-    .faq-container {
-        margin-bottom: 50px;
-    }
 
     .form-container {
         display: block;
@@ -739,18 +1146,40 @@ footer hr {
     .desktop {
         display: none;
     }
+
+    .hidden {
+        display: none;
+    }
 }
 
 @media (max-width: 575px) {
-    .gallery-section__projects h4 {
+    .first-section__txt {
+        margin-top: 40vh;
+    }
+
+    .first-section h1 {
+        font-size: 32px;
+    }
+
+    .first-section h2 {
+        font-size: 16px;
+        width: 70vw;
+    }
+
+    .first-section hr {
+        width: 70vw;
+    }
+
+
+    .second-section__projects h4 {
         font-size: 36px;
     }
 
-    .gallery-section__projects p {
+    .second-section__projects p {
         margin: 15px 5vw 10px;
     }
 
-    .gallery-section__projects a {
+    .second-section__projects a {
         font-size: 16px;
     }
 
@@ -759,24 +1188,17 @@ footer hr {
     }
 
     .third-section__txt h3,
-    .services-section__txt h3 {
+    .fourth-section__txt h3 {
         font-size: 36px;
     }
 
-
-
-
-    .fifth-section__opinion {
-        margin-top: 5px;
+    .fourth-section__img-container img {
+        width: 80vw;
     }
 
-    .faq-container {
-        width: 90vw;
-    }
 
-    .faq {
-        width: 90vw;
-    }
+
+
 
     footer hr {
         width: 104.2vw;
@@ -831,3 +1253,4 @@ footer hr {
         display: none;
     }
 }
+

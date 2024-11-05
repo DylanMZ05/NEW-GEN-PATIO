@@ -151,6 +151,9 @@ header.scrolled ul li:last-child a {
     color: #fff;
 }
 
+#gallery, #promise, #we-are {
+    scroll-margin-top: 50px;
+}
 
 
 
@@ -243,7 +246,7 @@ header.scrolled ul li:last-child a {
     border-bottom: 2px solid #a2a2a261;
 
     position: relative;
-    z-index: 1000;
+    z-index: 900;
 }
 
 .services-section__txt {
@@ -456,9 +459,42 @@ header.scrolled ul li:last-child a {
 }
 
 
+.our-promise {
+    background-color: var(--color-2);
+    padding: 50px 0;
+    
+    display: flex;
+    justify-content: center;
+}
+
+.our-promise__txt {
+    text-align: center;
+    width: 70vw;
+}
+
+.our-promise__txt h4 {
+    font-size: 46px;
+    font-weight: 500;
+}
+
+.our-promise p {
+    font-size: 16px;
+    margin: 15px 0 30px;
+}
+
+.our-promise__txt a {
+    background-color: var(--color-3);
+    color: var(--color-2);
+    font-size: 20px;
+    padding: 12px 25px;
+    border-radius: 50px;
+}
+
+
+
 
 .third-section {
-    background-image: url(media/Bradon-Rose/Newgenpatio_1-4.jpg);
+    background-image: url(../media/Bradon-Rose/Newgenpatio_1-4.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -644,7 +680,7 @@ header.scrolled ul li:last-child a {
     margin: -180px 0 0 0;
     width: 100%;
     height: 50px;
-    z-index: 2000;
+    z-index: 910;
     position: relative;
 }
 #controls label {
@@ -774,6 +810,8 @@ header.scrolled ul li:last-child a {
     width: 400px;
     height: 520px;
     object-fit: cover;
+
+    border-radius: 16px;
 }
 
 
@@ -786,7 +824,7 @@ header.scrolled ul li:last-child a {
 }
 
 .sixth-section__txt {
-    z-index: 1010;
+    z-index: 920;
     position: relative;
     padding-bottom: 1px;
     height: 160px;
@@ -1638,7 +1676,7 @@ footer hr {
 .op__hero {
     height: 100vh;
 
-    background-image: url(media/Bradon-Rose/Newgenpatio_1-10\(more-pixel\).jpg);
+    background-image: url(../media/Bradon-Rose/Newgenpatio_1-10\(more-pixel\).jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
