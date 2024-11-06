@@ -63,3 +63,80 @@ function toggleFaq(element) {
         arrow.innerHTML = "&#9654;"; // Cambiar la flecha hacia la derecha
     }
 }
+
+
+
+
+
+/* FREE QUOTE */
+
+let progress = 0;
+let targetProgress = 0; // Progreso objetivo al cual queremos llegar
+
+function showSubOptions(option) {
+    const optionContainer = document.querySelector(".option-container");
+    const subOptionContainer = document.getElementById("sub-option-container");
+    const backBtn = document.getElementById("back-btn");
+
+    optionContainer.style.display = "none";
+    subOptionContainer.style.display = "block";
+    backBtn.style.display = "block";
+
+    // Establecer el progreso objetivo al 50%
+    targetProgress = 50;
+    animateProgressBar();
+}
+
+function showContinue() {
+    const subOptionContainer = document.getElementById("sub-option-container");
+    const continueBtn = document.getElementById("continue-btn");
+
+    subOptionContainer.style.display = "none";
+    continueBtn.style.display = "block";
+
+    // Establecer el progreso objetivo al 100%
+    targetProgress = 100;
+    animateProgressBar();
+}
+
+function continueAction() {
+    alert("Continuando a la siguiente sección...");
+}
+
+function goBack() {
+    const optionContainer = document.querySelector(".option-container");
+    const subOptionContainer = document.getElementById("sub-option-container");
+    const continueBtn = document.getElementById("continue-btn");
+    const backBtn = document.getElementById("back-btn");
+
+    if (continueBtn.style.display === "block") {
+        // Retroceder de continuar a sub-opciones
+        continueBtn.style.display = "none";
+        subOptionContainer.style.display = "block";
+        targetProgress = 50;
+    } else if (subOptionContainer.style.display === "block") {
+        // Retroceder de sub-opciones a opciones principales
+        subOptionContainer.style.display = "none";
+        optionContainer.style.display = "block";
+        backBtn.style.display = "none";
+        targetProgress = 0;
+    }
+    animateProgressBar();
+}
+
+function animateProgressBar() {
+    const progressBar = document.getElementById("progress-bar");
+
+    // Intervalo para incrementar la barra de progreso gradualmente
+    const interval = setInterval(() => {
+        if (progress < targetProgress) {
+            progress += 1; // Incrementa el progreso
+            progressBar.style.width = progress + "%";
+        } else if (progress > targetProgress) {
+            progress -= 1; // Decrementa el progreso si retrocede
+            progressBar.style.width = progress + "%";
+        } else {
+            clearInterval(interval); // Detener el intervalo al llegar al progreso objetivo
+        }
+    }, 10); // La velocidad de la animación se controla con el valor en milisegundos
+}
