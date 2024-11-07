@@ -49,34 +49,35 @@
 
     <section class="fq__home">
 
-        <div>
+        <div class="fq__form-container">
 
             <div class="option-container">
-                <h2>¿Qué estás buscando?</h2>
-            <button class="option" onclick="showSubOptions('opcion1')">Opción 1</button>
-            <button class="option" onclick="showSubOptions('opcion2')">Opción 2</button>
-            <progress min="0" max="100" value="0">HOLA</progress>
-        </div>
-    
-        <div class="sub-option-container" id="sub-option-container" style="display: none;">
-            <h3>Seleccione una sub-opción</h3>
-            <button class="sub-option" onclick="showContinue()">Sub-opción A</button>
-            <button class="sub-option" onclick="showContinue()">Sub-opción B</button>
-            <button class="sub-option" onclick="showContinue()">Sub-opción C</button>
-            <progress min="0" max="100" value="50">HOLA</progress>
-        </div>
+                <h4>¿Qué estás buscando?</h4>
+                <button class="option" onclick="showSubOptions('opcion1')">Opción 1</button>
+                <button class="option" onclick="showSubOptions('opcion2')">Opción 2</button>
+                <div>
+                    <progress min="0" max="100" value="0">HOLA</progress>
+                </div>
+            </div>
+        
+            <div class="option-container" id="sub-option-container" style="display: none;">
+                <h4>Seleccione una sub-opción</h4>
+                <button class="sub-option" onclick="showContinue()">Sub-opción A</button>
+                <button class="sub-option" onclick="showContinue()">Sub-opción B</button>
+                <button class="sub-option" onclick="showContinue()">Sub-opción C</button>
+                <div>
+                    <progress min="0" max="100" value="50">HOLA</progress>
+                </div>
+            </div>
 
         
         <div class="continue-btn" id="continue-btn">
+            <div>
+                <progress min="0" max="100" value="100">HOLA</progress>
+            </div>
             <button onclick="continueAction()">Continuar ➔</button>
-            <progress min="0" max="100" value="100">HOLA</progress>
         </div>
-        
-        <!-- Barra de progreso -->
-        <div class="progress-bar-container">
-            <div class="progress-bar" id="progress-bar"></div>
-        </div>
-        
+                
         <!-- Botón de regresar -->
         <button class="back-btn" id="back-btn" onclick="goBack()" style="display: none;">Regresar</button>
     </div>

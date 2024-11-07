@@ -70,8 +70,6 @@ function toggleFaq(element) {
 
 /* FREE QUOTE */
 
-let progress = 0;
-let targetProgress = 0; // Progreso objetivo al cual queremos llegar
 
 function showSubOptions(option) {
     const optionContainer = document.querySelector(".option-container");

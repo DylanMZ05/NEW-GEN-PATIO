@@ -1992,21 +1992,49 @@ footer hr {
     flex-direction: column;
 }
 
+.fq__form-container {
+    background-color: var(--color-2);
+
+    height: 600px;
+    width: 800px;
+
+    border-radius: 12px;
+
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.fq__form-container progress {
+    height: 8px;
+    width: 400px;
+    accent-color: var(--color-1);
+
+}
+
+
 .option-container, .sub-option-container, .continue-btn {
     margin-top: 20px;
     text-align: center;
 }
 
-.option, .sub-option {
-    color: #ffffff;
-    background-color: transparent;
-    border: 1px solid #ffffff;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 1rem;
+.option-container h4 {
+    margin-top: 50px;
 }
 
-.option:hover, .sub-option:hover {
+.option, 
+.sub-option {
+    color: #ffffff;
+    background-color: var(--color-3);
+    border: none;
+    border-radius: 50px;
+    padding: 10px;
+    cursor: pointer;
+    margin: 15px 5px;
+
+    padding: 10px 24px;
+}
+
+.option:hover, 
+.sub-option:hover {
     background-color: #ffffff;
     color: #1c2a3a;
 }
@@ -2024,20 +2052,6 @@ footer hr {
     cursor: pointer;
 }
 
-.progress-bar-container {
-    width: 100%;
-    background-color: #ddd;
-    margin-top: 20px;
-    height: 10px;
-}
-
-.progress-bar {
-    width: 0;
-    height: 100%;
-    background-color: #3476c2;
-    transition: width 0.3s;
-}
-
 .back-btn {
     display: block;
     margin: 20px auto;
@@ -2047,3 +2061,4 @@ footer hr {
     border: 1px solid #1c2a3a;
     cursor: pointer;
 }
+
