@@ -1605,6 +1605,8 @@ ul, li {
 }
 
 
+
+
 .option-container, .continue-btn {
     margin-top: 20px;
     text-align: center;
@@ -1612,15 +1614,12 @@ ul, li {
 
 .option-container {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     gap: 1rem;
 }
 
-
-
-.option-container-2 input {
-    margin: 50px;
-}
 
 .fq__width {
     margin: 50px;
@@ -1632,7 +1631,10 @@ ul, li {
 
 .option, 
 .sub-option {
-    color: #ffffff;
+    color: var(--color-2);
+    letter-spacing: 2px;
+    font-weight: 500;
+
     background-color: var(--color-3);
     border: none;
     border-radius: 50px;
@@ -1642,6 +1644,7 @@ ul, li {
 
     padding: 10px 24px;
 }
+
 
 .option:hover, 
 .sub-option:hover {
@@ -1672,3 +1675,19 @@ ul, li {
     cursor: pointer;
 }
 
+.option-container-2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+}
+
+.option-container-2 input {
+    margin: 0;
+    width: 300px;
+}
+
+.text-start {
+    text-align: start;
+    width: 300px;
+}
