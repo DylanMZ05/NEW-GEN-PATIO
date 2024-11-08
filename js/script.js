@@ -71,6 +71,9 @@ function toggleFaq(element) {
 /* FREE QUOTE */
 
 
+let targetProgress = 0;
+let progress = 0;
+
 function showSubOptions(option) {
     const optionContainer = document.querySelector(".option-container");
     const subOptionContainer = document.getElementById("sub-option-container");
@@ -97,6 +100,23 @@ function showContinue() {
     animateProgressBar();
 }
 
+function checkInputs() {
+    const width = document.getElementById("width").value;
+    const length = document.getElementById("length").value;
+    const height = document.getElementById("height").value;
+    const continueBtn = document.getElementById("continue-btn");
+
+    // Mostrar el botón de continuar solo si todos los campos están completos
+    if (width && length && height) {
+        continueBtn.style.display = "block";
+        targetProgress = 100;
+    } else {
+        continueBtn.style.display = "none";
+        targetProgress = 50;
+    }
+    animateProgressBar();
+}
+
 function continueAction() {
     alert("Continuando a la siguiente sección...");
 }
@@ -108,12 +128,10 @@ function goBack() {
     const backBtn = document.getElementById("back-btn");
 
     if (continueBtn.style.display === "block") {
-        // Retroceder de continuar a sub-opciones
         continueBtn.style.display = "none";
         subOptionContainer.style.display = "block";
         targetProgress = 50;
     } else if (subOptionContainer.style.display === "block") {
-        // Retroceder de sub-opciones a opciones principales
         subOptionContainer.style.display = "none";
         optionContainer.style.display = "block";
         backBtn.style.display = "none";
@@ -124,17 +142,20 @@ function goBack() {
 
 function animateProgressBar() {
     const progressBar = document.getElementById("progress-bar");
-
-    // Intervalo para incrementar la barra de progreso gradualmente
     const interval = setInterval(() => {
         if (progress < targetProgress) {
-            progress += 1; // Incrementa el progreso
-            progressBar.style.width = progress + "%";
+            progress += 1;
+            progressBar.value = progress;
         } else if (progress > targetProgress) {
-            progress -= 1; // Decrementa el progreso si retrocede
-            progressBar.style.width = progress + "%";
+            progress -= 1;
+            progressBar.value = progress;
         } else {
-            clearInterval(interval); // Detener el intervalo al llegar al progreso objetivo
+            clearInterval(interval);
         }
-    }, 10); // La velocidad de la animación se controla con el valor en milisegundos
+    }, 10);
 }
+
+// Escuchar cambios en los campos de entrada
+document.getElementById("width").addEventListener("input", checkInputs);
+document.getElementById("length").addEventListener("input", checkInputs);
+document.getElementById("height").addEventListener("input", checkInputs);

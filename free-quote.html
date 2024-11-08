@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Gen Patio</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="footer/footer.css">
     <link rel="icon" href="media/logo-removebg-preview.png" type="image/x-icon">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
@@ -61,13 +62,14 @@
             </div>
         
             <div class="option-container" id="sub-option-container" style="display: none;">
-                <h4>Seleccione una sub-opción</h4>
-                <button class="sub-option" onclick="showContinue()">Sub-opción A</button>
-                <button class="sub-option" onclick="showContinue()">Sub-opción B</button>
-                <button class="sub-option" onclick="showContinue()">Sub-opción C</button>
+                <h4>Ingrese los detalles</h4>
+                <input type="text" class="sub-option-input" placeholder="Sub-opción A" />
+                <input type="text" class="sub-option-input" placeholder="Sub-opción B" />
+                <input type="text" class="sub-option-input" placeholder="Sub-opción C" />
                 <div>
                     <progress min="0" max="100" value="50">HOLA</progress>
                 </div>
+                <button onclick="showContinue()">Siguiente</button>
             </div>
 
         
@@ -85,105 +87,15 @@
     </section>
     
     
-    <footer>
-        <div class="footer-margin">
-    
-            <h4 class="footer-title">Get in Touch</h4>
-            
-            <nav class="footer-form-container">
-                <form action="/submit-form" method="POST" class="custom-footer-form form-spacing-right">
-                    <div class="custom-form-container">
-                        <div class="custom-entry-area">
-                            <input type="text" required>
-                            <div class="custom-label-line">Your name</div>
-                        </div>
-                        <div class="custom-entry-area">
-                            <input type="text" required>
-                            <div class="custom-label-line">Your email</div>
-                        </div>
-                        <div class="custom-entry-area">
-                            <input type="text" required>
-                            <div class="custom-label-line">Your message</div>
-                        </div>
-                    </div>
-                </form>
-                <form action="/submit-form" method="POST" class="custom-footer-form form-spacing-left">
-                    <div class="custom-form-container">
-                        <div class="custom-entry-area">
-                            <input type="text" required>
-                            <div class="custom-label-line">Subject</div>
-                        </div>
-                        <div class="custom-entry-area">
-                            <input type="text" required>
-                            <div class="custom-label-line">Phone number</div>
-                        </div>
-                    </div>
-                </form>
-            </nav>
-            <div class="mt-15">
-                <a href="#enlace4" class="shadow-none footer-button submit-spacing mt-15">SUBMIT</a>
-            </div>
-            <div class="footer-text footer-text-container">
-                <div class="footer-text footer-div">
-                    <div class="new-gen">
-                        <h5>
-                            NEW GEN PATIO
-                        </h5>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur, 
-                            adipiscing elit neque eleifend pellentesque, 
-                            leo felis dapibus praesent. At aptent convallis 
-                            habitant sapien id litora curae purus
-                            facilisi, per mi luctus nostra a consequat ligul.
-                        </p>
-                    </div>
-                </div>
-                <div class="footer-text footer-div contact column">
-                    <h5>
-                        CONTACT
-                    </h5>
-                    <div class="center footer-div-2 mail">
-                        <img src="media/DYLAN-ADDS/icons8-phone-26 1.png" alt="" class="icon-spacing margin-r-5">
-                        <a href="https://wa.me/13465819082" target="_blank">346-581-9082</a>
-                    </div>
-                    <div class="center footer-div start">
-                        <img src="media/DYLAN-ADDS/icons8-phone-26 2.png" alt="" class="icon-spacing margin-r-5">
-                        <a href="mailto:info@newgenpatio.io">info@newgenpatio.io</a>
-                    </div>
-                </div>
-                <div class="footer-text footer-div contact">
-                    <div>
-                        <h5>
-                            LOCATION
-                        </h5>
-                        <p>
-                            27805 Ellie Oak Ln, Spring, Texas. 77386
-                        </p>
-                    </div>
-                </div>
-            </div>    
-            <hr>
-            <div class="footer-end">
-                <p>
-                    © 2024 NEW GEN PATIO ALL RIGHTS RESERVED
-                </p>
-                <div>
-                    <a href="">
-                        <img src="media/DYLAN-ADDS/icons8-facebook-32 (1) 1.png" alt="">
-                    </a>
-                    <a href="">
-                        <img src="media/DYLAN-ADDS/icons8-instagram-32 1.png" alt="">
-                    </a>
-                    <a href="">
-                        <img src="media/DYLAN-ADDS/icons8-tiktok-50 1.png" alt="">
-                    </a>
-                    <a href="">
-                        <img src="media/DYLAN-ADDS/icons8-pinterest-50 1.png" alt="">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch("footer/footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer-placeholder").innerHTML = data;
+            });
+    </script>
 
     <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
