@@ -1612,8 +1612,8 @@ ul, li {
 
 .option-container {
     display: flex;
-    flex-direction: column; /* Alinea los elementos verticalmente */
-    gap: 1rem; /* Agrega un espacio entre cada elemento */
+    flex-direction: column;
+    gap: 1rem;
 }
 
 
