@@ -1598,8 +1598,8 @@ ul, li {
 }
 
 .fq__form-container progress {
-    height: 12px;
-    width: 95%;
+    height: 8px;
+    width: 400px;
     accent-color: var(--color-1);
 
 }
@@ -1608,6 +1608,7 @@ ul, li {
 
 
 .option-container, .continue-btn {
+    margin-top: 20px;
     text-align: center;
 }
 
@@ -1618,10 +1619,14 @@ ul, li {
     flex-direction: column;
 }
 
-.progress-1 {
-    margin-top: 380px;
-    width: 300px;
+.option-container p {
+    margin: 0;
 }
+
+.option-container label {
+    margin: 0;
+}
+
 
 .fq__width {
     margin: 50px;
@@ -1684,12 +1689,23 @@ ul, li {
     width: 300px;
 }
 
+.option-container-2 label {
+    font-weight: 600;
+    color: var(--color-3);
+}
+
 .option-container-2 input {
-    margin: 0;
+    margin: 5px;
     width: 300px;
 }
 
 .text-start {
     text-align: start;
     width: 300px;
+}
+
+.red-dot {
+    font-size: 14px;
+    margin-left: 2px;
+    color: #ff0000;
 }
