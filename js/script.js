@@ -82,7 +82,6 @@ function showSubOptions(option) {
     subOptionContainer.style.display = "block";
     backBtn.style.display = "block";
 
-    // Establecer el progreso objetivo al 50%
     targetProgress = 50;
     animateProgressBar();
 }
@@ -94,19 +93,15 @@ function showThirdStep() {
     subOptionContainer.style.display = "none";
     thirdStepContainer.style.display = "block";
 
-    // Establecer el progreso objetivo al 75%
     targetProgress = 75;
     animateProgressBar();
 }
 
 function showContinue() {
-    const thirdStepContainer = document.getElementById("third-step-container");
-    const continueBtn = document.getElementById("continue-btn");
+    const finalStepContainer = document.getElementById("continue-btn");
+    hideAllSteps();  // Oculta todos los pasos previos
+    finalStepContainer.style.display = "block";
 
-    thirdStepContainer.style.display = "none";
-    continueBtn.style.display = "block";
-
-    // Establecer el progreso objetivo al 100%
     targetProgress = 100;
     animateProgressBar();
 }
@@ -117,7 +112,6 @@ function checkInputs() {
     const height = document.getElementById("height").value;
     const continueBtn = document.getElementById("continue-btn");
 
-    // Mostrar el botón de continuar solo si todos los campos están completos
     if (width && length && height) {
         continueBtn.style.display = "block";
         targetProgress = 100;
@@ -126,10 +120,6 @@ function checkInputs() {
         targetProgress = 50;
     }
     animateProgressBar();
-}
-
-function continueAction() {
-    alert("Continuando a la siguiente sección...");
 }
 
 function goBack() {
@@ -171,36 +161,57 @@ function animateProgressBar() {
     }, 10);
 }
 
+// Función para manejar la elección en el tercer paso
 function chooseOption(option) {
-    alert(`You chose ${option}`);
+    const thirdStepContainer = document.getElementById("third-step-container");
+    const step4_1Container = document.getElementById("step-4-1-container");
+    const step4_2Container = document.getElementById("step-4-2-container");
+
+    thirdStepContainer.style.display = "none";
+
+    if (option === "Option A") { // ATTACHED
+        step4_1Container.style.display = "block";
+    } else if (option === "Option B") { // FREESTANDING
+        step4_2Container.style.display = "block";
+    }
+
+    targetProgress = 85;
+    animateProgressBar();
+}
+
+// Función para regresar al tercer paso desde el paso 4
+function goBackToThirdStep() {
+    const thirdStepContainer = document.getElementById("third-step-container");
+    const step4_1Container = document.getElementById("step-4-1-container");
+    const step4_2Container = document.getElementById("step-4-2-container");
+
+    step4_1Container.style.display = "none";
+    step4_2Container.style.display = "none";
+    thirdStepContainer.style.display = "block";
+
+    targetProgress = 75;
+    animateProgressBar();
+}
+
+// Función para ocultar todas las secciones antes de mostrar la final
+function hideAllSteps() {
+    document.querySelector(".option-container").style.display = "none";
+    document.getElementById("sub-option-container").style.display = "none";
+    document.getElementById("third-step-container").style.display = "none";
+    document.getElementById("step-4-1-container").style.display = "none";
+    document.getElementById("step-4-2-container").style.display = "none";
+}
+
+// Función para manejar el siguiente paso en 4.1 y 4.2 hacia el paso final
+function goToFinalStepFromStep4() {
+    hideAllSteps();
+    document.getElementById("continue-btn").style.display = "block";
+
+    targetProgress = 100;
+    animateProgressBar();
 }
 
 // Escuchar cambios en los campos de entrada
 document.getElementById("width").addEventListener("input", checkInputs);
 document.getElementById("length").addEventListener("input", checkInputs);
 document.getElementById("height").addEventListener("input", checkInputs);
-
-function chooseOption(option) {
-    const thirdStepContainer = document.getElementById("third-step-container");
-    const step4_1Container = document.getElementById("step-4-1-container");
-    const step4_2Container = document.getElementById("step-4-2-container");
-
-    thirdStepContainer.style.display = "none"; // Oculta el tercer paso
-
-    if (option === "Option A") { // ATTACHED
-        step4_1Container.style.display = "block"; // Muestra el paso 4.1
-    } else if (option === "Option B") { // FREESTANDING
-        step4_2Container.style.display = "block"; // Muestra el paso 4.2
-    }
-}
-
-function goBackToThirdStep() {
-    const thirdStepContainer = document.getElementById("third-step-container");
-    const step4_1Container = document.getElementById("step-4-1-container");
-    const step4_2Container = document.getElementById("step-4-2-container");
-
-    // Oculta ambos caminos y muestra el tercer paso
-    step4_1Container.style.display = "none";
-    step4_2Container.style.display = "none";
-    thirdStepContainer.style.display = "block";
-}
