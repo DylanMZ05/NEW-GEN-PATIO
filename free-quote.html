@@ -12,6 +12,7 @@
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
 </head>
 <body>
     <div id="header-placeholder"></div>
@@ -28,59 +29,80 @@
     <section class="fq__home">
 
         <div class="fq__form-container">
-
+            <!-- First Step -->
             <div class="option-container height-100">
                 <h4>¿Qué estás buscando?</h4>
                 <button class="option button-option-1" onclick="showSubOptions('opcion1')">Pergola/Patio</button>
                 <p>More options coming soon</p>
                 <div>
-                    <progress class="progress-1" min="0" max="100" value="0"></progress>
+                    <progress id="progress-bar" class="progress-1" min="0" max="100" value="0"></progress>
                 </div>
             </div>
         
+            <!-- Second Step -->
             <div class="option-container" id="sub-option-container" style="display: none;">
                 <h4>Ingrese los detalles</h4>
-                
                 <div class="option-container">
                     <div class="option-container-2 form">
-                        <input type="text" id="sub-option-a" class="sub-option-input" required />
-                        <label for="sub-option-a" class="label-name">
+                        <input type="text" id="width" class="sub-option-input" required />
+                        <label for="width" class="label-name">
                             <span class="content-name">Width<span class="red-dot">*</span></span>
                         </label>
                     </div>
-                    
                     <div class="option-container-2 form">
-                        <input type="text" id="sub-option-b" class="sub-option-input" required />
-                        <label for="sub-option-b" class="label-name">
+                        <input type="text" id="length" class="sub-option-input" required />
+                        <label for="length" class="label-name">
                             <span class="content-name">Length<span class="red-dot">*</span></span>
                         </label>
                     </div>
-
                     <div class="option-container-2 form">
-                        <input type="text" id="sub-option-c" class="sub-option-input" required />
-                        <label for="sub-option-c" class="label-name">
+                        <input type="text" id="height" class="sub-option-input" required />
+                        <label for="height" class="label-name">
                             <span class="content-name">Height<span class="red-dot">*</span></span>
                         </label>
                     </div>
                 </div>
-                
                 <div>
-                    <progress min="0" max="100" value="50"></progress>
+                    <progress class="progress-1" min="0" max="100" value="50"></progress>
                 </div>
-                <button onclick="showContinue()">Siguiente</button>
+                <button onclick="showThirdStep()">Siguiente <i class="fi fi-rr-arrow-small-right"></i></button>
             </div>
-
         
-        <div class="continue-btn" id="continue-btn">
-            <div>
-                <progress min="0" max="100" value="100">HOLA</progress>
-            </div>
-            <button onclick="continueAction()">Continuar ➔</button>
-        </div>
+            <!-- Third Step -->
+            <div class="option-container" id="third-step-container" style="display: none;">
+                <h4>How would you like your project to be?</h4>
                 
-        <!-- Botón de regresar -->
-        <button class="back-btn" id="back-btn" onclick="goBack()" style="display: none;">Regresar</button>
-    </div>
+                <div class="third-step-container">
+                    <!-- Image Option A -->
+                    <div class="image-option" onclick="chooseOption('Option A')">
+                        <img src="media/Bradon-Rose/Newgenpatio_1-1.jpg" alt="Option A" class="option-image" />
+                        <p>ATTACHED</p>
+                    </div>
+                    
+                    <!-- Image Option B -->
+                    <div class="image-option" onclick="chooseOption('Option B')">
+                        <img src="media/Bradon-Rose/Newgenpatio_1-2.jpg" alt="Option B" class="option-image" />
+                        <p>FREESTANDING</p>
+                    </div>
+                </div>
+            
+                <div>
+                    <progress class="progress-1" min="0" max="100" value="75"></progress>
+                </div>
+                <button onclick="showContinue()">Siguiente <i class="fi fi-rr-arrow-small-right"></i></button>
+            </div>
+        
+            <!-- Final Step: Continue Button -->
+            <div class="continue-btn" id="continue-btn" style="display: none;">
+                <div>
+                    <progress min="0" max="100" value="100"></progress>
+                </div>
+                <button onclick="continueAction()">Continuar ➔</button>
+            </div>
+        
+            <!-- Back Button -->
+            <button class="back-btn" id="back-btn" onclick="goBack()" style="display: none;">Regresar</button>
+        </div>
     
     </section>
     

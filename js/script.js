@@ -70,7 +70,6 @@ function toggleFaq(element) {
 
 /* FREE QUOTE */
 
-
 let targetProgress = 0;
 let progress = 0;
 
@@ -88,11 +87,23 @@ function showSubOptions(option) {
     animateProgressBar();
 }
 
-function showContinue() {
+function showThirdStep() {
     const subOptionContainer = document.getElementById("sub-option-container");
-    const continueBtn = document.getElementById("continue-btn");
+    const thirdStepContainer = document.getElementById("third-step-container");
 
     subOptionContainer.style.display = "none";
+    thirdStepContainer.style.display = "block";
+
+    // Establecer el progreso objetivo al 75%
+    targetProgress = 75;
+    animateProgressBar();
+}
+
+function showContinue() {
+    const thirdStepContainer = document.getElementById("third-step-container");
+    const continueBtn = document.getElementById("continue-btn");
+
+    thirdStepContainer.style.display = "none";
     continueBtn.style.display = "block";
 
     // Establecer el progreso objetivo al 100%
@@ -124,11 +135,16 @@ function continueAction() {
 function goBack() {
     const optionContainer = document.querySelector(".option-container");
     const subOptionContainer = document.getElementById("sub-option-container");
+    const thirdStepContainer = document.getElementById("third-step-container");
     const continueBtn = document.getElementById("continue-btn");
     const backBtn = document.getElementById("back-btn");
 
     if (continueBtn.style.display === "block") {
         continueBtn.style.display = "none";
+        thirdStepContainer.style.display = "block";
+        targetProgress = 75;
+    } else if (thirdStepContainer.style.display === "block") {
+        thirdStepContainer.style.display = "none";
         subOptionContainer.style.display = "block";
         targetProgress = 50;
     } else if (subOptionContainer.style.display === "block") {
@@ -153,6 +169,10 @@ function animateProgressBar() {
             clearInterval(interval);
         }
     }, 10);
+}
+
+function chooseOption(option) {
+    alert(`You chose ${option}`);
 }
 
 // Escuchar cambios en los campos de entrada
