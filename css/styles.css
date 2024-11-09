@@ -1694,6 +1694,8 @@ ul, li {
     align-items: center;
     flex-direction: column;
     width: 300px;
+
+    margin: 15px 0;
 }
 
 .option-container-2 label {
@@ -1702,7 +1704,7 @@ ul, li {
 }
 
 .option-container-2 input {
-    margin: 5px;
+    margin: 15px;
     width: 300px;
     padding: 0 5px;
     border: none;
@@ -1722,10 +1724,62 @@ ul, li {
     color: #ff0000;
 }
 
-.blur-cover-2 {
-    background: rgba( 255, 255, 255, 0.1 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+.option-container-2.form {
+    position: relative;
+    height: 60px;
+    overflow: hidden;
+}
 
-    border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
+.option-container-2 .sub-option-input {
+    height: 100%;
+    color: #000000;
+    padding-top: 20px;
+    border: none;
+}
+
+.option-container-2 .label-name {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.option-container-2 .label-name::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    border-bottom: 3px solid var(--color-1);
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+}
+
+.option-container-2 .content-name {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+.option-container-2 .sub-option-input:focus {
+    outline: none;
+}
+
+.option-container-2 .sub-option-input:focus + .label-name .content-name,
+.option-container-2 .sub-option-input:valid + .label-name .content-name {
+    transform: translateY(-140%);
+    font-size: 14px;
+    left: 0px;
+    color: var(--color-1);
+}
+
+.option-container-2 .sub-option-input:focus + .label-name::after,
+.option-container-2 .sub-option-input:valid + .label-name::after {
+    transform: translateX(0%);
 }

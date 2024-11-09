@@ -27,58 +27,60 @@
 
     <section class="fq__home">
 
-        <div class="bluir">
-            
-            <div class="fq__form-container">
+        <div class="fq__form-container">
 
-                <div class="option-container height-100">
-                    <h4>¿Qué estás buscando?</h4>
-                    <button class="option button-option-1" onclick="showSubOptions('opcion1')">Pergola/Patio</button>
-                    <p>More options coming soon</p>
-                    <div>
-                        <progress class="progress-1" min="0" max="100" value="0"></progress>
+            <div class="option-container height-100">
+                <h4>¿Qué estás buscando?</h4>
+                <button class="option button-option-1" onclick="showSubOptions('opcion1')">Pergola/Patio</button>
+                <p>More options coming soon</p>
+                <div>
+                    <progress class="progress-1" min="0" max="100" value="0"></progress>
+                </div>
+            </div>
+        
+            <div class="option-container" id="sub-option-container" style="display: none;">
+                <h4>Ingrese los detalles</h4>
+                
+                <div class="option-container">
+                    <div class="option-container-2 form">
+                        <input type="text" id="sub-option-a" class="sub-option-input" required />
+                        <label for="sub-option-a" class="label-name">
+                            <span class="content-name">Width<span class="red-dot">*</span></span>
+                        </label>
+                    </div>
+                    
+                    <div class="option-container-2 form">
+                        <input type="text" id="sub-option-b" class="sub-option-input" required />
+                        <label for="sub-option-b" class="label-name">
+                            <span class="content-name">Length<span class="red-dot">*</span></span>
+                        </label>
+                    </div>
+
+                    <div class="option-container-2 form">
+                        <input type="text" id="sub-option-c" class="sub-option-input" required />
+                        <label for="sub-option-c" class="label-name">
+                            <span class="content-name">Height<span class="red-dot">*</span></span>
+                        </label>
                     </div>
                 </div>
-
-                <div class="option-container" id="sub-option-container" style="display: none;">
-                    <h4>Ingrese los detalles</h4>
-
-                    <div class="option-container">
-                        <div class="option-container-2">
-                            <label for="sub-option-a" class="text-start">Width<span class="red-dot">*</span></label>
-                            <input type="text" id="sub-option-a" class="sub-option-input" placeholder="Sub-opción A" />
-                        </div>
-
-                        <div class="option-container-2">
-                            <label for="sub-option-b" class="text-start">Length<span class="red-dot">*</span></label>
-                            <input type="text" id="sub-option-b" class="sub-option-input" placeholder="Sub-opción B" />
-                        </div>
-
-                        <div class="option-container-2">
-                            <label for="sub-option-c" class="text-start">Height<span class="red-dot">*</span></label>
-                            <input type="text" id="sub-option-c" class="sub-option-input" placeholder="Sub-opción C" />
-                        </div>
-                    </div>
-
-                    <div>
-                        <progress min="0" max="100" value="50"></progress>
-                    </div>
-                    <button onclick="showContinue()">Siguiente</button>
+                
+                <div>
+                    <progress min="0" max="100" value="50"></progress>
                 </div>
-
-
-                <div class="continue-btn" id="continue-btn">
-                    <div>
-                        <progress min="0" max="100" value="100">HOLA</progress>
-                    </div>
-                    <button onclick="continueAction()">Continuar ➔</button>
-                </div>
-
-                <!-- Botón de regresar -->
-                <button class="back-btn" id="back-btn" onclick="goBack()" style="display: none;">Regresar</button>
+                <button onclick="showContinue()">Siguiente</button>
             </div>
 
+        
+        <div class="continue-btn" id="continue-btn">
+            <div>
+                <progress min="0" max="100" value="100">HOLA</progress>
+            </div>
+            <button onclick="continueAction()">Continuar ➔</button>
         </div>
+                
+        <!-- Botón de regresar -->
+        <button class="back-btn" id="back-btn" onclick="goBack()" style="display: none;">Regresar</button>
+    </div>
     
     </section>
     
