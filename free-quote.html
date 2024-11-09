@@ -65,7 +65,10 @@
                 <div>
                     <progress class="progress-1" min="0" max="100" value="50"></progress>
                 </div>
-                <button onclick="showThirdStep()">Siguiente <i class="fi fi-rr-arrow-small-right"></i></button>
+                <div class="button-container">
+                    <button class="back-btn" onclick="goBack()"><i class="fi fi-rr-arrow-small-left flecha-1"></i>Regresar</button>
+                    <button class="next-btn" onclick="showThirdStep()">Siguiente<i class="fi fi-rr-arrow-small-right flecha-2"></i></button>
+                </div>
             </div>
         
             <!-- Third Step -->
@@ -89,7 +92,30 @@
                 <div>
                     <progress class="progress-1" min="0" max="100" value="75"></progress>
                 </div>
-                <button onclick="showContinue()">Siguiente <i class="fi fi-rr-arrow-small-right"></i></button>
+                <div class="button-container">
+                    <button class="back-btn" onclick="goBack()"><i class="fi fi-rr-arrow-small-left flecha-1"></i>Regresar</button>
+                    <button class="next-btn" onclick="showContinue()">Siguiente <i class="fi fi-rr-arrow-small-right flecha-2"></i></button>
+                </div>
+            </div>
+
+            <!-- Paso 4.1 -->
+            <div class="option-container" id="step-4-1-container" style="display: none;">
+                <h4>Opciones para Attached</h4>
+                <!-- Aquí van los elementos específicos para Attached -->
+                <div class="button-container">
+        <button class="back-btn" onclick="goBackToThirdStep()"><i class="fi fi-rr-arrow-small-left flecha-1"></i>Regresar</button>
+        <button class="next-btn" onclick="showContinue()">Continuar <i class="fi fi-rr-arrow-small-right flecha-2"></i></button>
+                </div>
+            </div>
+            
+            <!-- Paso 4.2 -->
+            <div class="option-container" id="step-4-2-container" style="display: none;">
+                <h4>Opciones para Freestanding</h4>
+                <!-- Aquí van los elementos específicos para Freestanding -->
+                <div class="button-container">
+                    <button class="back-btn" onclick="goBackToThirdStep()"><i class="fi fi-rr-arrow-small-left flecha-1"></i>Regresar</button>
+                    <button class="next-btn" onclick="showContinue()">Continuar <i class="fi fi-rr-arrow-small-right flecha-2"></i></button>
+                </div>
             </div>
         
             <!-- Final Step: Continue Button -->
@@ -97,11 +123,12 @@
                 <div>
                     <progress min="0" max="100" value="100"></progress>
                 </div>
-                <button onclick="continueAction()">Continuar ➔</button>
+                <div class="button-container">
+                    <button class="back-btn" onclick="goBack()"><i class="fi fi-rr-arrow-small-left flecha-1"></i>Regresar</button>
+                    <button class="next-btn" onclick="showContinue()">Siguiente <i class="fi fi-rr-arrow-small-right flecha-2"></i></button>
+                </div>
             </div>
         
-            <!-- Back Button -->
-            <button class="back-btn" id="back-btn" onclick="goBack()" style="display: none;">Regresar</button>
         </div>
     
     </section>

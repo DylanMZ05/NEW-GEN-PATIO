@@ -179,3 +179,28 @@ function chooseOption(option) {
 document.getElementById("width").addEventListener("input", checkInputs);
 document.getElementById("length").addEventListener("input", checkInputs);
 document.getElementById("height").addEventListener("input", checkInputs);
+
+function chooseOption(option) {
+    const thirdStepContainer = document.getElementById("third-step-container");
+    const step4_1Container = document.getElementById("step-4-1-container");
+    const step4_2Container = document.getElementById("step-4-2-container");
+
+    thirdStepContainer.style.display = "none"; // Oculta el tercer paso
+
+    if (option === "Option A") { // ATTACHED
+        step4_1Container.style.display = "block"; // Muestra el paso 4.1
+    } else if (option === "Option B") { // FREESTANDING
+        step4_2Container.style.display = "block"; // Muestra el paso 4.2
+    }
+}
+
+function goBackToThirdStep() {
+    const thirdStepContainer = document.getElementById("third-step-container");
+    const step4_1Container = document.getElementById("step-4-1-container");
+    const step4_2Container = document.getElementById("step-4-2-container");
+
+    // Oculta ambos caminos y muestra el tercer paso
+    step4_1Container.style.display = "none";
+    step4_2Container.style.display = "none";
+    thirdStepContainer.style.display = "block";
+}
