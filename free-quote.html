@@ -99,13 +99,42 @@
 
             <!-- Paso 4.1 -->
             <div class="option-container" id="step-4-1-container" style="display: none;">
-                <h4>Opciones para Attached</h4>
-                <!-- Aquí van los elementos específicos para Attached -->
+                <h4>FOUNDATION</h4>
+                <div class="fourth-step-container">
+                    <!-- Imagen Opción 4.1.1 -->
+                    <div class="image-option" onclick="chooseSubOption('Option 4.1.1')">
+                        <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="Option 4.1.1" class="option-image" />
+                        <p>CONCRETE</p>
+                    </div>
+
+                    <!-- Imagen Opción 4.1.2 -->
+                    <div class="image-option" onclick="chooseSubOption('Option 4.1.2')">
+                        <img src="media/Bradon-Rose/Newgenpatio_1-4.jpg" alt="Option 4.1.2" class="option-image" />
+                        <p>GRAVEL</p>
+                    </div>
+                </div>
                 <div class="button-container">
                     <button class="back-btn" onclick="goBackToThirdStep()"><i class="fi fi-rr-arrow-small-left flecha-1"></i>Regresar</button>
-                    <button class="next-btn" onclick="showContinue()">Siguiente <i class="fi fi-rr-arrow-small-right flecha-2"></i></button>                    
                 </div>
             </div>
+
+                <!-- Paso 4.1.1 (detalles para Opción 4.1.1) -->
+                <div class="option-container" id="step-4-1-1-container" style="display: none;">
+                    <h4>Detalles para CONCRETE</h4>
+                    <div class="button-container">
+                        <button class="back-btn" onclick="goBackToStep4_1()"><i class="fi fi-rr-arrow-small-left flecha-1"></i>Regresar</button>
+                        <button class="next-btn" onclick="goToFinalStepFromStep4()"><i class="fi fi-rr-arrow-small-right flecha-2"></i>Siguiente</button>
+                    </div>
+                </div>
+                
+                <!-- Paso 4.1.2 (detalles para Opción 4.1.2) -->
+                <div class="option-container" id="step-4-1-2-container" style="display: none;">
+                    <h4>Detalles para GRAVEL</h4>
+                    <div class="button-container">
+                        <button class="back-btn" onclick="goBackToStep4_1()"><i class="fi fi-rr-arrow-small-left flecha-1"></i>Regresar</button>
+                        <button class="next-btn" onclick="goToFinalStepFromStep4()"><i class="fi fi-rr-arrow-small-right flecha-2"></i>Siguiente</button>
+                    </div>
+                </div>
 
             <!-- Paso 4.2 -->
             <div class="option-container" id="step-4-2-container" style="display: none;">

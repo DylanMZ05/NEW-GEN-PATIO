@@ -193,6 +193,8 @@ function goBackToThirdStep() {
     animateProgressBar();
 }
 
+
+
 // Función para ocultar todas las secciones antes de mostrar la final
 function hideAllSteps() {
     document.querySelector(".option-container").style.display = "none";
