@@ -1613,13 +1613,42 @@ ul, li {
 }
 
 .gl__second-sub-container img {
-
     width: 33.33vw;
     height: 350px;
     object-fit: cover;
 }
 
+.mobile {
+display: none !important;
+}
 
+@media (max-width: 950px) {
+    .gl__second-container img {
+        width: 49.3vw;
+        height: 350px;
+        object-fit: cover;
+    }
+
+    .mobile {
+        display: flex !important;
+    }
+
+    .desktop {
+        display: none;
+    }
+}
+
+@media (max-width: 950px) {
+    .gl__second-sub-container img {
+        width: 100vw;
+        height: 350px;
+        object-fit: cover;
+    }
+
+    .desktop-2 {
+        display: none;
+    }
+}
 
 
 /* FREE QUOTE */
