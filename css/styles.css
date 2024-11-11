@@ -1584,6 +1584,42 @@ ul, li {
     background-position: center;
 }
 
+.gl__second-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100vw;
+}
+
+.gl__second-container h4 {
+    font-size: 44px;
+    font-weight: 600;
+    margin: 100px 0 0px;
+}
+
+.gl__second-container hr {
+    margin-bottom: 85px;
+    height: 4px;
+    width: 150px;
+}
+
+.gl__second-sub-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.gl__second-sub-container img {
+
+    width: 33.33vw;
+    height: 350px;
+    object-fit: cover;
+}
+
+
 
 
 /* FREE QUOTE */
