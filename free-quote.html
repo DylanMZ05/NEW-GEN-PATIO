@@ -15,15 +15,41 @@
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
 </head>
 <body>
-    <div id="header-placeholder"></div>
-
-    <script>
-        fetch("header/header.html")
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("header-placeholder").innerHTML = data;
-            });
-    </script>
+    
+    <header>
+        <nav class="over-header movile">
+            <div class="center header-phone">
+                <img src="media/DYLAN-ADDS/icons8-phone-26 1.png" alt="" class="margin-r-5">
+                <a href="https://wa.me/13465819082" target="_blank">346-581-9082</a>
+            </div>
+            <div class="header-button">
+                <li class="shadow-none"><a href="free-quote.html" class="color-black shadow-none">FREE QUOTE</a></li>
+            </div>
+        </nav>
+        
+        <div class="header__div">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="media/logo-removebg-preview.png" alt="Descripción de la imagen">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                <li><a href="index.html#services">SERVICES</a></li>
+                <li><a href="index.html#gallery">GALLERY</a></li>
+                <li><a href="index.html#promise">OUR PROMISE</a></li>
+                <li><a href="index.html#we-are">WHO WE ARE</a></li>
+                <li><a href="page-in-progress.html">CONTACT</a></li>
+                <li class="shadow-none desktop"><a href="free-quote.html" class="color-black shadow-none">FREE QUOTE</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
 
 
     <section class="fq__home">

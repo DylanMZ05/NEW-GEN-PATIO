@@ -1573,6 +1573,17 @@ ul, li {
 }
 
 
+/* GALLERY */
+
+.gl__hero {
+    height: 100vh;
+
+    background-image: url(../media/Pictures-WEB/Gallery/Fresstanding/Copy\ of\ Z91_0079-HDR.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 
 
 /* FREE QUOTE */

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Gen Patio</title>
-    <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="header/header.css">
     <link rel="stylesheet" href="footer/footer.css">
     <link rel="icon" href="media/logo-removebg-preview.png" type="image/x-icon">
@@ -14,17 +14,126 @@
 <body>
 
 
-    <div id="header-placeholder"></div>
+    <header>
+        <nav class="over-header movile">
+            <div class="center header-phone">
+                <img src="media/DYLAN-ADDS/icons8-phone-26 1.png" alt="" class="margin-r-5">
+                <a href="https://wa.me/13465819082" target="_blank">346-581-9082</a>
+            </div>
+            <div class="header-button">
+                <li class="shadow-none"><a href="free-quote.html" class="color-black shadow-none">FREE QUOTE</a></li>
+            </div>
+        </nav>
+        
+        <div class="header__div">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="media/logo-removebg-preview.png" alt="Descripción de la imagen">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                <li><a href="index.html#services">SERVICES</a></li>
+                <li><a href="index.html#gallery">GALLERY</a></li>
+                <li><a href="index.html#promise">OUR PROMISE</a></li>
+                <li><a href="index.html#we-are">WHO WE ARE</a></li>
+                <li><a href="page-in-progress.html">CONTACT</a></li>
+                <li class="shadow-none desktop"><a href="free-quote.html" class="color-black shadow-none">FREE QUOTE</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
 
-    <script>
-        fetch("header/header.html")
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("header-placeholder").innerHTML = data;
-            });
-    </script>
+    <section class="gl__hero">
+        <div class="black-cover">
+            <div class="op__hero-container black-cover">
+                <div class="op__hero-txt">
+                    <h1>Our Gallery</h1>
+                    <hr>
+                    <h2>Our Promise of Quality</h2>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section class="gl__second">
 
+        <div>
+            <h4>
+                Attached
+            </h4>
+            <div>
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+            </div>
+        </div>
+
+        <div>
+            <h4>
+                Fresstanding
+            </h4>
+            <div>
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+            </div>
+        </div>g
+
+        <div>
+            <h4>
+                TV % Privacy Wall
+            </h4>
+            <div>
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+            </div>
+        </div>
+
+        <div>
+            <h4>
+                Outdoor Kitchen
+            </h4>
+            <div>
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+            </div>
+        </div>
+
+        <div>
+            <h4>
+                Night Time
+            </h4>
+            <div>
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+            </div>
+        </div>
+
+    </section>
 
 
 
