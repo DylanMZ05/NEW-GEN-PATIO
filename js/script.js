@@ -161,7 +161,7 @@ function animateProgressBar() {
     }, 10);
 }
 
-// Función para manejar la elección en el tercer paso
+// Función para manejar la elección en el tercer paso 
 function chooseOption(option) {
     const thirdStepContainer = document.getElementById("third-step-container");
     const step4_1Container = document.getElementById("step-4-1-container");
