@@ -349,7 +349,7 @@ ul, li {
 }
 
 .carousel-item img {
-    width: 33%;
+    width: 33vw;
     border-radius: 3px;
     height: 300px;
     object-fit: cover;
@@ -928,7 +928,7 @@ ul, li {
 
 @media (max-width: 1850px) {
     .carousel-item img {
-        width: 33%;
+        width: 33vw;
     }
 }
 
@@ -991,7 +991,7 @@ ul, li {
     }
 
     .carousel-item img {
-        width: 49.3%;
+        width: 49.3vw;
     }
 }
 
