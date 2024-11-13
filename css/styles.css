@@ -657,6 +657,7 @@ ul, li {
     }
 }
 
+/* FAQ */
 
 .faq-img-cont {
     display: flex;
@@ -726,7 +727,32 @@ ul, li {
     border-radius: 16px;
 }
 
+.whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #25D366;
+    color: #ffffff;
+    padding: 10px 15px;
+    margin: 0px 0 15px;
+    border-radius: 50px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
 
+.whatsapp-button i {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+.whatsapp-button:hover {
+    text-decoration: none;
+    background-color: #1DA851;
+}
+
+
+
+/* MAP */
 
 .sixth-section {
     height: 540px;
