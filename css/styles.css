@@ -1586,10 +1586,14 @@ ul, li {
 
 @media (max-width: 370px) {
     .header-button a {
-        padding: 7px 12px;
+        padding: 4px 6px;
     }
 
     header a {
+        font-size: 14px;
+    }
+
+    .over-header a {
         font-size: 14px;
     }
 }
@@ -1644,13 +1648,28 @@ ul, li {
 .gl__second-container h4 {
     font-size: 44px;
     font-weight: 600;
-    margin: 100px 0 0px;
+    margin: 0;
 }
 
 .gl__second-container hr {
-    margin-bottom: 85px;
     height: 4px;
     width: 150px;
+}
+
+.gl__second-txt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    
+    width: 60vw;
+    max-width: 1000px;
+    margin: 50px 0;
+}
+
+.gl__second-txt p {
+    margin: 0;
 }
 
 .gl__second-sub-container {
@@ -1671,6 +1690,10 @@ display: none !important;
 }
 
 @media (max-width: 950px) {
+    .gl__second-txt {
+        width: 90vw;
+    }
+
     .mobile {
         display: block !important;
     }
