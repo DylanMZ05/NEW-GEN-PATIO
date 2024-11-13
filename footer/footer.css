@@ -150,6 +150,17 @@
     margin: 0;
 }
 
+.column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.column h5 {
+    margin-right: 75px;
+}
+
 @media (max-width: 1350px) {
     .footer__end {
         margin-right: 0;
@@ -181,7 +192,8 @@
     margin-bottom: 15px;
     }
 
-    .contact {
+    .contact,
+    .column {
     align-items: start !important;  
     justify-content: start !important;
     }
