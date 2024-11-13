@@ -1342,6 +1342,15 @@ ul, li {
     background-position: center;
 }
 
+.op__hero-kitchen {
+    height: 100vh;
+
+    background-image: url(../media/Pictures-WEBs/Services/Outdoor%20Kitchen/Modern/IMG-20241026-WA0086.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .op__hero-container {
     display: flex;
     justify-content: center;
@@ -1415,6 +1424,7 @@ ul, li {
 .op__second-sub-container-2 img{
     width: 500px;
     height: 300px;
+    aspect-ratio: 1.5/1;
     object-fit: cover;
     
     border-radius: 8px;
