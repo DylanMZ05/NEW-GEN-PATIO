@@ -81,28 +81,28 @@
             <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active flex-gallery" data-interval="10000">
-                        <img src="media/TRELLO/PERGOLAS-PATIOS/Patios-pergolas.jpg" alt="...">
-                        <img src="media/TRELLO/PERGOLAS-PATIOS/Patios-Pergolas_2.jpg" alt="">    
-                        <img src="media/TRELLO/PERGOLAS-PATIOS/Patios-Pergolas_3.jpg" alt="" class="gallery-img-2">    
-                        <img src="media/TRELLO/PERGOLAS-PATIOS/Patios_Pergolas_4.jpg" alt="" class="gallery-img-2">    
-                        <img src="media/TRELLO/PERGOLAS-PATIOS/Patios_Pergolas_5.jpg" alt="" class="gallery-img-3">    
-                        <img src="media/TRELLO/PERGOLAS-PATIOS/Patios_Pergolas_6.jpg" alt="" class="gallery-img-3">    
+                        <img src="media/Pictures-WEB/Gallery/Attached/426fe163-24bf-455c-b43e-621e88a891e7.jpeg" alt="..." onclick="openModal(this)">
+                        <img src="media/Pictures-WEB/Gallery/Attached/481f93f7-1eaf-43ee-bf9a-4e898246e2c6.jpg" alt="" onclick="openModal(this)">    
+                        <img src="media/Pictures-WEB/Gallery/Attached/65f9bddc-ef7e-4f36-8abd-d5c62c1e2a5e.jpg" alt="" class="gallery-img-2" onclick="openModal(this)">    
+                        <img src="media/Pictures-WEB/Gallery/Attached/a3c28c1b-3350-41a4-8f8d-751b24f8686e.jpeg" alt="" class="gallery-img-2" onclick="openModal(this)">    
+                        <img src="media/Pictures-WEB/Gallery/Attached/ae64be42-0545-4cb7-b965-d6daac704250.jpg" alt="" class="gallery-img-3" onclick="openModal(this)">    
+                        <img src="media/Pictures-WEB/Gallery/Attached/Copy of Z91_0118-HDR.jpg" alt="" class="gallery-img-3" onclick="openModal(this)" onclick="openModal(this)">    
                     </div>
                     <div class="carousel-item flex-gallery" data-interval="10000">
-                        <img src="media/TRELLO/OUTDOOR-KITCHEN/OutDoor_Kitchen_1.jpg" alt="...">
-                        <img src="media/TRELLO/OUTDOOR-KITCHEN/T_outdoor_Kitchen_2.jpg" alt="">    
-                        <img src="media/TRELLO/OUTDOOR-KITCHEN/T_outdoor_Kitchen_3.jpg" alt="" class="gallery-img-2">    
-                        <img src="media/TRELLO/OUTDOOR-KITCHEN/T_outdoor_Kitchen_4.jpg" alt="" class="gallery-img-2">    
-                        <img src="media/TRELLO/OUTDOOR-KITCHEN/T_outdoor_Kitchen_5.jpg" alt="" class="gallery-img-3">    
-                        <img src="media/TRELLO/OUTDOOR-KITCHEN/T_outdoor_Kitchen_6.jpg" alt="" class="gallery-img-3">    
+                        <img src="media/Pictures-WEB/Gallery/Attached/Copy of Z91_0130-HDR.jpg" alt="..." onclick="openModal(this)">
+                        <img src="media/Pictures-WEB/Gallery/Attached/Copy of Z91_0163-HDR.jpg" alt="" onclick="openModal(this)">    
+                        <img src="media/Pictures-WEB/Gallery/Attached/fe21a220-7d41-4c3a-aa99-86d78e986103.jpeg" alt="" class="gallery-img-2" onclick="openModal(this)">    
+                        <img src="media/Pictures-WEB/Gallery/Attached/FullSizeRender-1.jpeg" alt="" class="gallery-img-2" onclick="openModal(this)">    
+                        <img src="media/Pictures-WEB/Gallery/Attached/FullSizeRender.jpeg" alt="" class="gallery-img-3" onclick="openModal(this)">    
+                        <img src="media/Pictures-WEB/Gallery/Attached/IMG-20240817-WA0015.jpg" alt="" class="gallery-img-3" onclick="openModal(this)" onclick="openModal(this)">    
                     </div>
                     <div class="carousel-item flex-gallery" data-interval="10000">
-                        <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="...">
-                        <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="">    
-                        <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="" class="gallery-img-2">    
-                        <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="" class="gallery-img-2">    
-                        <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="" class="gallery-img-3">    
-                        <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="" class="gallery-img-3">    
+                        <img src="media/Pictures-WEB/Gallery/Attached/IMG-20241018-WA0027.jpg" alt="..." onclick="openModal(this)">
+                        <img src="media/Pictures-WEB/Gallery/Attached/IMG-20241019-WA0112.jpg" alt="" onclick="openModal(this)">    
+                        <img src="media/Pictures-WEB/Gallery/Attached/IMG-20241104-WA0023.jpg" alt="" class="gallery-img-2" onclick="openModal(this)">    
+                        <img src="media/Pictures-WEB/Gallery/Attached/IMG-20241104-WA0043.jpg" alt="" class="gallery-img-2" onclick="openModal(this)">    
+                        <img src="media/Pictures-WEB/Gallery/Attached/IMG-20241104-WA0044.jpg" alt="" class="gallery-img-3" onclick="openModal(this)">    
+                        <img src="media/Pictures-WEB/Gallery/Attached/IMG_1165.jpeg" alt="" class="gallery-img-3" onclick="openModal(this)">    
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-target="#carouselExampleInterval" data-slide="prev">
@@ -114,6 +114,11 @@
                     <span class="sr-only">Next</span>
                 </button>
             </div>
+        </div>
+
+        <div id="imgModal" class="modal" onclick="closeModal()">
+            <span class="close-btn" onclick="closeModal()">×</span>
+            <img class="modal-content" id="imgModalContent">
         </div>
 
         <div class="gl__second-container">
@@ -130,28 +135,28 @@
             <div id="carouselExampleInterval2" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active flex-gallery" data-interval="10000">
-                        <img src="media/TRELLO/PERGOLAS-PATIOS/Patios-pergolas.jpg" alt="...">
-                        <img src="media/TRELLO/PERGOLAS-PATIOS/Patios-Pergolas_2.jpg" alt="">    
-                        <img src="media/TRELLO/PERGOLAS-PATIOS/Patios-Pergolas_3.jpg" alt="" class="gallery-img-2">    
-                        <img src="media/TRELLO/PERGOLAS-PATIOS/Patios_Pergolas_4.jpg" alt="" class="gallery-img-2">    
-                        <img src="media/TRELLO/PERGOLAS-PATIOS/Patios_Pergolas_5.jpg" alt="" class="gallery-img-3">    
-                        <img src="media/TRELLO/PERGOLAS-PATIOS/Patios_Pergolas_6.jpg" alt="" class="gallery-img-3">    
+                        <img src="media/Pictures-WEB/Gallery/Fresstanding/6914afb6-631f-4ce1-ac4e-89c7201a4010.jpeg" alt="..." onclick="openModal(this)">
+                        <img src="media/Pictures-WEB/Gallery/Fresstanding/aefedb19-4097-49d7-b51d-8b597bbbd27e.jpg" alt="" onclick="openModal(this)">    
+                        <img src="media/Pictures-WEB/Gallery/Fresstanding/c87e87af-fa5e-4f2c-8a2d-b8fc1b0367f6.jpeg" alt="" class="gallery-img-2" onclick="openModal(this)">    
+                        <img src="media/TRELLO/PERGOLAS-PATIOS/Patios_Pergolas_4.jpg" alt="" class="gallery-img-2" onclick="openModal(this)">    
+                        <img src="media/TRELLO/PERGOLAS-PATIOS/Patios_Pergolas_5.jpg" alt="" class="gallery-img-3" onclick="openModal(this)">    
+                        <img src="media/TRELLO/PERGOLAS-PATIOS/Patios_Pergolas_6.jpg" alt="" class="gallery-img-3" onclick="openModal(this)">    
                     </div>
                     <div class="carousel-item flex-gallery" data-interval="10000">
-                        <img src="media/TRELLO/OUTDOOR-KITCHEN/OutDoor_Kitchen_1.jpg" alt="...">
-                        <img src="media/TRELLO/OUTDOOR-KITCHEN/T_outdoor_Kitchen_2.jpg" alt="">    
-                        <img src="media/TRELLO/OUTDOOR-KITCHEN/T_outdoor_Kitchen_3.jpg" alt="" class="gallery-img-2">    
-                        <img src="media/TRELLO/OUTDOOR-KITCHEN/T_outdoor_Kitchen_4.jpg" alt="" class="gallery-img-2">    
-                        <img src="media/TRELLO/OUTDOOR-KITCHEN/T_outdoor_Kitchen_5.jpg" alt="" class="gallery-img-3">    
-                        <img src="media/TRELLO/OUTDOOR-KITCHEN/T_outdoor_Kitchen_6.jpg" alt="" class="gallery-img-3">    
+                        <img src="media/TRELLO/OUTDOOR-KITCHEN/OutDoor_Kitchen_1.jpg" alt="..." onclick="openModal(this)">
+                        <img src="media/TRELLO/OUTDOOR-KITCHEN/T_outdoor_Kitchen_2.jpg" alt="" onclick="openModal(this)">    
+                        <img src="media/TRELLO/OUTDOOR-KITCHEN/T_outdoor_Kitchen_3.jpg" alt="" class="gallery-img-2" onclick="openModal(this)">    
+                        <img src="media/TRELLO/OUTDOOR-KITCHEN/T_outdoor_Kitchen_4.jpg" alt="" class="gallery-img-2" onclick="openModal(this)">    
+                        <img src="media/TRELLO/OUTDOOR-KITCHEN/T_outdoor_Kitchen_5.jpg" alt="" class="gallery-img-3" onclick="openModal(this)">    
+                        <img src="media/TRELLO/OUTDOOR-KITCHEN/T_outdoor_Kitchen_6.jpg" alt="" class="gallery-img-3" onclick="openModal(this)">    
                     </div>
                     <div class="carousel-item flex-gallery" data-interval="10000">
-                        <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="...">
-                        <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="">    
-                        <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="" class="gallery-img-2">    
-                        <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="" class="gallery-img-2">    
-                        <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="" class="gallery-img-3">    
-                        <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="" class="gallery-img-3">    
+                        <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="..." onclick="openModal(this)">
+                        <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="" onclick="openModal(this)">    
+                        <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="" class="gallery-img-2" onclick="openModal(this)">    
+                        <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="" class="gallery-img-2" onclick="openModal(this)">    
+                        <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="" class="gallery-img-3" onclick="openModal(this)">    
+                        <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="" class="gallery-img-3" onclick="openModal(this)">    
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-target="#carouselExampleInterval2" data-slide="prev">
@@ -180,28 +185,28 @@
             <div id="carouselExampleInterval4" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active flex-gallery" data-interval="10000">
-                        <img src="media/TRELLO/PERGOLAS-PATIOS/Patios-pergolas.jpg" alt="...">
-                        <img src="media/TRELLO/PERGOLAS-PATIOS/Patios-Pergolas_2.jpg" alt="">    
-                        <img src="media/TRELLO/PERGOLAS-PATIOS/Patios-Pergolas_3.jpg" alt="" class="gallery-img-2">    
-                        <img src="media/TRELLO/PERGOLAS-PATIOS/Patios_Pergolas_4.jpg" alt="" class="gallery-img-2">    
-                        <img src="media/TRELLO/PERGOLAS-PATIOS/Patios_Pergolas_5.jpg" alt="" class="gallery-img-3">    
-                        <img src="media/TRELLO/PERGOLAS-PATIOS/Patios_Pergolas_6.jpg" alt="" class="gallery-img-3">    
+                        <img src="media/TRELLO/PERGOLAS-PATIOS/Patios-pergolas.jpg" alt="..." onclick="openModal(this)">
+                        <img src="media/TRELLO/PERGOLAS-PATIOS/Patios-Pergolas_2.jpg" alt="" onclick="openModal(this)">    
+                        <img src="media/TRELLO/PERGOLAS-PATIOS/Patios-Pergolas_3.jpg" alt="" class="gallery-img-2" onclick="openModal(this)">    
+                        <img src="media/TRELLO/PERGOLAS-PATIOS/Patios_Pergolas_4.jpg" alt="" class="gallery-img-2" onclick="openModal(this)">    
+                        <img src="media/TRELLO/PERGOLAS-PATIOS/Patios_Pergolas_5.jpg" alt="" class="gallery-img-3" onclick="openModal(this)">    
+                        <img src="media/TRELLO/PERGOLAS-PATIOS/Patios_Pergolas_6.jpg" alt="" class="gallery-img-3" onclick="openModal(this)">    
                     </div>
                     <div class="carousel-item flex-gallery" data-interval="10000">
-                        <img src="media/TRELLO/OUTDOOR-KITCHEN/OutDoor_Kitchen_1.jpg" alt="...">
-                        <img src="media/TRELLO/OUTDOOR-KITCHEN/T_outdoor_Kitchen_2.jpg" alt="">    
-                        <img src="media/TRELLO/OUTDOOR-KITCHEN/T_outdoor_Kitchen_3.jpg" alt="" class="gallery-img-2">    
-                        <img src="media/TRELLO/OUTDOOR-KITCHEN/T_outdoor_Kitchen_4.jpg" alt="" class="gallery-img-2">    
-                        <img src="media/TRELLO/OUTDOOR-KITCHEN/T_outdoor_Kitchen_5.jpg" alt="" class="gallery-img-3">    
-                        <img src="media/TRELLO/OUTDOOR-KITCHEN/T_outdoor_Kitchen_6.jpg" alt="" class="gallery-img-3">    
+                        <img src="media/TRELLO/OUTDOOR-KITCHEN/OutDoor_Kitchen_1.jpg" alt="..." onclick="openModal(this)">
+                        <img src="media/TRELLO/OUTDOOR-KITCHEN/T_outdoor_Kitchen_2.jpg" alt="" onclick="openModal(this)">    
+                        <img src="media/TRELLO/OUTDOOR-KITCHEN/T_outdoor_Kitchen_3.jpg" alt="" class="gallery-img-2" onclick="openModal(this)">    
+                        <img src="media/TRELLO/OUTDOOR-KITCHEN/T_outdoor_Kitchen_4.jpg" alt="" class="gallery-img-2" onclick="openModal(this)">    
+                        <img src="media/TRELLO/OUTDOOR-KITCHEN/T_outdoor_Kitchen_5.jpg" alt="" class="gallery-img-3" onclick="openModal(this)">    
+                        <img src="media/TRELLO/OUTDOOR-KITCHEN/T_outdoor_Kitchen_6.jpg" alt="" class="gallery-img-3" onclick="openModal(this)">    
                     </div>
                     <div class="carousel-item flex-gallery" data-interval="10000">
-                        <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="...">
-                        <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="">    
-                        <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="" class="gallery-img-2">    
-                        <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="" class="gallery-img-2">    
-                        <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="" class="gallery-img-3">    
-                        <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="" class="gallery-img-3">    
+                        <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="..." onclick="openModal(this)">
+                        <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="" onclick="openModal(this)">    
+                        <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="" class="gallery-img-2" onclick="openModal(this)">    
+                        <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="" class="gallery-img-2" onclick="openModal(this)">    
+                        <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="" class="gallery-img-3" onclick="openModal(this)">    
+                        <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="" class="gallery-img-3" onclick="openModal(this)">    
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-target="#carouselExampleInterval4" data-slide="prev">
@@ -229,28 +234,28 @@
             <div id="carouselExampleInterval5" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active flex-gallery" data-interval="10000">
-                        <img src="media/TRELLO/PERGOLAS-PATIOS/Patios-pergolas.jpg" alt="...">
-                        <img src="media/TRELLO/PERGOLAS-PATIOS/Patios-Pergolas_2.jpg" alt="">    
-                        <img src="media/TRELLO/PERGOLAS-PATIOS/Patios-Pergolas_3.jpg" alt="" class="gallery-img-2">    
-                        <img src="media/TRELLO/PERGOLAS-PATIOS/Patios_Pergolas_4.jpg" alt="" class="gallery-img-2">    
-                        <img src="media/TRELLO/PERGOLAS-PATIOS/Patios_Pergolas_5.jpg" alt="" class="gallery-img-3">    
-                        <img src="media/TRELLO/PERGOLAS-PATIOS/Patios_Pergolas_6.jpg" alt="" class="gallery-img-3">    
+                        <img src="media/TRELLO/PERGOLAS-PATIOS/Patios-pergolas.jpg" alt="..." onclick="openModal(this)">
+                        <img src="media/TRELLO/PERGOLAS-PATIOS/Patios-Pergolas_2.jpg" alt="" onclick="openModal(this)">    
+                        <img src="media/TRELLO/PERGOLAS-PATIOS/Patios-Pergolas_3.jpg" alt="" class="gallery-img-2" onclick="openModal(this)">    
+                        <img src="media/TRELLO/PERGOLAS-PATIOS/Patios_Pergolas_4.jpg" alt="" class="gallery-img-2" onclick="openModal(this)">    
+                        <img src="media/TRELLO/PERGOLAS-PATIOS/Patios_Pergolas_5.jpg" alt="" class="gallery-img-3" onclick="openModal(this)">    
+                        <img src="media/TRELLO/PERGOLAS-PATIOS/Patios_Pergolas_6.jpg" alt="" class="gallery-img-3" onclick="openModal(this)">    
                     </div>
                     <div class="carousel-item flex-gallery" data-interval="10000">
-                        <img src="media/TRELLO/OUTDOOR-KITCHEN/OutDoor_Kitchen_1.jpg" alt="...">
-                        <img src="media/TRELLO/OUTDOOR-KITCHEN/T_outdoor_Kitchen_2.jpg" alt="">    
+                        <img src="media/TRELLO/OUTDOOR-KITCHEN/OutDoor_Kitchen_1.jpg" alt="..." onclick="openModal(this)">
+                        <img src="media/TRELLO/OUTDOOR-KITCHEN/T_outdoor_Kitchen_2.jpg" alt="" onclick="openModal(this)">    
                         <img src="media/TRELLO/OUTDOOR-KITCHEN/T_outdoor_Kitchen_3.jpg" alt="" class="gallery-img-2">    
                         <img src="media/TRELLO/OUTDOOR-KITCHEN/T_outdoor_Kitchen_4.jpg" alt="" class="gallery-img-2">    
-                        <img src="media/TRELLO/OUTDOOR-KITCHEN/T_outdoor_Kitchen_5.jpg" alt="" class="gallery-img-3">    
-                        <img src="media/TRELLO/OUTDOOR-KITCHEN/T_outdoor_Kitchen_6.jpg" alt="" class="gallery-img-3">    
+                        <img src="media/TRELLO/OUTDOOR-KITCHEN/T_outdoor_Kitchen_5.jpg" alt="" class="gallery-img-3" onclick="openModal(this)">    
+                        <img src="media/TRELLO/OUTDOOR-KITCHEN/T_outdoor_Kitchen_6.jpg" alt="" class="gallery-img-3" onclick="openModal(this)">    
                     </div>
                     <div class="carousel-item flex-gallery" data-interval="10000">
-                        <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="...">
-                        <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="">    
-                        <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="" class="gallery-img-2">    
-                        <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="" class="gallery-img-2">    
-                        <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="" class="gallery-img-3">    
-                        <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="" class="gallery-img-3">    
+                        <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="..." onclick="openModal(this)">
+                        <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="" onclick="openModal(this)">    
+                        <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="" class="gallery-img-2" onclick="openModal(this)">    
+                        <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="" class="gallery-img-2" onclick="openModal(this)">    
+                        <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="" class="gallery-img-3" onclick="openModal(this)">    
+                        <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="" class="gallery-img-3" onclick="openModal(this)">    
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-target="#carouselExampleInterval5" data-slide="prev">
@@ -278,38 +283,29 @@
             <div id="carouselExampleInterval3" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active flex-gallery" data-interval="10000">
-                        <img src="media/TRELLO/PERGOLAS-PATIOS/Patios-pergolas.jpg" alt="...">
-                        <img src="media/TRELLO/PERGOLAS-PATIOS/Patios-Pergolas_2.jpg" alt="">    
-                        <img src="media/TRELLO/PERGOLAS-PATIOS/Patios-Pergolas_3.jpg" alt="" class="gallery-img-2">    
-                        <img src="media/TRELLO/PERGOLAS-PATIOS/Patios_Pergolas_4.jpg" alt="" class="gallery-img-2">    
-                        <img src="media/TRELLO/PERGOLAS-PATIOS/Patios_Pergolas_5.jpg" alt="" class="gallery-img-3">    
-                        <img src="media/TRELLO/PERGOLAS-PATIOS/Patios_Pergolas_6.jpg" alt="" class="gallery-img-3">    
+                        <img src="media/TRELLO/PERGOLAS-PATIOS/Patios-pergolas.jpg" alt="..." onclick="openModal(this)">
+                        <img src="media/TRELLO/PERGOLAS-PATIOS/Patios-Pergolas_2.jpg" alt="" onclick="openModal(this)">    
+                        <img src="media/TRELLO/PERGOLAS-PATIOS/Patios-Pergolas_3.jpg" alt="" class="gallery-img-3" onclick="openModal(this)">  
                     </div>
-                    <div class="carousel-item flex-gallery" data-interval="10000">
+                    <!-- <div class="carousel-item flex-gallery" data-interval="10000">
                         <img src="media/TRELLO/OUTDOOR-KITCHEN/OutDoor_Kitchen_1.jpg" alt="...">
                         <img src="media/TRELLO/OUTDOOR-KITCHEN/T_outdoor_Kitchen_2.jpg" alt="">    
-                        <img src="media/TRELLO/OUTDOOR-KITCHEN/T_outdoor_Kitchen_3.jpg" alt="" class="gallery-img-2">    
-                        <img src="media/TRELLO/OUTDOOR-KITCHEN/T_outdoor_Kitchen_4.jpg" alt="" class="gallery-img-2">    
-                        <img src="media/TRELLO/OUTDOOR-KITCHEN/T_outdoor_Kitchen_5.jpg" alt="" class="gallery-img-3">    
-                        <img src="media/TRELLO/OUTDOOR-KITCHEN/T_outdoor_Kitchen_6.jpg" alt="" class="gallery-img-3">    
+                        <img src="media/TRELLO/OUTDOOR-KITCHEN/T_outdoor_Kitchen_3.jpg" alt="" class="gallery-img-3">    
                     </div>
                     <div class="carousel-item flex-gallery" data-interval="10000">
                         <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="...">
                         <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="">    
-                        <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="" class="gallery-img-2">    
-                        <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="" class="gallery-img-2">    
-                        <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="" class="gallery-img-3">    
-                        <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="" class="gallery-img-3">    
-                    </div>
+                        <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="" class="gallery-img-3">
+                    </div> -->
                 </div>
-                <button class="carousel-control-prev" type="button" data-target="#carouselExampleInterval3" data-slide="prev">
+                <!-- <button class="carousel-control-prev" type="button" data-target="#carouselExampleInterval3" data-slide="prev">
                     <span aria-hidden="true"><i class="fi fi-ss-angle-circle-left img-shadow"></i></span>
                     <span class="sr-only">Previous</span>
                 </button>
                 <button class="carousel-control-next" type="button" data-target="#carouselExampleInterval3" data-slide="next">
                     <span aria-hidden="true"><i class="fi fi-ss-angle-circle-right img-shadow"></i></span>
                     <span class="sr-only">Next</span>
-                </button>
+                </button> -->
             </div>
         </div>
 

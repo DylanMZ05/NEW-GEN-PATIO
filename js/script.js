@@ -217,3 +217,18 @@ function goToFinalStepFromStep4() {
 document.getElementById("width").addEventListener("input", checkInputs);
 document.getElementById("length").addEventListener("input", checkInputs);
 document.getElementById("height").addEventListener("input", checkInputs);
+
+function openModal(img) {
+    var modal = document.getElementById("imgModal");
+    var modalImg = document.getElementById("imgModalContent");
+    
+    modal.style.display = "block";
+    modalImg.src = img.src;
+    document.body.classList.add("modal-open");
+}
+
+function closeModal() {
+    var modal = document.getElementById("imgModal");
+    modal.style.display = "none";
+    document.body.classList.remove("modal-open");
+}
