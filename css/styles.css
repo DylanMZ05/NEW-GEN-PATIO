@@ -752,6 +752,26 @@ ul, li {
     color: #0b0b0b;
 }
 
+.wsp-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+    margin-top: 25px;
+    margin-bottom: 0;
+}
+
+.wsp-container p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.wsp-container a {
+    color: #ff6524;
+    text-decoration: underline;
+}
 
 
 /* MAP */
@@ -857,7 +877,7 @@ ul, li {
 /* MARGIN 50PX */
 
 .mt-50 {
-    margin-top: 50px;
+    margin-top: 50px !important;
 }
 
 .mb-50 {
@@ -1628,6 +1648,24 @@ ul, li {
     font-weight: 500;
 }
 
+.pp__second-txt__container p {
+    margin-bottom: 40px;
+}
+
+.pp__second-txt__container a {
+    font-size: 18px;
+
+    text-decoration: none;
+    text-align: center;
+
+    color: #ffffff;
+
+    padding: 7px 28px;
+    background-color: #000000;
+
+    border-radius: 50px;
+}
+
 .pp__second-img__container img {
     width: 33.33%;
     height: 300px;
@@ -1635,12 +1673,14 @@ ul, li {
 }
 
 
+
+
 /* GALLERY */
 
 .gl__hero {
     height: 100vh;
 
-    background-image: url(../media/Pictures-WEBs/Gallery/Fresstanding/Copy\ of\ Z91_0079-HDR.jpg);
+    background-image: url(../media/Pictures-WEBs/Gallery/Fresstanding/Free\ 15.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
