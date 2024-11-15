@@ -2178,11 +2178,11 @@ display: none !important;
     margin-top: 10px;
 }
 
-.step-11-image {
-    max-width: 200px; /* Tamaño personalizado para el paso 11 */
+.step-14-image {
+    max-width: 225px; /* Tamaño personalizado para el paso 11 */
     border-radius: 10px; /* Bordes redondeados adicionales */
 }
 
-.step-11-image:hover {
+.step-14-image:hover {
     transform: scale(1.03); /* Efecto de escala diferente en hover */
 }

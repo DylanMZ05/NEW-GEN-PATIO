@@ -255,7 +255,7 @@ const steps = {
         title: 'Estilo',
         options: [
             { img: 'media/Bradon-Rose/Newgenpatio_1-3.jpg', text: 'MODERN', nextStep: 11 },
-            { img: 'media/Bradon-Rose/Newgenpatio_1-5.jpg', text: 'TRADITIONAL', nextStep: 11 }
+            { img: 'media/Bradon-Rose/Newgenpatio_1-5.jpg', text: 'TRADITIONAL', nextStep: 12 }
         ],
         previousStep: 1
     },
@@ -264,8 +264,35 @@ const steps = {
         fields: [
             { label: 'Linear Feet', id: 'linear-feet' },
         ],
-        nextStep: 12,
+        nextStep: 13,
         previousStep: 10
+    },
+    12: {
+        title: 'Estilo',
+        fields: [
+            { label: 'Linear Feet', id: 'linear-feet' },
+        ],
+        nextStep: 14,
+        previousStep: 10
+    },
+    13: {
+        title: 'Estilo',
+        options: [
+            { img: 'media/Bradon-Rose/Newgenpatio_1-3.jpg', text: 'COMPOSITE', nextStep: 'final' },
+            { img: 'media/Bradon-Rose/Newgenpatio_1-5.jpg', text: 'THERMO WOOD', nextStep: 'final' }
+        ],
+        nextStep: 12,
+        previousStep: 11
+    },
+    14: {
+        title: 'Estilo',
+        options: [
+            { img: 'media/Bradon-Rose/Newgenpatio_1-3.jpg', text: 'COMPOSITE', nextStep: 'final' },
+            { img: 'media/Bradon-Rose/Newgenpatio_1-5.jpg', text: 'THERMO WOOD', nextStep: 'final' },
+            { img: 'media/Bradon-Rose/Newgenpatio_1-5.jpg', text: 'TRADITIONAL', nextStep: 'final' }
+        ],
+        nextStep: 12,
+        previousStep: 12
     },
 };
 
@@ -301,8 +328,8 @@ function renderStep(stepNumber) {
                 img.classList.add('option-image');
                 img.onclick = () => goToNextStep(option.nextStep);
 
-                if (stepNumber === 11) {
-                    img.classList.add('step-11-image');
+                if (stepNumber === 14) {
+                    img.classList.add('step-14-image');
                 }
                 
                 const text = document.createElement('p');
