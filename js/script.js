@@ -214,7 +214,7 @@ const steps = {
         title: '¿Qué estás buscando?',
         options: [
             { text: 'Pergola/Patio', nextStep: 2 },
-            { text: 'Outdoor Kitchen', nextStep: 2 }
+            { text: 'Outdoor Kitchen', nextStep: 10 }
         ]
     },
     2: {
@@ -230,7 +230,7 @@ const steps = {
     3: {
         title: '¿Cómo prefieres tu proyecto?',
         options: [
-            { img: 'media/Bradon-Rose/Newgenpatio_1-4.jpg', text: 'ATTACHED', nextStep: 4 },
+            { img: 'media/Bradon-Rose/Newgenpatio_1-4.jpg', text: 'ATTACHED', nextStep: 5 },
             { img: 'media/Bradon-Rose/Newgenpatio_1-5.jpg', text: 'FREESTANDING', nextStep: 4 }
         ],
         previousStep: 2
@@ -250,7 +250,23 @@ const steps = {
             { img: 'media/Bradon-Rose/Newgenpatio_1-5.jpg', text: 'CONCRETE', nextStep: 'final' }
         ],
         previousStep: 4
-    }
+    },
+    10: {
+        title: 'Estilo',
+        options: [
+            { img: 'media/Bradon-Rose/Newgenpatio_1-3.jpg', text: 'MODERN', nextStep: 11 },
+            { img: 'media/Bradon-Rose/Newgenpatio_1-5.jpg', text: 'TRADITIONAL', nextStep: 11 }
+        ],
+        previousStep: 1
+    },
+    11: {
+        title: 'Estilo',
+        fields: [
+            { label: 'Linear Feet', id: 'linear-feet' },
+        ],
+        nextStep: 12,
+        previousStep: 10
+    },
 };
 
 let currentStep = 1;
@@ -284,6 +300,10 @@ function renderStep(stepNumber) {
                 img.alt = option.text;
                 img.classList.add('option-image');
                 img.onclick = () => goToNextStep(option.nextStep);
+
+                if (stepNumber === 11) {
+                    img.classList.add('step-11-image');
+                }
                 
                 const text = document.createElement('p');
                 text.textContent = option.text;
@@ -302,7 +322,9 @@ function renderStep(stepNumber) {
             }
         });
         container.appendChild(optionsContainer); // Añadir el contenedor de opciones al contenedor principal
-    } else if (step.fields) {
+    } 
+    
+    else if (step.fields) {
         step.fields.forEach(field => {
             const inputContainer = document.createElement('div');
             inputContainer.classList.add('option-container-2', 'form');
@@ -332,6 +354,8 @@ function renderStep(stepNumber) {
         backButton.onclick = () => goToPreviousStep(step.previousStep);
         container.appendChild(backButton);
     }
+
+    
 
     // Botón "Siguiente" si hay un próximo paso (sólo para campos de entrada)
     if (step.fields && step.nextStep) {
