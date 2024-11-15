@@ -32,13 +32,13 @@ function resumeAnimation() {
     scrollingText.style.animationPlayState = 'running';
 }
 
-// Para escritorio: detener y reanudar con el mouse
-scrollingText.addEventListener('mouseenter', stopAnimation);
-scrollingText.addEventListener('mouseleave', resumeAnimation);
+// // Para escritorio: detener y reanudar con el mouse
+// scrollingText.addEventListener('mouseenter', stopAnimation);
+// scrollingText.addEventListener('mouseleave', resumeAnimation);
 
-// Para dispositivos móviles: detener y reanudar al tocar
-scrollingText.addEventListener('touchstart', stopAnimation);
-scrollingText.addEventListener('touchend', resumeAnimation);
+// // Para dispositivos móviles: detener y reanudar al tocar
+// scrollingText.addEventListener('touchstart', stopAnimation);
+// scrollingText.addEventListener('touchend', resumeAnimation);
 
 
 
@@ -70,165 +70,140 @@ function toggleFaq(element) {
 
 /* FREE QUOTE */
 
-let targetProgress = 0;
-let progress = 0;
+//References
+const a = document.getElementById('a'); // Primer paso
+const pergola = document.getElementById('pergola');
+const subOptionContainer = document.getElementById('sub-option-container'); // Segundo paso
+const subOptionContainer2 = document.getElementById('sub-option-container2'); // Segundo paso 2
+const stepContainer = document.getElementById('step-container'); // Tercer paso
+const lastStep = document.getElementById('last-step') // Último paso
+const btns = document.getElementById('continue-btn'); // Botón de continuar
+const backBtn = document.getElementById('back-btn'); // Botón de regresar
+const titleTemplate = document.getElementById('title-template');
+const textTemplate = document.getElementById('text-template-1');
+const textTemplate2 = document.getElementById('text-template-2');
+const img1Template = document.getElementById('img-template-1');
+const img2Template = document.getElementById('img-template-2');
 
-function showSubOptions(option) {
-    const optionContainer = document.querySelector(".option-container");
-    const subOptionContainer = document.getElementById("sub-option-container");
-    const backBtn = document.getElementById("back-btn");
+let currentStep = 1;
 
-    optionContainer.style.display = "none";
-    subOptionContainer.style.display = "block";
-    backBtn.style.display = "block";
+pergola.addEventListener('click', showSubOptions)
+backBtn.addEventListener('click', goBack);
 
-    targetProgress = 50;
-    animateProgressBar();
+function showSubOptions() {
+    a.style.display = 'none';
+    subOptionContainer.style.display = 'flex';
+    btns.style.display = 'flex';
+    currentStep = 2;
 }
 
-function showThirdStep() {
-    const subOptionContainer = document.getElementById("sub-option-container");
-    const thirdStepContainer = document.getElementById("third-step-container");
-
-    subOptionContainer.style.display = "none";
-    thirdStepContainer.style.display = "block";
-
-    targetProgress = 75;
-    animateProgressBar();
+function showSubOptions() {
+    a.style.display = 'none';
+    subOptionContainer.style.display = 'flex';
+    btns.style.display = 'flex';
+    currentStep = 2;
 }
 
-function showContinue() {
-    const finalStepContainer = document.getElementById("continue-btn");
-    hideAllSteps();  // Oculta todos los pasos previos
-    finalStepContainer.style.display = "block";
-
-    targetProgress = 100;
-    animateProgressBar();
-}
-
-function checkInputs() {
-    const width = document.getElementById("width").value;
-    const length = document.getElementById("length").value;
-    const height = document.getElementById("height").value;
-    const continueBtn = document.getElementById("continue-btn");
-
-    if (width && length && height) {
-        continueBtn.style.display = "block";
-        targetProgress = 100;
-    } else {
-        continueBtn.style.display = "none";
-        targetProgress = 50;
+function goNextStep() {
+    if (currentStep === 2) {
+        subOptionContainer.style.display = 'none';
+        stepContainer.style.display = 'flex';
+        btns.style.display = 'none';
+        currentStep = 3;
     }
-    animateProgressBar();
 }
 
 function goBack() {
-    const optionContainer = document.querySelector(".option-container");
-    const subOptionContainer = document.getElementById("sub-option-container");
-    const thirdStepContainer = document.getElementById("third-step-container");
-    const continueBtn = document.getElementById("continue-btn");
-    const backBtn = document.getElementById("back-btn");
-
-    if (continueBtn.style.display === "block") {
-        continueBtn.style.display = "none";
-        thirdStepContainer.style.display = "block";
-        targetProgress = 75;
-    } else if (thirdStepContainer.style.display === "block") {
-        thirdStepContainer.style.display = "none";
-        subOptionContainer.style.display = "block";
-        targetProgress = 50;
-    } else if (subOptionContainer.style.display === "block") {
-        subOptionContainer.style.display = "none";
-        optionContainer.style.display = "block";
-        backBtn.style.display = "none";
-        targetProgress = 0;
-    }
-    animateProgressBar();
-}
-
-function animateProgressBar() {
-    const progressBar = document.getElementById("progress-bar");
-    const interval = setInterval(() => {
-        if (progress < targetProgress) {
-            progress += 1;
-            progressBar.value = progress;
-        } else if (progress > targetProgress) {
-            progress -= 1;
-            progressBar.value = progress;
-        } else {
-            clearInterval(interval);
-        }
-    }, 10);
-}
-
-// Función para manejar la elección en el tercer paso 
-function chooseOption(option) {
-    const thirdStepContainer = document.getElementById("third-step-container");
-    const step4_1Container = document.getElementById("step-4-1-container");
-    const step4_2Container = document.getElementById("step-4-2-container");
-
-    thirdStepContainer.style.display = "none";
-
-    if (option === "Option A") { // ATTACHED
-        step4_1Container.style.display = "block";
-    } else if (option === "Option B") { // FREESTANDING
-        step4_2Container.style.display = "block";
+    if (currentStep === 3) {
+        stepContainer.style.display = 'none';
+        subOptionContainer.style.display = 'block';
+        btns.style.display = 'flex';
+        currentStep = 2;
+    } else if (currentStep === 2) {
+        subOptionContainer.style.display = 'none';
+        a.style.display = 'flex';
+        btns.style.display = 'none';
+        currentStep = 1;
     }
 
-    targetProgress = 85;
-    animateProgressBar();
+    console.log(goBack)
 }
 
-// Función para regresar al tercer paso desde el paso 4
-function goBackToThirdStep() {
-    const thirdStepContainer = document.getElementById("third-step-container");
-    const step4_1Container = document.getElementById("step-4-1-container");
-    const step4_2Container = document.getElementById("step-4-2-container");
+// RAMA 1
 
-    step4_1Container.style.display = "none";
-    step4_2Container.style.display = "none";
-    thirdStepContainer.style.display = "block";
+document.querySelector('.next-btn').addEventListener('click', goNextStep);
+img1Template.addEventListener('click', () => changeSteps());
 
-    targetProgress = 75;
-    animateProgressBar();
-}
+const steps = {
+    1: {
+        title: 'FOUNDATION',
+        img: 'media/Bradon-Rose/Newgenpatio_1-4.jpg',
+        text: 'GLASS',
+        img2: 'media/Bradon-Rose/Newgenpatio_1-5.jpg',
+        text2: 'CONCRETE',
+    }
 
+};
+let numberStep = 0;
 
+function changeSteps(){
+    numberStep += 1;
+    const beforeStep = steps[numberStep];
+    titleTemplate.innerHTML = beforeStep.title;
+    img1Template.src = beforeStep.img;
+    textTemplate.innerHTML = beforeStep.text;
+    img2Template.src = beforeStep.img2;
+    textTemplate2.innerHTML = beforeStep.text2;
 
-// Función para ocultar todas las secciones antes de mostrar la final
-function hideAllSteps() {
-    document.querySelector(".option-container").style.display = "none";
-    document.getElementById("sub-option-container").style.display = "none";
-    document.getElementById("third-step-container").style.display = "none";
-    document.getElementById("step-4-1-container").style.display = "none";
-    document.getElementById("step-4-2-container").style.display = "none";
-}
+    if (numberStep === 1) {
+        document.getElementById('img-template-1').onclick = showNextContainer;
+        document.getElementById('text-template-1').onclick = showNextContainer;
+        document.getElementById('img-template-2').onclick = showNextContainer;
+        document.getElementById('text-template-2').onclick = showNextContainer;
+    }
+};
 
-// Función para manejar el siguiente paso en 4.1 y 4.2 hacia el paso final
-function goToFinalStepFromStep4() {
-    hideAllSteps();
-    document.getElementById("continue-btn").style.display = "block";
+// RAMA 2
 
-    targetProgress = 100;
-    animateProgressBar();
-}
+img2Template.addEventListener('click', () => changeSteps2());
 
-// Escuchar cambios en los campos de entrada
-document.getElementById("width").addEventListener("input", checkInputs);
-document.getElementById("length").addEventListener("input", checkInputs);
-document.getElementById("height").addEventListener("input", checkInputs);
+const steps2 = {
+    1: {
+        title: 'FREESTANDING',
+        img: 'media/Bradon-Rose/Newgenpatio_1-4.jpg',
+        text: 'RESOLAR',
+        img2: 'media/Bradon-Rose/Newgenpatio_1-5.jpg',
+        text2: 'CANTILEVER',
+    },
+    2: {
+        title: 'FUNDATION',
+        img: 'media/Bradon-Rose/Newgenpatio_1-3.jpg',
+        text: 'GLASS',
+        img2: 'media/Bradon-Rose/Newgenpatio_1-3.jpg',
+        text2: 'CONCRETE',
+    }
 
-function openModal(img) {
-    var modal = document.getElementById("imgModal");
-    var modalImg = document.getElementById("imgModalContent");
-    
-    modal.style.display = "block";
-    modalImg.src = img.src;
-    document.body.classList.add("modal-open");
-}
+};
+let numberStep2 = 0;
 
-function closeModal() {
-    var modal = document.getElementById("imgModal");
-    modal.style.display = "none";
-    document.body.classList.remove("modal-open");
+function changeSteps2(){
+    numberStep += 1;
+    const beforeStep2 = steps2[numberStep];
+    titleTemplate.innerHTML = beforeStep2.title;
+    img1Template.src = beforeStep2.img;
+    textTemplate.innerHTML = beforeStep2.text;
+    img2Template.src = beforeStep2.img2;
+    textTemplate2.innerHTML = beforeStep2.text2;
+
+    if (numberStep === 2) {
+        document.getElementById('img-template-1').onclick = showNextContainer;
+        document.getElementById('text-template-1').onclick = showNextContainer;
+        document.getElementById('img-template-2').onclick = showNextContainer;
+        document.getElementById('text-template-2').onclick = showNextContainer;
+    }
+};
+
+function showNextContainer() {
+    document.getElementById('step-container').style.display = 'none';
+    document.getElementById('last-step').style.display = 'flex';
 }

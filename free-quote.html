@@ -56,15 +56,12 @@
 
         <div class="fq__form-container">
             <!-- First Step -->
-            <div class="option-container height-100">
+            <div class="option-container height-100" id="a">
                 <h4>¿Qué estás buscando?</h4>
-                <button class="option button-option-1" onclick="showSubOptions('opcion1')">Pergola/Patio</button>
-                <p>More options coming soon</p>
-                <div>
-                    <progress id="progress-bar" class="progress-1" min="0" max="100" value="0"></progress>
-                </div>
+                <button class="option button-option-1" id="pergola">Pergola/Patio</button>
+                <button class="option button-option-1">Outdoor Kitchen</button>
             </div>
-        
+
             <!-- Second Step -->
             <div class="option-container" id="sub-option-container" style="display: none;">
                 <h4>Ingrese los detalles</h4>
@@ -87,103 +84,79 @@
                             <span class="content-name">Height<span class="red-dot">*</span></span>
                         </label>
                     </div>
-                </div>
-                <div>
-                    <progress class="progress-1" min="0" max="100" value="50"></progress>
-                </div>
-                <div class="button-container">
-                    <button class="back-btn" onclick="goBack()"><i class="fi fi-rr-arrow-small-left flecha-1"></i>Regresar</button>
-                    <button class="next-btn" onclick="showThirdStep()">Siguiente<i class="fi fi-rr-arrow-small-right flecha-2"></i></button>
+                    <div class="button-container">
+                        <button class="back-btn" id="back-btn"><i class="fi fi-rr-arrow-small-left flecha-1"></i>Regresar</button>
+                        <button class="next-btn" id="continue-btn">Siguiente<i class="fi fi-rr-arrow-small-right flecha-2"></i></button>
+                    </div>
                 </div>
             </div>
-        
-            <!-- Third Step -->
-            <div class="option-container" id="third-step-container" style="display: none;">
-                <h4>How would you like your project to be?</h4>
+
+            <!-- Dinamic template -->
+            <div class="option-container" id="step-container" style="display: none;">
+                <h4 id="title-template">How would you like your project to be?</h4>
                 
                 <div class="third-step-container">
-                    <!-- Image Option A -->
-                    <div class="image-option" onclick="chooseOption('Option A')">
-                        <img src="media/Bradon-Rose/Newgenpatio_1-1.jpg" alt="Option A" class="option-image" />
-                        <p>ATTACHED</p>
+                    <div class="image-option">
+                        <img src="media/Bradon-Rose/Newgenpatio_1-1.jpg" alt="Option A" class="option-image" id="img-template-1" />
+                        <p id="text-template-1">ATTACHED</p>
                     </div>
                     
-                    <!-- Image Option B -->
-                    <div class="image-option" onclick="chooseOption('Option B')">
-                        <img src="media/Bradon-Rose/Newgenpatio_1-2.jpg" alt="Option B" class="option-image" />
-                        <p>FREESTANDING</p>
+                    <div class="image-option">
+                        <img src="media/Bradon-Rose/Newgenpatio_1-2.jpg" alt="Option B" class="option-image" id="img-template-2"/>
+                        <p id="text-template-2">FREESTANDING</p>
                     </div>
                 </div>
             
-                <div>
-                    <progress class="progress-1" min="0" max="100" value="75"></progress>
-                </div>
                 <div class="button-container">
-                    <button class="back-btn" onclick="goBack()"><i class="fi fi-rr-arrow-small-left flecha-1"></i>Regresar</button>
+                    <button class="back-btn" id="back-btn"><i class="fi fi-rr-arrow-small-left flecha-1"></i>Regresar</button>
                 </div>
             </div>
 
-            <!-- Paso 4.1 -->
-            <div class="option-container" id="step-4-1-container" style="display: none;">
-                <h4>FOUNDATION</h4>
-                <div class="fourth-step-container">
-                    <!-- Imagen Opción 4.1.1 -->
-                    <div class="image-option" onclick="chooseSubOption('Option 4.1.1')">
-                        <img src="media/Bradon-Rose/Newgenpatio_1-3.jpg" alt="Option 4.1.1" class="option-image" />
-                        <p>CONCRETE</p>
+            
+            <!-- Second Step 2 -->
+            <div class="option-container" id="sub-option-container2" style="display: none;">
+                <h4>Ingrese los detalles</h4>
+                <div class="option-container">
+                    <div class="option-container-2 form">
+                        <input type="text" id="width" class="sub-option-input" required />
+                        <label for="width" class="label-name">
+                            <span class="content-name">Width<span class="red-dot">*</span></span>
+                        </label>
                     </div>
-
-                    <!-- Imagen Opción 4.1.2 -->
-                    <div class="image-option" onclick="chooseSubOption('Option 4.1.2')">
-                        <img src="media/Bradon-Rose/Newgenpatio_1-4.jpg" alt="Option 4.1.2" class="option-image" />
-                        <p>GRAVEL</p>
+                    <div class="option-container-2 form">
+                        <input type="text" id="length" class="sub-option-input" required />
+                        <label for="length" class="label-name">
+                            <span class="content-name">Length<span class="red-dot">*</span></span>
+                        </label>
                     </div>
-                </div>
-                <div class="button-container">
-                    <button class="back-btn" onclick="goBackToThirdStep()"><i class="fi fi-rr-arrow-small-left flecha-1"></i>Regresar</button>
-                </div>
-            </div>
-
-                <!-- Paso 4.1.1 (detalles para Opción 4.1.1) -->
-                <div class="option-container" id="step-4-1-1-container" style="display: none;">
-                    <h4>Detalles para CONCRETE</h4>
+                    <div class="option-container-2 form">
+                        <input type="text" id="height" class="sub-option-input" required />
+                        <label for="height" class="label-name">
+                            <span class="content-name">Height<span class="red-dot">*</span></span>
+                        </label>
+                    </div>
                     <div class="button-container">
-                        <button class="back-btn" onclick="goBackToStep4_1()"><i class="fi fi-rr-arrow-small-left flecha-1"></i>Regresar</button>
-                        <button class="next-btn" onclick="goToFinalStepFromStep4()"><i class="fi fi-rr-arrow-small-right flecha-2"></i>Siguiente</button>
+                        <button class="back-btn" id="back-btn"><i class="fi fi-rr-arrow-small-left flecha-1"></i>Regresar</button>
+                        <button class="next-btn" id="continue-btn">Siguiente<i class="fi fi-rr-arrow-small-right flecha-2"></i></button>
                     </div>
-                </div>
-                
-                <!-- Paso 4.1.2 (detalles para Opción 4.1.2) -->
-                <div class="option-container" id="step-4-1-2-container" style="display: none;">
-                    <h4>Detalles para GRAVEL</h4>
-                    <div class="button-container">
-                        <button class="back-btn" onclick="goBackToStep4_1()"><i class="fi fi-rr-arrow-small-left flecha-1"></i>Regresar</button>
-                        <button class="next-btn" onclick="goToFinalStepFromStep4()"><i class="fi fi-rr-arrow-small-right flecha-2"></i>Siguiente</button>
-                    </div>
-                </div>
-
-            <!-- Paso 4.2 -->
-            <div class="option-container" id="step-4-2-container" style="display: none;">
-                <h4>Opciones para Freestanding</h4>
-                <!-- Aquí van los elementos específicos para Freestanding -->
-                <div class="button-container">
-                    <button class="back-btn" onclick="goBackToThirdStep()"><i class="fi fi-rr-arrow-small-left flecha-1"></i>Regresar</button>
-                    <button class="next-btn" onclick="showContinue()">Siguiente <i class="fi fi-rr-arrow-small-right flecha-2"></i></button>                    
-
                 </div>
             </div>
+
         
             <!-- Final Step: Continue Button -->
-            <div class="continue-btn" id="continue-btn" style="display: none;">
+            <div class="back-continue-btn" id="last-step" style="display: none;">
                 <div>
-                    <progress min="0" max="100" value="100"></progress>
-                </div>
-                <div class="button-container">
-                    <button class="back-btn" onclick="goBack()"><i class="fi fi-rr-arrow-small-left flecha-1"></i>Regresar</button>
-                    <button class="next-btn" onclick="showContinue()">Siguiente <i class="fi fi-rr-arrow-small-right flecha-2"></i></button>
+                    <h4>HOLA</h4>
                 </div>
             </div>
-        
+
+            <div class="button-container" style="display: none;">
+                <button class="back-btn" id="back-btn"><i class="fi fi-rr-arrow-small-left flecha-1"></i>Regresar</button>
+                <button class="next-btn" id="continue-btn">Siguiente<i class="fi fi-rr-arrow-small-right flecha-2"></i></button>
+            </div>
+            <div class="back-continue-btn-progress">
+                <progress min="0" max="100" value="100"></progress>
+            </div>
         </div>
     
     </section>
