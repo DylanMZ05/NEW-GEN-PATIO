@@ -281,7 +281,7 @@ ul, li {
 }
 
 .gallery-section__projects p {
-    margin: 0px 25vw 10px;
+    margin: 0px 24vw 10px;
 
     font-size: 16px;
 }
@@ -1356,7 +1356,25 @@ ul, li {
 .op__hero {
     height: 100vh;
 
-    background-image: url(../media/Bradon-Rose/Newgenpatio_1-10\(more-pixel\).jpg);
+    background-image: url(../media/Pictures-WEBs/Fotos-para-Fondos/Cover\ Patios\ &\ Pergolas.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.op__hero-op {
+    height: 100vh;
+
+    background-image: url(../media/Pictures-WEBs/Fotos-para-Fondos/Our\ Promise.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.op__hero-services {
+    height: 100vh;
+
+    background-image: url(../media/Pictures-WEBs/Fotos-para-Fondos/Our\ Promise.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -1365,7 +1383,7 @@ ul, li {
 .op__hero-kitchen {
     height: 100vh;
 
-    background-image: url(../media/Pictures-WEBs/Services/Outdoor%20Kitchen/Modern/IMG-20241026-WA0086.jpg);
+    background-image: url(../media/Pictures-WEBs/Fotos-para-Fondos/Outdoor\ Kitchens.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -1680,7 +1698,7 @@ ul, li {
 .gl__hero {
     height: 100vh;
 
-    background-image: url(../media/Pictures-WEBs/Gallery/Fresstanding/Free\ 15.jpg);
+    background-image: url(../media/Pictures-WEBs/Fotos-para-Fondos/Gallery.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
