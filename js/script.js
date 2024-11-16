@@ -410,7 +410,30 @@ function goToPreviousStep(previousStep) {
 
 function showFinalStep() {
     const container = document.querySelector('.fq__form-container');
-    container.innerHTML = '<h4>¡Gracias! Hemos recibido tu solicitud de cotización.</h4>';
+    container.innerHTML = `
+        <h4>¡Gracias! Hemos recibido tu solicitud de cotización.</h4>
+        <form id="quoteForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="zip">Zip Code:</label>
+            <input type="text" id="zip" name="zip" required>
+
+            <label for="notes">Notes (optional):</label>
+            <textarea id="notes" name="notes"></textarea>
+
+            <label for="file">Attached File:</label>
+            <input type="file" id="file" name="file">
+
+            <button type="submit">Enviar</button>
+        </form>
+    `;
 }
 
 // Iniciar en el primer paso
