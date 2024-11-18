@@ -298,11 +298,12 @@ const steps = {
 };
 
 let currentStep = 1;
+let userSelections = { options: [] };
 
 function renderStep(stepNumber) {
     const step = steps[stepNumber];
     const container = document.querySelector('.fq__form-container');
-    
+
     // Limpiar el contenedor
     container.innerHTML = '';
 
@@ -313,26 +314,24 @@ function renderStep(stepNumber) {
 
     // Verificar si el paso tiene opciones con imágenes o campos de entrada
     if (step.options) {
-        // Contenedor de opciones con display flex
         const optionsContainer = document.createElement('div');
         optionsContainer.classList.add('image-options-container');
 
+        if (stepNumber === 14) {
+            optionsContainer.classList.add('step-14');
+        }
+
         step.options.forEach(option => {
-            // Si el paso tiene imágenes, renderizar con imagen
             if (option.img) {
                 const optionContainer = document.createElement('div');
                 optionContainer.classList.add('image-option');
-                
+
                 const img = document.createElement('img');
                 img.src = option.img;
                 img.alt = option.text;
                 img.classList.add('option-image');
-                img.onclick = () => goToNextStep(option.nextStep);
+                img.onclick = () => goToNextStep(option.nextStep, option.text);
 
-                if (stepNumber === 14) {
-                    img.classList.add('step-14-image');
-                }
-                
                 const text = document.createElement('p');
                 text.textContent = option.text;
                 text.classList.add('option-text');
@@ -341,18 +340,15 @@ function renderStep(stepNumber) {
                 optionContainer.appendChild(text);
                 optionsContainer.appendChild(optionContainer);
             } else {
-                // Si no tiene imagen, renderizar solo como botón de texto
                 const button = document.createElement('button');
                 button.classList.add('option');
                 button.textContent = option.text;
-                button.onclick = () => goToNextStep(option.nextStep);
+                button.onclick = () => goToNextStep(option.nextStep, option.text);
                 container.appendChild(button);
             }
         });
-        container.appendChild(optionsContainer); // Añadir el contenedor de opciones al contenedor principal
-    } 
-    
-    else if (step.fields) {
+        container.appendChild(optionsContainer);
+    } else if (step.fields) {
         step.fields.forEach(field => {
             const inputContainer = document.createElement('div');
             inputContainer.classList.add('option-container-2', 'form');
@@ -374,16 +370,18 @@ function renderStep(stepNumber) {
         });
     }
 
+    // Crear un contenedor para los botones
+    const buttonContainer = document.createElement('div');
+    buttonContainer.classList.add('button-container');
+
     // Botón "Regresar" si no es el primer paso
     if (step.previousStep) {
         const backButton = document.createElement('button');
         backButton.classList.add('back-btn');
         backButton.textContent = 'Regresar';
         backButton.onclick = () => goToPreviousStep(step.previousStep);
-        container.appendChild(backButton);
+        buttonContainer.appendChild(backButton);
     }
-
-    
 
     // Botón "Siguiente" si hay un próximo paso (sólo para campos de entrada)
     if (step.fields && step.nextStep) {
@@ -391,11 +389,16 @@ function renderStep(stepNumber) {
         nextButton.classList.add('next-btn');
         nextButton.textContent = 'Siguiente';
         nextButton.onclick = () => goToNextStep(step.nextStep);
-        container.appendChild(nextButton);
+        buttonContainer.appendChild(nextButton);
     }
+
+    container.appendChild(buttonContainer);
 }
 
-function goToNextStep(nextStep) {
+function goToNextStep(nextStep, optionText = null) {
+    if (optionText) {
+        userSelections.options.push(optionText);
+    }
     if (nextStep === 'final') {
         showFinalStep();
     } else {
@@ -406,6 +409,7 @@ function goToNextStep(nextStep) {
 
 function goToPreviousStep(previousStep) {
     currentStep = previousStep;
+    userSelections.options.pop(); // Elimina la última selección al regresar
     renderStep(currentStep);
 }
 
@@ -413,6 +417,7 @@ function showFinalStep() {
     const container = document.querySelector('.fq__form-container');
     container.innerHTML = `
         <h4>¡Gracias! Hemos recibido tu solicitud de cotización.</h4>
+        <p>Vas a pedir Quote sobre: <strong>${userSelections.options.join(', ')}</strong></p>
         <form id="quoteForm">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
@@ -435,6 +440,17 @@ function showFinalStep() {
             <button type="submit">Enviar</button>
         </form>
     `;
+
+    const buttonContainer = document.createElement('div');
+    buttonContainer.classList.add('button-container');
+
+    const backButton = document.createElement('button');
+    backButton.classList.add('back-btn');
+    backButton.textContent = 'Regresar';
+    backButton.onclick = () => goToPreviousStep(currentStep - 1);
+    buttonContainer.appendChild(backButton);
+
+    container.appendChild(buttonContainer);
 }
 
 // Iniciar en el primer paso

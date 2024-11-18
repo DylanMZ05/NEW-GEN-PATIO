@@ -2118,21 +2118,18 @@ display: none !important;
 
 
 
-/* Título */
 .fq__form-container h4 {
     font-size: 1.5em;
     text-align: center;
     margin-bottom: 20px;
 }
 
-/* Contenedor de opciones en flex para alinear imágenes en línea */
 .image-options-container {
     display: flex;
     justify-content: space-between;
-    gap: 20px; /* Espacio entre las imágenes */
+    gap: 20px;
 }
 
-/* Estilos para cada opción con imagen */
 .image-option {
     display: flex;
     flex-direction: column;
@@ -2141,7 +2138,6 @@ display: none !important;
     flex: 1;
 }
 
-/* Estilo para las imágenes */
 .option-image {
     width: 100%;
     height: auto;
@@ -2154,12 +2150,10 @@ display: none !important;
     width: 350px;
 }
 
-/* Efecto hover en las imágenes */
 .option-image:hover {
     transform: scale(1.01);
 }
 
-/* Texto debajo de cada imagen */
 .option-text {
     font-size: 1em;
     font-weight: bold;
@@ -2167,11 +2161,114 @@ display: none !important;
 }
 
 .step-14-image {
-    max-width: 225px; /* Tamaño personalizado para el paso 11 */
-    border-radius: 10px; /* Bordes redondeados adicionales */
+    max-width: 225px;
+    border-radius: 10px;
 }
 
 .step-14-image:hover {
-    transform: scale(1.03); /* Efecto de escala diferente en hover */
+    transform: scale(1.03);
 }
 
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    width: 90%;
+    gap: 10px;
+}
+
+.button-container .back-btn,
+.button-container .next-btn {
+    padding: 5px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: 600;
+}
+
+.button-container .back-btn {
+    border: 1px solid #000;
+    color: #000000;
+}
+
+.button-container .back-btn:hover {
+    background-color: #aaa;
+}
+
+.button-container .next-btn {
+    background-color: #007bff;
+    border: 1px solid #007bff;
+    color: white;
+}
+
+.button-container .next-btn:hover {
+    background-color: #0056b3;
+}
+
+#quoteForm {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#quoteForm label {
+    font-size: 1em;
+    font-weight: bold;
+    color: #555;
+    text-align: left;
+    margin-bottom: 0px;
+}
+
+#quoteForm input,
+#quoteForm textarea {
+    width: 100%;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; 
+}
+
+#quoteForm textarea {
+    height: 80px;
+    resize: none;
+}
+
+#quoteForm button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    width: 100px;
+    padding: 5px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#quoteForm button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.image-options-container.step-14 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.image-options-container.step-14 .option-image {
+    width: 100%;
+    height: auto;
+    max-width: 250px;
+}
+
+.image-options-container.step-14 .option-text {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 5px;
+}
