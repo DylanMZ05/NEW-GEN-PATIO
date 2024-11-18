@@ -2077,44 +2077,7 @@ display: none !important;
 
 
 
-.third-step-container img,
-.fourth-step-container img {
-    width: 350px;
-    height: 250px;
-    object-fit: cover;
 
-    margin: 0 10px 10px;
-    border-radius: 12px;
-
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-}
-
-.third-step-container p,
-.fourth-step-container {
-    font-weight: 600;
-    color: #000;
-}
-
-.back-continue-btn {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.back-continue-btn-progress{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-#step-container, #continue-btn {
-    display: none;
-}
-
-#step-container.active, #continue-btn.active {
-    display: flex;
-}
 
 
 
@@ -2211,7 +2174,7 @@ display: none !important;
 #quoteForm {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 3px;
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
