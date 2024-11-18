@@ -212,6 +212,7 @@ function toggleFaq(element) {
 const steps = {
     1: {
         title: '¿Qué estás buscando?',
+        progress: 0,
         options: [
             { text: 'Pergola/Patio', nextStep: 2 },
             { text: 'Outdoor Kitchen', nextStep: 10 }
