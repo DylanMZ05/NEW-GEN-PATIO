@@ -416,8 +416,8 @@ function goToPreviousStep(previousStep) {
 function showFinalStep() {
     const container = document.querySelector('.fq__form-container');
     container.innerHTML = `
-        <h4>¡Gracias! Hemos recibido tu solicitud de cotización.</h4>
-        <p>Vas a pedir Quote sobre: <strong>${userSelections.options.join(', ')}</strong></p>
+        <h4>Último paso! Completa el formulario para recibir tu quote.</h4>
+        <p>Estás a punto de pedir quote sobre: <strong>${userSelections.options.join(', ')}</strong></p>
         <form id="quoteForm">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>

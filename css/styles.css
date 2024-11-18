@@ -1849,7 +1849,7 @@ display: none !important;
 /* FREE QUOTE */
 
 .fq__home {
-    height: 100vh;
+    min-height: 100vh;
     background-color: var(--color-5);
     
     
@@ -1869,7 +1869,7 @@ display: none !important;
 
     background-color: var(--color-2);
 
-    height: 600px;
+    height: 650px;
     width: 800px;
 
     border-radius: 12px;
@@ -1903,11 +1903,7 @@ display: none !important;
     margin-top: 50px;
 }
 
-.fourth-step-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 
 .option, 
 .sub-option {
@@ -1934,65 +1930,6 @@ display: none !important;
     border: 1px solid var(--color-3);
 
     transition: .25s;
-}
-
-
-.continue-btn {
-    display: none;
-}
-
-
-
-
-
-.flecha {
-    margin-bottom: -5px !important;
-    padding-bottom: -5px !important;
-}
-
-.button-container {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px;
-}
-
-.button-st-container {
-    display: flex;
-    justify-content: end;
-    margin: 20px;
-}
-
-
-
-.back-btn, .continue-btn {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    align-items: center;
-}
-
-.back-btn,
-.next-btn {
-    display: flex;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: var(--color-2);
-    color: #1c2a3a;
-    border: none;
-    cursor: pointer;
-}
-
-.back-btn i,
-.next-btn i {
-    margin-top: 8px;
-}
-
-.flecha-1 {
-    margin-right: 5px;
-}
-
-.flecha-2 {
-    margin-left: 5px;
 }
 
 
@@ -2234,4 +2171,36 @@ display: none !important;
     text-align: center;
     font-size: 14px;
     margin-top: 5px;
+}
+
+@media (max-width: 850px) {
+    .fq__form-container {
+        height: max-content;
+        min-height: 90vw;
+        padding: 20px 0;
+        width: 90vw;
+        margin-top: 135px;
+        margin: 150px 0 20px;
+    }
+
+    .option-container-2 {
+        width: 80vw;
+    }
+
+    .image-option img {
+        width: 42.5vw;
+    }
+
+    .image-options-container.step-14 {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    .image-options-container {
+        flex-direction: column;
+        gap: 1px;
+    }
+
 }
