@@ -417,7 +417,7 @@ function showFinalStep() {
     const container = document.querySelector('.fq__form-container');
     container.innerHTML = `
         <h4>Último paso! Completa el formulario para recibir tu quote.</h4>
-        <p>Estás a punto de pedir quote sobre: <strong>${userSelections.options.join(', ')}</strong></p>
+        <p>Estás a punto de pedir quote sobre: <br><strong>${userSelections.options.join(', ')}</strong></p>
         <form id="quoteForm">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>

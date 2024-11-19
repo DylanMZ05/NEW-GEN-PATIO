@@ -2113,7 +2113,7 @@ display: none !important;
     flex-direction: column;
     gap: 3px;
     width: 100%;
-    max-width: 500px;
+    max-width: 710px;
     margin: 0 auto;
 }
 
@@ -2176,11 +2176,19 @@ display: none !important;
 @media (max-width: 850px) {
     .fq__form-container {
         height: max-content;
-        min-height: 90vw;
+        min-height: 80vh;
         padding: 20px 0;
         width: 90vw;
         margin-top: 135px;
         margin: 150px 0 20px;
+    }
+
+    .fq__form-container h4 {
+        margin: 0 20px 20px;
+    }
+
+    .fq__form-container p {
+        margin: 0 25px;
     }
 
     .option-container-2 {
@@ -2194,6 +2202,14 @@ display: none !important;
     .image-options-container.step-14 {
         display: flex;
         flex-direction: column;
+    }
+
+    #quoteForm {
+        width: 80vw;
+    }
+    
+    .button-container {
+        width: 80vw;
     }
 }
 
