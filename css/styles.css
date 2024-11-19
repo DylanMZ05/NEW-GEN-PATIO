@@ -1849,16 +1849,20 @@ display: none !important;
 /* FREE QUOTE */
 
 .fq__home {
+    position: relative;
     min-height: 100vh;
-    background-color: var(--color-5);
-    
-    
+    background-image: url(../media/Pictures-WEBs/Fotos-para-Fondos/Free\ Quotes-2.jpg);
+    background-size: cover; /* Asegura que la imagen ocupe todo el contenedor */
+    background-position: center;
 
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    overflow: hidden;
 }
+
+
 
 .fq__form-container {
     display: flex;
