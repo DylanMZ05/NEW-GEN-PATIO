@@ -2052,6 +2052,8 @@ display: none !important;
 
 .image-option img {
     width: 350px;
+    height: 250px;
+    object-fit: cover;
 }
 
 .option-image:hover {
@@ -2066,6 +2068,7 @@ display: none !important;
 
 .step-14-image {
     max-width: 225px;
+    height: 150px;
     border-radius: 10px;
 }
 
@@ -2169,6 +2172,7 @@ display: none !important;
     width: 100%;
     height: auto;
     max-width: 250px;
+    aspect-ratio: 3/2;
 }
 
 .image-options-container.step-14 .option-text {
