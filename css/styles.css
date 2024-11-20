@@ -1282,8 +1282,8 @@ ul, li {
 
 
 
-    .fifth-section__opinion {
-        margin-top: 5px;
+    #slides .slide {
+        height: 400px;
     }
 
     .faq-container {
@@ -1292,6 +1292,10 @@ ul, li {
 
     .faq {
         width: 90vw;
+    }
+
+    .sixth-section h4 {
+        font-size: 30px;
     }
 
     .desktop {
@@ -2227,4 +2231,8 @@ display: none !important;
         gap: 1px;
     }
 
+}
+
+.cu__hero {
+    height: 100vh;
 }
