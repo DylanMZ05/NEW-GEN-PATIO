@@ -10,8 +10,8 @@ const steps = {
         title: '¿What are you looking for?',
         progress: 0,
         options: [
-            { img: 'media/Pictures-WEB-2/Fotos-para-Fondos/Cover Patios & Pergolas.jpg', text: 'Patios & Pergolas', nextStep: 2 },
-            { img: 'media/Pictures-WEB-2/Fotos-para-Fondos/Outdoor Kitchens.jpg', text: 'Outdoor Kitchens', nextStep: 2 }
+            { img: 'media/Pictures-WEB-1/Fotos-para-Fondos/Cover Patios & Pergolas.jpg', text: 'Patios & Pergolas', nextStep: 2 },
+            { img: 'media/Pictures-WEB-1/Fotos-para-Fondos/Outdoor Kitchens.jpg', text: 'Outdoor Kitchens', nextStep: 10 }
         ],
     },
     2: {
@@ -27,33 +27,33 @@ const steps = {
     3: {
         title: 'Type',
         options: [
-            { img: 'media/Pictures-WEB-2/Free-QUOTE/Patios-&-Pergolas/Attached.jpg', text: 'Attached', nextStep: 5 },
-            { img: 'media/Pictures-WEB-2/Free-QUOTE/Patios-&-Pergolas/Freestanding.jpg', text: 'Freestanding', nextStep: 4 }
+            { img: 'media/Pictures-WEB-1/Free-QUOTE/Patios-&-Pergolas/Attached.jpg', text: 'Attached', nextStep: 5 },
+            { img: 'media/Pictures-WEB-1/Free-QUOTE/Patios-&-Pergolas/Freestanding.jpg', text: 'Freestanding', nextStep: 4 }
         ],
         previousStep: 2
     },
     4: {
         title: 'Style',
         options: [
-            { img: 'media/Pictures-WEB-2/Free-QUOTE/Patios-&-Pergolas/Fresstanding/Regular.jpg', text: 'Regular', nextStep: 5 },
-            { img: 'media/Pictures-WEB-2/Free-QUOTE/Patios-&-Pergolas/Fresstanding/Cantilever.jpg', text: 'Cantilever', nextStep: 5 }
+            { img: 'media/Pictures-WEB-1/Free-QUOTE/Patios-&-Pergolas/Fresstanding/Regular.jpg', text: 'Regular', nextStep: 5 },
+            { img: 'media/Pictures-WEB-1/Free-QUOTE/Patios-&-Pergolas/Fresstanding/Cantilever.jpg', text: 'Cantilever', nextStep: 5 }
         ],
         previousStep: 3
     },
     5: {
         title: 'Foundation',
         options: [
-            { img: 'media/Pictures-WEB-2/Free-QUOTE/Patios-&-Pergolas/Foundation/Concrete.jpg', text: 'Concrete', nextStep: 'final' },
-            { img: 'media/Pictures-WEB-2/Free-QUOTE/Patios-&-Pergolas/Foundation/Grass & Dirt.jpg', text: 'Grass & Dirt', nextStep: 'final' },
-            { img: 'media/Pictures-WEB-2/Free-QUOTE/Patios-&-Pergolas/Foundation/Travertine.jpg', text: 'Travertine', nextStep: 'final' }
+            { img: 'media/Pictures-WEB-1/Free-QUOTE/Patios-&-Pergolas/Foundation/Concrete.jpg', text: 'Concrete', nextStep: 'final' },
+            { img: 'media/Pictures-WEB-1/Free-QUOTE/Patios-&-Pergolas/Foundation/Grass & Dirt.jpg', text: 'Grass & Dirt', nextStep: 'final' },
+            { img: 'media/Pictures-WEB-1/Free-QUOTE/Patios-&-Pergolas/Foundation/Travertine.jpg', text: 'Travertine', nextStep: 'final' }
         ],
         previousStep: 4
     },
     10: {
         title: 'Style',
         options: [
-            { img: 'media/Bradon-Rose/Newgenpatio_1-3.jpg', text: 'MODERN', nextStep: 11 },
-            { img: 'media/Bradon-Rose/Newgenpatio_1-5.jpg', text: 'TRADITIONAL', nextStep: 12 }
+            { img: 'media/Pictures-WEB-1/Free-QUOTE/Outdoor-Kitchen/Modern.jpg', text: 'Modern', nextStep: 11 },
+            { img: 'media/Pictures-WEB-1/Free-QUOTE/Outdoor-Kitchen/Traditional.jpg', text: 'Traditional', nextStep: 12 }
         ],
         previousStep: 1
     },
@@ -76,8 +76,8 @@ const steps = {
     13: {
         title: 'Exterior Material',
         options: [
-            { img: 'media/Bradon-Rose/Newgenpatio_1-3.jpg', text: 'COMPOSITE', nextStep: 'final' },
-            { img: 'media/Bradon-Rose/Newgenpatio_1-5.jpg', text: 'THERMO WOOD', nextStep: 'final' }
+            { img: 'media/Pictures-WEB-1/Free-QUOTE/Outdoor-Kitchen/Modern/Composite.jpg', text: 'Composite', nextStep: 'final' },
+            { img: 'media/Pictures-WEB-1/Free-QUOTE/Outdoor-Kitchen/Modern/Thermo Wood.jpg', text: 'Thermo Wood', nextStep: 'final' }
         ],
         nextStep: 12,
         previousStep: 11
@@ -85,9 +85,9 @@ const steps = {
     14: {
         title: 'Exterior Material',
         options: [
-            { img: 'media/Bradon-Rose/Newgenpatio_1-3.jpg', text: 'COMPOSITE', nextStep: 'final' },
-            { img: 'media/Bradon-Rose/Newgenpatio_1-5.jpg', text: 'THERMO WOOD', nextStep: 'final' },
-            { img: 'media/Bradon-Rose/Newgenpatio_1-5.jpg', text: 'TRADITIONAL', nextStep: 'final' }
+            { img: 'media/Pictures-WEB-1/Free-QUOTE/Outdoor-Kitchen/Traditional/Brick.jpg', text: 'COMPOSITE', nextStep: 'final' },
+            { img: 'media/Pictures-WEB-1/Free-QUOTE/Outdoor-Kitchen/Traditional/Stone.jpg', text: 'THERMO WOOD', nextStep: 'final' },
+            { img: 'media/Pictures-WEB-1/Free-QUOTE/Outdoor-Kitchen/Traditional/Stucco.jpg', text: 'TRADITIONAL', nextStep: 'final' }
         ],
         nextStep: 12,
         previousStep: 12
