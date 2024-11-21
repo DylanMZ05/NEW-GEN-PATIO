@@ -10,8 +10,8 @@ const steps = {
         title: '¿What are you looking for?',
         progress: 0,
         options: [
-            { img: 'media/Pictures-WEBs/Fotos-para-Fondos/Cover Patios & Pergolas.jpg', text: 'Patios & Pergolas', nextStep: 2 },
-            { img: 'media/Pictures-WEBs/Fotos-para-Fondos/Outdoor Kitchens.jpg', text: 'Outdoor Kitchens', nextStep: 2 }
+            { img: 'media/Pictures-WEB-2/Fotos-para-Fondos/Cover Patios & Pergolas.jpg', text: 'Patios & Pergolas', nextStep: 2 },
+            { img: 'media/Pictures-WEB-2/Fotos-para-Fondos/Outdoor Kitchens.jpg', text: 'Outdoor Kitchens', nextStep: 2 }
         ],
     },
     2: {
@@ -27,25 +27,25 @@ const steps = {
     3: {
         title: 'Type',
         options: [
-            { img: 'media/Pictures-WEBs/Free-QUOTE/Patios-&-Pergolas/Attached.jpeg', text: 'Attached', nextStep: 5 },
-            { img: 'media/Pictures-WEBs/Free-QUOTE/Patios-&-Pergolas/Freestanding.jpeg', text: 'Freestanding', nextStep: 4 }
+            { img: 'media/Pictures-WEB-2/Free-QUOTE/Patios-&-Pergolas/Attached.jpeg', text: 'Attached', nextStep: 5 },
+            { img: 'media/Pictures-WEB-2/Free-QUOTE/Patios-&-Pergolas/Freestanding.jpeg', text: 'Freestanding', nextStep: 4 }
         ],
         previousStep: 2
     },
     4: {
         title: 'Style',
         options: [
-            { img: 'media/Pictures-WEBs/Free-QUOTE/Patios-&-Pergolas/Fresstanding/Regular.jpeg', text: 'Regular', nextStep: 5 },
-            { img: 'media/Pictures-WEBs/Free-QUOTE/Patios-&-Pergolas/Fresstanding/Cantilever.jpg', text: 'Cantilever', nextStep: 5 }
+            { img: 'media/Pictures-WEB-2/Free-QUOTE/Patios-&-Pergolas/Fresstanding/Regular.jpeg', text: 'Regular', nextStep: 5 },
+            { img: 'media/Pictures-WEB-2/Free-QUOTE/Patios-&-Pergolas/Fresstanding/Cantilever.jpg', text: 'Cantilever', nextStep: 5 }
         ],
         previousStep: 3
     },
     5: {
         title: 'Foundation',
         options: [
-            { img: 'media/Pictures-WEBs/Free-QUOTE/Patios-&-Pergolas/Foundation/Concrete.jpg', text: 'Concrete', nextStep: 'final' },
-            { img: 'media/Pictures-WEBs/Free-QUOTE/Patios-&-Pergolas/Foundation/Grass & Dirt.jpg', text: 'Grass & Dirt', nextStep: 'final' },
-            { img: 'media/Pictures-WEBs/Free-QUOTE/Patios-&-Pergolas/Foundation/Travertine.jpg', text: 'Travertine', nextStep: 'final' }
+            { img: 'media/Pictures-WEB-2/Free-QUOTE/Patios-&-Pergolas/Foundation/Concrete.jpg', text: 'Concrete', nextStep: 'final' },
+            { img: 'media/Pictures-WEB-2/Free-QUOTE/Patios-&-Pergolas/Foundation/Grass & Dirt.jpg', text: 'Grass & Dirt', nextStep: 'final' },
+            { img: 'media/Pictures-WEB-2/Free-QUOTE/Patios-&-Pergolas/Foundation/Travertine.jpg', text: 'Travertine', nextStep: 'final' }
         ],
         previousStep: 4
     },
