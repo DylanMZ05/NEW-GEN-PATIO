@@ -2231,6 +2231,11 @@ display: none !important;
         gap: 1px;
     }
 
+    .image-option img {
+        width: 70vw;
+        height: 250px;
+    }
+
 }
 
 .cu__hero {
