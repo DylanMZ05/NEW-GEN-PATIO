@@ -27,16 +27,16 @@ const steps = {
     3: {
         title: 'Type',
         options: [
-            { img: 'media/Pictures-WEB-2/Free-QUOTE/Patios-&-Pergolas/Attached.jpeg', text: 'Attached', nextStep: 5 },
-            { img: 'media/Pictures-WEB-2/Free-QUOTE/Patios-&-Pergolas/Freestanding.jpeg', text: 'Freestanding', nextStep: 4 }
+            { img: 'media/Pictures-WEB-2/Free-QUOTE/Patios-&-Pergolas/Attached.jpg', text: 'Attached', nextStep: 5 },
+            { img: 'media/Pictures-WEB-2/Free-QUOTE/Patios-&-Pergolas/Freestanding.jpg', text: 'Freestanding', nextStep: 4 }
         ],
         previousStep: 2
     },
     4: {
         title: 'Style',
         options: [
-            { img: 'media/Pictures-WEB-2/Free-QUOTE/Patios-&-Pergolas/Fresstanding/Regular.jpeg', text: 'Regular', nextStep: 5 },
-            { img: 'media/Pictures-WEB-2/Free-QUOTE/Patios-&-Pergolas/Fresstanding/Cantilever.jpg', text: 'Cantilever', nextStep: 5 }
+            { img: 'media/Pictures-WEB-2/Free-QUOTE/Patios-&-Pergolas/Fresstanding/Regular-2.jpeg', text: 'Regular', nextStep: 5 },
+            { img: 'media/Pictures-WEB-2/Free-QUOTE/Patios-&-Pergolas/Fresstanding/Cantilever-2.jpg', text: 'Cantilever', nextStep: 5 }
         ],
         previousStep: 3
     },
