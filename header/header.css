@@ -26,6 +26,16 @@ header.scrolled {
     margin: 5px 10px 5px 50px;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    color: var(--color-2);
+}
+
+.logo p {
+    margin: 0;
+    font-weight: 500;
+}
 
 .hamburger {
     display: none;
@@ -64,7 +74,8 @@ header a {
     color: #f4f4f4;
 }
 
-header.scrolled a {
+header.scrolled a,
+header.scrolled .logo {
     color: #000;
 }
 
@@ -88,7 +99,7 @@ header.scrolled ul li:last-child a {
     scroll-margin-top: 50px;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1150px) {
     .movile {
         display: flex;
         align-items: center;
@@ -187,4 +198,18 @@ header.scrolled ul li:last-child a {
     }
 
     
+}
+
+@media (max-width: 400px) {
+    .header__div img {
+        margin-left: 10px;
+    }
+
+    .logo b {
+        font-size: 14px;
+    }
+
+    .logo p {
+        font-size: 12px;
+    }
 }
