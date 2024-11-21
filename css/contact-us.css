@@ -6,7 +6,7 @@
     background-color: #ffffff;
     padding: 50px;
     border-radius: 16px;
-    width: 40vw;
+    width: 500px;
 }
 
 .contact-form {
@@ -54,15 +54,24 @@ button:hover {
     text-align: left;
     padding: 0;
     margin: 0 0 0 -1px;
-    top: 428px;
-    left: 50.1%;
-    transform: translateX(-50%);
+    top: 45px;
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
     background-color: white;
     border: 1px solid #CCC;
     white-space: nowrap;
-    width: 270px !important;
-    max-height: 200px !important;
+    width: 350px !important;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 950px) {
+    .form-container {
+        margin: 100px 10px 0;
+    }
+}
+
+@media (max-width: 520px) {
+    .iti__country-list {
+        width: 220px !important;
+    }
 }
