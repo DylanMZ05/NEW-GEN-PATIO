@@ -35,8 +35,8 @@ const steps = {
     4: {
         title: 'Style',
         options: [
-            { img: 'media/Pictures-WEB-2/Free-QUOTE/Patios-&-Pergolas/Fresstanding/Regular-2.jpeg', text: 'Regular', nextStep: 5 },
-            { img: 'media/Pictures-WEB-2/Free-QUOTE/Patios-&-Pergolas/Fresstanding/Cantilever-2.jpg', text: 'Cantilever', nextStep: 5 }
+            { img: 'media/Pictures-WEB-2/Free-QUOTE/Patios-&-Pergolas/Fresstanding/Regular.jpg', text: 'Regular', nextStep: 5 },
+            { img: 'media/Pictures-WEB-2/Free-QUOTE/Patios-&-Pergolas/Fresstanding/Cantilever.jpg', text: 'Cantilever', nextStep: 5 }
         ],
         previousStep: 3
     },
