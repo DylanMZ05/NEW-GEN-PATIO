@@ -36,15 +36,16 @@ input, select, button {
 }
 
 button {
-    background-color: #3A3AFF;
+    background-color: #ff6524;
     color: white;
     font-size: 16px;
     border: none;
     cursor: pointer;
+    border-radius: 50px !important;
 }
 
 button:hover {
-    background-color: #2a2acd;
+    background-color: #e65c21;
 }
 
 .iti__country-list {

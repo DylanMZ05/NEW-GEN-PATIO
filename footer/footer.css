@@ -248,3 +248,76 @@
         flex-direction: column;
     }
 }
+
+.form-container {
+    display: flex;
+    justify-content: start;
+}
+
+.contact-form-2 {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+input, select, button {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.phone-input {
+    display: flex;
+    gap: 5px;
+}
+
+button {
+    background-color: #ff6524;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px !important;
+    margin-top: 10px !important;
+}
+
+button:hover {
+    background-color: #e65c21;
+}
+
+.iti__country-list {
+    position: absolute;
+    z-index: 2;
+    list-style: none;
+    text-align: left;
+    padding: 0;
+    margin: 0 0 0 -1px;
+    top: 45px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    border: 1px solid #CCC;
+    white-space: nowrap;
+    width: 350px !important;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 950px) {
+    .form-container {
+        margin: 100px 10px 0;
+    }
+}
+
+@media (max-width: 520px) {
+    .iti__country-list {
+        width: 220px !important;
+    }
+}
