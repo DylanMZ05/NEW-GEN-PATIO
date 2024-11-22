@@ -71,7 +71,7 @@ ul, li {
 
     display: flex;
     justify-content: center;
-    align-items: baselinec;
+    align-items: center;
     flex-direction: column;
 }
 
@@ -2268,7 +2268,6 @@ display: none !important;
 }
 
 .cu__hero {
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
