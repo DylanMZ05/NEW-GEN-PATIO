@@ -45,7 +45,7 @@ const steps = {
         options: [
             { img: 'media/Pictures-WEB-1/Free-QUOTE/Patios-&-Pergolas/Foundation/Concrete.jpg', text: 'Concrete', nextStep: 'final' },
             { img: 'media/Pictures-WEB-1/Free-QUOTE/Patios-&-Pergolas/Foundation/Grass & Dirt.jpg', text: 'Grass & Dirt', nextStep: 'final' },
-            { img: 'media/Pictures-WEB-1/Free-QUOTE/Patios-&-Pergolas/Foundation/Travertine.jpg', text: 'Travertine', nextStep: 'final' }
+            { img: 'media/Pictures-WEB-1/Free-QUOTE/Patios-&-Pergolas/Foundation/Travertine.jpg', text: 'Travertine & Pavers', nextStep: 'final' }
         ],
         previousStep: 4
     },
@@ -85,9 +85,9 @@ const steps = {
     14: {
         title: 'Exterior Material',
         options: [
-            { img: 'media/Pictures-WEB-1/Free-QUOTE/Outdoor-Kitchen/Traditional/Brick.jpg', text: 'COMPOSITE', nextStep: 'final' },
-            { img: 'media/Pictures-WEB-1/Free-QUOTE/Outdoor-Kitchen/Traditional/Stone.jpg', text: 'THERMO WOOD', nextStep: 'final' },
-            { img: 'media/Pictures-WEB-1/Free-QUOTE/Outdoor-Kitchen/Traditional/Stucco.jpg', text: 'TRADITIONAL', nextStep: 'final' }
+            { img: 'media/Pictures-WEB-1/Free-QUOTE/Outdoor-Kitchen/Traditional/Brick.jpg', text: 'Composite', nextStep: 'final' },
+            { img: 'media/Pictures-WEB-1/Free-QUOTE/Outdoor-Kitchen/Traditional/Stone.jpg', text: 'Thermo Wood', nextStep: 'final' },
+            { img: 'media/Pictures-WEB-1/Free-QUOTE/Outdoor-Kitchen/Traditional/Stucco.jpg', text: 'Traditional', nextStep: 'final' }
         ],
         nextStep: 12,
         previousStep: 12
@@ -213,8 +213,8 @@ function goToPreviousStep(previousStep) {
 function showFinalStep() {
     const container = document.querySelector('.fq__form-container');
     container.innerHTML = `
-        <h4>Último paso! Completa el formulario para recibir tu quote.</h4>
-        <p>Estás a punto de pedir quote sobre: <br><strong>${userSelections.options.join(', ')}</strong></p>
+        <h4>Final step! Complete the form to receive your quote.</h4>
+        <p>You're about to request a quote for: <br><strong>${userSelections.options.join(', ')}</strong></p>
         <form id="quoteForm">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
@@ -234,7 +234,7 @@ function showFinalStep() {
             <label for="file">Attached File:</label>
             <input type="file" id="file" name="file">
 
-            <button type="submit">Enviar</button>
+            <button type="submit">Submit</button>
         </form>
     `;
 
@@ -243,7 +243,7 @@ function showFinalStep() {
 
     const backButton = document.createElement('button');
     backButton.classList.add('back-btn');
-    backButton.textContent = 'Regresar';
+    backButton.textContent = 'Go back';
     backButton.onclick = () => goToPreviousStep(currentStep);
     buttonContainer.appendChild(backButton);
 
