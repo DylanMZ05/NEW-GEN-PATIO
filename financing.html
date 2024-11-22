@@ -69,17 +69,46 @@
                     <label for="amount">Amount</label>
                     <span id="amountValue">$72,000</span>
                     <input type="range" id="amount" min="500" max="200000" step="500" value="72000" oninput="updateValues()">
-                        
+                    <div class="precios">
+                        <div>
+                            <p>MIN</p>
+                            <p>$500</p>
+                        </div>
+                        <div>
+                            <p class="end">MAX</p>
+                            <p>$200,000</p>
+                        </div>
+                    </div>
                 </div>
                 <div>
                     <label for="apr">APR</label>
                     <span id="aprValue">15.3%</span>
-                    <input type="range" id="apr" min="0" max="39" step="0.1" value="15.3" oninput="updateValues()">
+                    <input type="range" id="apr" min="0.1" max="39" step="0.1" value="15.3" oninput="updateValues()">
+                    <div class="precios">
+                        <div>
+                            <p>MIN</p>
+                            <p>0.1%</p>
+                        </div>
+                        <div>
+                            <p class="end">MAX</p>
+                            <p>39%</p>
+                        </div>
+                    </div>    
                 </div>
                 <div>
-                    <label for="term">Financing term (in years)</label>
-                    <span id="termValue">5 years</span>
-                    <input type="range" id="term" min="1" max="12" step="1" value="5" oninput="updateValues()">
+                    <label for="term">Financing term<br><span style="color: #494949;">(in months)</span></label>
+                    <span id="termValue">5 months</span>
+                    <input type="range" id="term" min="1" max="36" step="1" value="5" oninput="updateValues()">
+                    <div class="precios">
+                        <div>
+                            <p>MIN</p>
+                            <p>1 MONTH</p>
+                        </div>
+                        <div>
+                            <p class="end">MAX</p>
+                            <p>12 MONTHS</p>
+                        </div>
+                    </div>    
                 </div>
             </div>
             <div class="results">

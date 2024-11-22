@@ -15,7 +15,7 @@ function updateValues() {
     // Actualizar valores visibles en la UI
     document.getElementById('amountValue').innerText = `$${amount.toLocaleString()}`;
     document.getElementById('aprValue').innerText = `${(apr * 100).toFixed(1)}%`;
-    document.getElementById('termValue').innerText = `${term} years`;
+    document.getElementById('termValue').innerText = `${term} months`;
 
     // Cálculo del pago mensual
     const monthlyRate = apr / 12;
