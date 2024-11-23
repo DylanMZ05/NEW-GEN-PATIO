@@ -85,9 +85,9 @@ const steps = {
     14: {
         title: 'Exterior Material',
         options: [
-            { img: 'media/Pictures-WEB-1/Free-QUOTE/Outdoor-Kitchen/Traditional/Brick.jpg', text: 'Composite', nextStep: 'final' },
-            { img: 'media/Pictures-WEB-1/Free-QUOTE/Outdoor-Kitchen/Traditional/Stone.jpg', text: 'Thermo Wood', nextStep: 'final' },
-            { img: 'media/Pictures-WEB-1/Free-QUOTE/Outdoor-Kitchen/Traditional/Stucco.jpg', text: 'Traditional', nextStep: 'final' }
+            { img: 'media/Pictures-WEB-1/Free-QUOTE/Outdoor-Kitchen/Traditional/Brick.jpg', text: 'Brick', nextStep: 'final' },
+            { img: 'media/Pictures-WEB-1/Free-QUOTE/Outdoor-Kitchen/Traditional/Stone.jpg', text: 'Stone', nextStep: 'final' },
+            { img: 'media/Pictures-WEB-1/Free-QUOTE/Outdoor-Kitchen/Traditional/Stucco.jpg', text: 'Stucco', nextStep: 'final' }
         ],
         nextStep: 12,
         previousStep: 12
