@@ -596,19 +596,22 @@
     
             <form id="form">
                 <div class="field">
-                    <label for="from_name">from_name</label>
-                    <input type="text" name="from_name" id="from_name">
+                    <label for="from_name">Name</label>
+                    <input type="text" name="from_name" id="from_name" placeholder="Type your name" minlength="3" pattern="[A-Za-z\s]{3,}" required title="Name must have at least 3 letters and only contain letters or spaces.">
                 </div>
                 <div class="field">
-                    <label for="to_name">to_name</label>
-                    <input type="text" name="to_name" id="to_name">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="youremail@gmail.com" required>
                 </div>
                 <div class="field">
-                    <label for="message">message</label>
-                    <input type="text" name="message" id="message">
+                    <label for="phone">Phone number</label>
+                    <input type="tel" name="phone" id="phone" placeholder="Example: +1 555 123-4567" pattern="\+1\s\d{3}\s\d{3}-\d{4}" minlength="14" required title="Please enter a valid phone number in the format: +1 555 123-4567">
                 </div>
-
-                <input type="submit" id="button" value="Send Email" >
+                <div class="field">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" placeholder="Write your message" minlength="8" required title="Message must be at least 8 characters long."></textarea>
+                </div>
+                <input type="submit" id="button" value="Send Email">
             </form>
 
             <div class="footer-text footer-text-container">

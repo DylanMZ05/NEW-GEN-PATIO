@@ -2272,3 +2272,8 @@ display: none !important;
     justify-content: center;
     align-items: center;
 }
+
+footer .field {
+    display: flex;
+    flex-direction: column;
+}
