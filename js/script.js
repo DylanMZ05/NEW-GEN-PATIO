@@ -70,24 +70,23 @@ function toggleFaq(element) {
 
 const btn = document.getElementById('button');
 
-// Agrega un listener al formulario
-document.getElementById('form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevenir envío predeterminado
+document.getElementById('form')
+    .addEventListener('submit', function(event) {
+    event.preventDefault();
 
-    btn.value = 'Sending...'; // Cambiar el texto del botón mientras se envía
+    btn.value = 'Sending...';
 
-    const serviceID = 'default_service'; // ID del servicio de EmailJS
-    const templateID = 'template_01v4ztg'; // ID de tu plantilla en EmailJS
+    const serviceID = 'default_service';
+    const templateID = 'template_01v4ztg';
 
-    // Enviar los datos del formulario con EmailJS
     emailjs.sendForm(serviceID, templateID, this)
         .then(() => {
-            btn.value = 'Send Email'; // Volver a texto inicial
-            alert('Email sent successfully!'); // Notificar al usuario
-        })
-        .catch((err) => {
-            btn.value = 'Send Email'; // Volver a texto inicial
-            console.error('Error:', err);
-            alert('Failed to send email. Please try again later.'); // Mostrar error
-        });
+        btn.value = 'Send Email';
+        alert('Sent!');
+        this.reset();
+        window.scrollTo(0, 0); 
+    }, (err) => {
+        btn.value = 'Send Email';
+        alert(JSON.stringify(err));
+    });
 });
