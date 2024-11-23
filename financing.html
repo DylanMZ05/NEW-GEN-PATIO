@@ -17,6 +17,12 @@
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+    emailjs.init('4Kq4zGQMojtXolPnb')
+    </script>
 </head>
 <body>
     
@@ -112,26 +118,82 @@
                 </div>
             </div>
             <div class="results">
-                <h3>Estimated min. monthly payment</h3>
-                <div id="payment">$1,724.23</div>
-                <p>Total Amount: <span id="totalAmount">$72,000</span></p>
+                <h3 class="hidde">Estimated min. monthly payment</h3>
+                <div id="payment" class="hidde">$1,724.23</div>
+                <p class="total-amount">Total Amount: <span id="totalAmount">$72,000</span></p>
                 <p>Monthly Payment: <span id="monthlyPayment">$1,724.23</span></p>
-                <button>See Your Personalized Offers</button>
+                <button onclick="window.location.href='financing-options.html';">See Your Personalized Offers</button>
             </div>
         </div>
     
     </section>
     
     
-    <div id="footer-placeholder"></div>
-
-    <script>
-        fetch("footer/footer.html")
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("footer-placeholder").innerHTML = data;
-            });
-    </script>
+    <footer class="footer">
+        <div class="footer-margin">
+            <h4 class="footer-title">Get in Touch</h4>
+    
+            <form id="form">
+                <div class="field">
+                    <label for="from_name">from_name</label>
+                    <input type="text" name="from_name" id="from_name">
+                </div>
+                <div class="field">
+                    <label for="to_name">to_name</label>
+                    <input type="text" name="to_name" id="to_name">
+                </div>
+                <div class="field">
+                    <label for="message">message</label>
+                    <input type="text" name="message" id="message">
+                </div>
+    
+                <input type="submit" id="button" value="Send Email" >
+            </form>
+    
+    
+            <div class="footer-text footer-text-container">
+                <div class="footer-text footer-div">
+                    <div class="new-gen">
+                        <h5>NEW GEN PATIO</h5>
+                        <p>
+                            Transforming your outdoor spaces with expertly crafted patios and pergolas. 
+                            <br><br>
+                            We specialize in creating comfortable, beautiful spaces for family gatherings, outdoor relaxation, and lasting memories.
+                            <br><br>
+                            Desing, quality, and communication at the heart of every project.
+                        </p>
+                    </div>
+                </div>
+                <div class="footer-text footer-div column">
+                    <h5>CONTACT</h5>
+                    <div class="center footer-div-2 mail">
+                        <img src="media/DYLAN-ADDS/icons8-phone-26 1.png" alt="" class="icon-spacing margin-r-5">
+                        <a href="https://wa.me/13465819082" target="_blank">346-581-9082</a>
+                    </div>
+                    <div class="center footer-div start">
+                        <img src="media/DYLAN-ADDS/icons8-phone-26 2.png" alt="" class="icon-spacing margin-r-5">
+                        <a href="mailto:info@newgenpatio.io">info@newgenpatio.io</a>
+                    </div>
+                </div>
+                <div class="footer-text footer-div contact">
+                    <div>
+                        <h5>LOCATION</h5>
+                        <p>27805 Ellie Oak Ln, Spring, Texas. 77386</p>
+                    </div>
+                </div>
+            </div>    
+            <hr>
+            <div class="footer-end">
+                <p>© 2024 NEW GEN PATIO ALL RIGHTS RESERVED</p>
+                <div>
+                    <a href=""><img src="media/DYLAN-ADDS/icons8-facebook-32 (1) 1.png" alt=""></a>
+                    <a href=""><img src="media/DYLAN-ADDS/icons8-instagram-32 1.png" alt=""></a>
+                    <a href=""><img src="media/DYLAN-ADDS/icons8-tiktok-50 1.png" alt=""></a>
+                    <a href=""><img src="media/DYLAN-ADDS/icons8-pinterest-50 1.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="js/calculator.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

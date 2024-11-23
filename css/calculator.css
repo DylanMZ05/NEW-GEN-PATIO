@@ -84,10 +84,51 @@ button {
     text-align: end;
 }
 
+.total-amount {
+    font-size: 36px;
+    font-weight: 500;
+}
+
 #payment,
 #totalAmount,
 #monthlyPayment {
     font-size: 36px;
+}
+
+.hidde {
+    display: none;
+}
+
+.options-hero {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.options-hero h4 {
+    font-weight: 600;
+    font-size: 36px;
+    color: #000;
+}
+
+.options-hero b {
+    margin: 15px;
+    font-size: 24px;
+}
+
+.options-hero a {
+    text-decoration: none;
+}
+
+.options-hero-container img {
+    width: 300px;
+    height: 100px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px #000;
+    margin: 10px;
 }
 
 @media (max-width: 1150px) {
@@ -103,5 +144,23 @@ button {
 
     .inputs, .results {
         margin: 10px 0;
+    }
+
+    .options-hero {
+        text-align: center;
+    }
+
+    .options-hero-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 350px) {
+    .options-hero-container img {
+        width: 95vw;
+        height: 30vw;
     }
 }
