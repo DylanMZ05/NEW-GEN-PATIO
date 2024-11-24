@@ -320,4 +320,16 @@ input, select, .form-button {
     .iti__country-list {
         width: 220px !important;
     }
+
+    #form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .field,
+    #button {
+        width: 90vw;
+    }
 }

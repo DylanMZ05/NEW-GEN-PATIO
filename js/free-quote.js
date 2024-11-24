@@ -17,9 +17,9 @@ const steps = {
     2: {
         title: 'Measurement',
         fields: [
-            { label: 'Width', id: 'width' },
-            { label: 'Length', id: 'length' },
-            { label: 'Height', id: 'height' }
+            { label: 'Width', id: 'width', required: true },
+            { label: 'Length', id: 'length', required: true },
+            { label: 'Height', id: 'height', required: true }
         ],
         nextStep: 3,
         previousStep: 1
@@ -60,7 +60,7 @@ const steps = {
     11: {
         title: 'Measurement',
         fields: [
-            { label: 'Linear Feet', id: 'linear-feet' },
+            { label: 'Linear Feet', id: 'linear-feet', required: true },
         ],
         nextStep: 13,
         previousStep: 10
@@ -68,7 +68,7 @@ const steps = {
     12: {
         title: 'Measurement',
         fields: [
-            { label: 'Linear Feet', id: 'linear-feet' },
+            { label: 'Linear Feet', id: 'linear-feet', required: true },
         ],
         nextStep: 14,
         previousStep: 10
@@ -96,6 +96,8 @@ const steps = {
 
 let currentStep = 1;
 let userSelections = { options: [] };
+
+let inputs = [];
 
 function renderStep(stepNumber) {
     const step = steps[stepNumber];
@@ -156,6 +158,8 @@ function renderStep(stepNumber) {
             input.required = true;
             input.classList.add('sub-option-input');
 
+            input.addEventListener('input', checkInputsValue);
+
             const label = document.createElement('label');
             label.htmlFor = field.id;
             label.classList.add('label-name');
@@ -186,10 +190,33 @@ function renderStep(stepNumber) {
         nextButton.classList.add('next-btn');
         nextButton.textContent = 'Continue';
         nextButton.onclick = () => goToNextStep(step.nextStep);
+
+        let stepsRequired = false;
+
+        step.fields.forEach(field => {
+            if(stepsRequired) return;
+            stepsRequired = field.required;
+        });
+
+        nextButton.disabled = stepsRequired;
         buttonContainer.appendChild(nextButton);
+
+        const width = document.getElementById('width');
+        const height = document.getElementById('height');
+        const length = document.getElementById('length');
+        const linearFeet = document.getElementById('linear-feet');
+
+        inputs = [width, height, length, linearFeet];
     }
 
     container.appendChild(buttonContainer);
+}
+
+function checkInputsValue(){
+    const nextButton = document.querySelector('.next-btn');
+    const inputsFiltered = inputs.filter(input => input);
+    const allFilled = Array.from(inputsFiltered).every(input => input.value.trim() !== '');
+    nextButton.disabled = !allFilled;
 }
 
 function goToNextStep(nextStep, optionText = null) {
@@ -252,3 +279,32 @@ function showFinalStep() {
 
 // Iniciar en el primer paso
 renderStep(currentStep);
+
+
+
+
+
+
+
+const btn = document.getElementById('button');
+
+document.getElementById('form')
+    .addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    btn.value = 'Sending...';
+
+    const serviceID = 'default_service';
+    const templateID = 'template_01v4ztg';
+
+    emailjs.sendForm(serviceID, templateID, this)
+        .then(() => {
+        btn.value = 'Send Email';
+        alert('Sent!');
+        this.reset();
+        window.scrollTo(0, 0); 
+    }, (err) => {
+        btn.value = 'Send Email';
+        alert(JSON.stringify(err));
+    });
+});
