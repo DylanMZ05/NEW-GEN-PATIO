@@ -2208,8 +2208,24 @@ display: none !important;
     margin-top: 5px;
 }
 
+#quoteFormContainer {
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 12px;
+    margin-top: 105px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+#quoteFormContainer {
+    display: none;
+}
+
 @media (max-width: 1150px) {
     .fq__form-container {
+        margin-top: 150px;
+    }
+
+    #quoteFormContainer {
         margin-top: 150px;
     }
 }
@@ -2252,6 +2268,22 @@ display: none !important;
     .button-container {
         width: 80vw;
     }
+    
+    .option-container-2,
+    .sub-option-input {
+        width: 70vw;
+    }
+
+    .option-container-2 input {
+        width: 70vw;
+    }
+    
+    #quoteFormContainer {
+        min-height: 80vh;
+        width: 90vw;
+        margin-top: 145px;
+        margin: 150px 0 20px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -2264,7 +2296,6 @@ display: none !important;
         width: 70vw;
         height: 250px;
     }
-
 }
 
 .cu__hero {

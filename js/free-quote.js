@@ -238,44 +238,77 @@ function goToPreviousStep(previousStep) {
 }
 
 function showFinalStep() {
-    const container = document.querySelector('.fq__form-container');
-    container.innerHTML = `
-        <h4>Final step! Complete the form to receive your quote.</h4>
-        <p>You're about to request a quote for: <br><strong>${userSelections.options.join(', ')}</strong></p>
-        <form id="quoteForm">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+    const stepContainer = document.querySelector('.fq__form-container'); // Contenedor de pasos anteriores
+    const formContainer = document.getElementById('quoteFormContainer'); // Contenedor del formulario final
 
-            <label for="phone">Phone:</label>
-            <input type="tel" id="phone" name="phone" required>
+    // Ocultar el contenedor de los pasos
+    stepContainer.style.display = 'none';
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+    // Mostrar el formulario final
+    formContainer.style.display = 'block';
 
-            <label for="zip">Zip Code:</label>
-            <input type="text" id="zip" name="zip" required>
-
-            <label for="notes">Notes (optional):</label>
-            <textarea id="notes" name="notes"></textarea>
-
-            <label for="file">Attached File:</label>
-            <input type="file" id="file" name="file">
-
-            <button type="submit">Submit</button>
-        </form>
-    `;
-
-    const buttonContainer = document.createElement('div');
-    buttonContainer.classList.add('button-container');
-
-    const backButton = document.createElement('button');
-    backButton.classList.add('back-btn');
-    backButton.textContent = 'Go back';
-    backButton.onclick = () => goToPreviousStep(currentStep);
-    buttonContainer.appendChild(backButton);
-
-    container.appendChild(buttonContainer);
+    // Actualizar el mensaje con las opciones seleccionadas
+    const userSelectionsText = formContainer.querySelector('p'); // Selecciona el párrafo donde se muestran las selecciones
+    userSelectionsText.innerHTML = `You're about to request a quote for: <br><strong>${userSelections.options.join(', ')}</strong>`;
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('quoteFormContainer').style.display = 'none';
+});
+
+function goToNextStep(nextStep, optionText = null) {
+    if (optionText) {
+        userSelections.options.push(optionText);
+    }
+    if (nextStep === 'final') {
+        showFinalStep();
+    } else {
+        currentStep = nextStep;
+        renderStep(currentStep);
+    }
+}
+
+
+
+// function showFinalStep() {
+//     const container = document.querySelector('.fq__form-container');
+//     container.innerHTML = `
+//         <h4>Final step! Complete the form to receive your quote.</h4>
+//         <p>You're about to request a quote for: <br><strong>${userSelections.options.join(', ')}</strong></p>
+//         <form id="quoteForm">
+//             <label for="name">Name:</label>
+//             <input type="text" id="name" name="to_name" required>
+
+//             <label for="phone">Phone:</label>
+//             <input type="tel" id="phone" name="from_phone" required>
+
+//             <label for="email">Email:</label>
+//             <input type="email" id="email" name="from_email" required>
+
+//             <label for="zip">Zip Code:</label>
+//             <input type="text" id="zip" name="zip_code" required>
+
+//             <label for="notes">Notes (optional):</label>
+//             <textarea id="notes" name="message"></textarea>
+
+//             <label for="file">Attached File:</label>
+//             <input type="file" id="file" name="attachment">
+
+//             <button id="button" type="submit">Submit</button>
+//         </form>
+//     `;
+
+//     const buttonContainer = document.createElement('div');
+//     buttonContainer.classList.add('button-container');
+
+//     const backButton = document.createElement('button');
+//     backButton.classList.add('back-btn');
+//     backButton.textContent = 'Go back';
+//     backButton.onclick = () => goToPreviousStep(currentStep);
+//     buttonContainer.appendChild(backButton);
+
+//     container.appendChild(buttonContainer);
+// }
 
 // Iniciar en el primer paso
 renderStep(currentStep);
@@ -307,4 +340,58 @@ document.getElementById('form')
         btn.value = 'Send Email';
         alert(JSON.stringify(err));
     });
+});
+
+
+
+
+
+const btn2 = document.getElementById('button');
+
+document.getElementById('quoteForm')
+    .addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    btn2.value = 'Sending...';
+
+    const serviceID = 'service_ddj4p3g';
+    const templateID = 'template_mtk77tn';
+
+    // Recopilar los datos adicionales
+    const formData = new FormData(this);
+    const userOptions = userSelections.options.join(', '); // Opciones seleccionadas
+
+    // Crear un objeto con los parámetros para EmailJS
+    const emailParams = {
+        to_name: formData.get('to_name'),
+        from_phone: formData.get('from_phone'),
+        from_email: formData.get('from_email'),
+        zip_code: formData.get('zip_code'),
+        message: formData.get('message'),
+        user_options: userOptions,
+    };
+
+    // Adjuntar archivo si existe
+    const fileInput = document.getElementById('file');
+    if (fileInput.files.length > 0) {
+        const reader = new FileReader();
+        reader.onload = function () {
+            emailParams.attachment = reader.result; // Convertir archivo a base64
+            sendEmail(emailParams); // Enviar email con archivo
+        };
+        reader.readAsDataURL(fileInput.files[0]); // Leer archivo como base64
+    } else {
+        sendEmail(emailParams); // Enviar email sin archivo
+    }
+
+    function sendEmail(params) {
+        emailjs.send(serviceID, templateID, params)
+            .then(() => {
+                btn2.value = 'Submit';
+                alert('Message sent successfully!');
+            }, (err) => {
+                btn2.value = 'Submit';
+                alert('An error occurred while sending the message: ' + JSON.stringify(err));
+            });
+    }
 });
