@@ -5,6 +5,8 @@ window.addEventListener('DOMContentLoaded', function() {
 
 /* FREE QUOTE */
 
+
+
 const steps = {
     1: {
         title: '¿What are you looking for?',
@@ -95,7 +97,10 @@ const steps = {
 };
 
 let currentStep = 1;
-let userSelections = { options: [] };
+let userSelections = { 
+    options: [],
+    inputValues: {} // Objeto para almacenar los valores ingresados
+};
 
 let inputs = [];
 
@@ -220,9 +225,25 @@ function checkInputsValue(){
 }
 
 function goToNextStep(nextStep, optionText = null) {
+    // Guardar las opciones seleccionadas
     if (optionText) {
         userSelections.options.push(optionText);
     }
+
+    // Capturar los valores de los inputs actuales (asegúrate de que estén en el DOM)
+    const inputs = document.querySelectorAll('.sub-option-input'); // Seleccionar todos los inputs visibles
+    inputs.forEach(input => {
+        const value = input.value.trim();
+        if (value) {
+            console.log(`Capturando input: ${input.id} = ${value}`); // Depuración
+            userSelections.inputValues[input.id] = value; // Guardar en el objeto
+        }
+    });
+
+    // Mostrar el contenido actual de inputValues para verificar
+    console.log('Valores actuales capturados:', userSelections.inputValues);
+
+    // Ir al siguiente paso o mostrar el paso final
     if (nextStep === 'final') {
         showFinalStep();
     } else {
@@ -238,8 +259,10 @@ function goToPreviousStep(previousStep) {
 }
 
 function showFinalStep() {
+    console.log('Valores finales capturados:', userSelections.inputValues);
     const stepContainer = document.querySelector('.fq__form-container'); // Contenedor de pasos anteriores
     const formContainer = document.getElementById('quoteFormContainer'); // Contenedor del formulario final
+    
 
     // Ocultar el contenedor de los pasos
     stepContainer.style.display = 'none';
@@ -247,26 +270,29 @@ function showFinalStep() {
     // Mostrar el formulario final
     formContainer.style.display = 'block';
 
-    // Actualizar el mensaje con las opciones seleccionadas
+    // Crear el mensaje final con las opciones y los inputs ingresados
     const userSelectionsText = formContainer.querySelector('p'); // Selecciona el párrafo donde se muestran las selecciones
-    userSelectionsText.innerHTML = `You're about to request a quote for: <br><strong>${userSelections.options.join(', ')}</strong>`;
+
+    // Formatear los inputs ingresados como texto
+    const inputValuesText = Object.entries(userSelections.inputValues)
+        .map(([key, value]) => `${key.charAt(0).toUpperCase() + key.slice(1)}: ${value}`)
+        .join(', ');
+
+    console.log('Final step input values:', userSelections.inputValues); // Depuración
+
+    // Mostrar el mensaje con las selecciones y las dimensiones
+    userSelectionsText.innerHTML = `
+        You're about to request a quote for: <br>
+        <strong>${userSelections.options.join(', ')}</strong> <br>
+        <em>Measurements: ${inputValuesText || 'None provided'}</em>
+    `;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('quoteFormContainer').style.display = 'none';
 });
 
-function goToNextStep(nextStep, optionText = null) {
-    if (optionText) {
-        userSelections.options.push(optionText);
-    }
-    if (nextStep === 'final') {
-        showFinalStep();
-    } else {
-        currentStep = nextStep;
-        renderStep(currentStep);
-    }
-}
+
 
 
 
@@ -361,6 +387,11 @@ document.getElementById('quoteForm')
     const formData = new FormData(this);
     const userOptions = userSelections.options.join(', '); // Opciones seleccionadas
 
+    // Formatear las medidas ingresadas por el usuario
+    const measurements = Object.entries(userSelections.inputValues)
+        .map(([key, value]) => `${key.charAt(0).toUpperCase() + key.slice(1)}: ${value}`)
+        .join(', ');
+
     // Crear un objeto con los parámetros para EmailJS
     const emailParams = {
         to_name: formData.get('to_name'),
@@ -369,11 +400,12 @@ document.getElementById('quoteForm')
         zip_code: formData.get('zip_code'),
         message: formData.get('message'),
         user_options: userOptions,
+        measurements: measurements, // Agregar las medidas
     };
 
-    // Adjuntar archivo si existe
+    // Verificar si el input de archivo existe
     const fileInput = document.getElementById('file');
-    if (fileInput.files.length > 0) {
+    if (fileInput && fileInput.files.length > 0) {
         const reader = new FileReader();
         reader.onload = function () {
             emailParams.attachment = reader.result; // Convertir archivo a base64
