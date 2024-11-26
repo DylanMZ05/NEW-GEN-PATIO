@@ -2354,3 +2354,27 @@ footer .field {
     color: #fff;
     text-decoration: none;
 }
+
+@media (max-width: 970px) {
+    .footer-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .footer-financing {
+        margin-top: 50px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 500px) {
+    .footer-financing {
+        width: 90vw;
+    }
+
+    .footer-financing p {
+        margin: 0 7px 15px;
+    }
+}
