@@ -80,20 +80,20 @@
             <p>You're about to request a quote for: <br><strong>${userSelections.options.join(', ')}</strong></p>
             <form id="quoteForm">
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="to_name" required>
-        
+                <input type="text" id="name" name="to_name" required minlength="3" pattern="[A-Za-z ]+" title="Name must contain at least 3 letters and no numbers or special characters.">
+            
                 <label for="phone">Phone:</label>
-                <input type="tel" id="phone" name="from_phone" required>
-        
+                <input type="number" id="phone" name="from_phone" required pattern="\d+" title="Phone must contain only numbers.">
+            
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="from_email" required>
-        
+                <input type="email" id="email" name="from_email" required title="Please enter a valid email address.">
+            
                 <label for="zip">Zip Code:</label>
-                <input type="text" id="zip" name="zip_code" required>
-        
+                <input type="number" id="zip" name="zip_code" required pattern="[0-9]{5}" title="Zip Code must be exactly 5 digits.">
+            
                 <label for="notes">Notes (optional):</label>
-                <textarea id="notes" name="message"></textarea>
-        
+                <textarea id="notes" name="message" minlength="5" title="Notes must contain at least 5 characters."></textarea>
+            
                 <button id="button" type="submit">Submit</button>
             </form>
         </div>

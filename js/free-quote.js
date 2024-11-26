@@ -19,9 +19,9 @@ const steps = {
     2: {
         title: 'Measurement',
         fields: [
-            { label: 'Width', id: 'width', required: true },
-            { label: 'Length', id: 'length', required: true },
-            { label: 'Height', id: 'height', required: true }
+            { label: 'Width (cm)', id: 'width', required: true },
+            { label: 'Length (cm)', id: 'length', required: true },
+            { label: 'Height (cm)', id: 'height', required: true }
         ],
         nextStep: 3,
         previousStep: 1
@@ -158,7 +158,7 @@ function renderStep(stepNumber) {
             inputContainer.classList.add('option-container-2', 'form');
 
             const input = document.createElement('input');
-            input.type = 'text';
+            input.type = 'number';
             input.id = field.id;
             input.required = true;
             input.classList.add('sub-option-input');
@@ -427,3 +427,4 @@ document.getElementById('quoteForm')
             });
     }
 });
+
