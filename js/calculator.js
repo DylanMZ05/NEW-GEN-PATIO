@@ -3,6 +3,14 @@ window.addEventListener('DOMContentLoaded', function() {
     header.classList.add('scrolled'); // Aseguramos que tenga la clase al cargar la página
 });
 
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.querySelector('nav ul');
+
+hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active'); // Activa o desactiva la clase `active` en el menú
+    hamburger.classList.toggle('open'); // Cambia el ícono de hamburguesa a una "X"
+});
+
 function updateValues() {
     const amountSlider = document.getElementById('amount');
     const aprSlider = document.getElementById('apr');
