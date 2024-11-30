@@ -103,3 +103,27 @@ document.getElementById('form')
     });
 });
 
+
+
+
+async function query(data) {
+    const response = await fetch(
+    "https://api.stack-ai.com/inference/v0/run/4053279d-c854-4131-b46e-4b0d0b3bd979/67453fb348d02d59d854ca2b",
+    {
+        headers: {'Authorization':
+            'Bearer c66e5bff-8ac6-4b9f-9e4d-40f375168d1a',
+            'Content-Type': 'application/json'
+    },
+        method: "POST",
+        body: JSON.stringify(data),
+    }
+    );
+    const result = await response.json();
+    return result;
+}
+
+query({"user_id": `c66e5bff-8ac6-4b9f-9e4d-40f375168d1a`, "in-0": `A qué se dedican?`}).then((response) => {
+    console.log(JSON.stringify(response));
+});
+
+

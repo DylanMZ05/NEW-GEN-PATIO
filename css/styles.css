@@ -626,7 +626,6 @@ ul, li {
 #slide3:checked ~ #controls label:nth-child(4),
 #slide4:checked ~ #controls label:nth-child(5), 
 #slide5:checked ~ #controls label:nth-child(1) {
-    background: url(https://image.flaticon.com/icons/svg/130/130884.svg) no-repeat;
     float:right;
     margin: 0 -50px 0 0;
     display: block;
@@ -636,7 +635,6 @@ ul, li {
 #slide3:checked ~ #controls label:nth-last-child(4),
 #slide4:checked ~ #controls label:nth-last-child(5),
 #slide5:checked ~ #controls label:nth-last-child(1) {
-    background: url(https://image.flaticon.com/icons/svg/130/130882.svg) no-repeat;
     float:left;
     margin: 0 0 0 -50px;
     display: block;
@@ -802,7 +800,7 @@ ul, li {
     height: auto !important;
 }
 
-iframe, .stackai-widget {
+#responsiveIframe, .stackai-widget {
     transform: translate(38px, 56px) scale(.85);
     width: 400px !important;
     height: 650px !important;
@@ -2314,7 +2312,20 @@ display: none !important;
         width: 70vw;
         height: 250px;
     }
+
+    #quoteForm input,
+    #quoteForm textarea {
+        width: 76vw;
+    }
 }
+
+@media (max-width: 450px) {
+    #quoteForm input,
+    #quoteForm textarea {
+        width: 70vw;
+    }
+}
+
 
 .cu__hero {
     display: flex;
@@ -2383,18 +2394,8 @@ footer .field {
         height: auto !important;
     }
     
-    iframe, .stackai-widget {
+    #responsiveIframe, .stackai-widget {
         display: none;
-    }
-    
-    .sixth-section iframe {
-        display: flex;
-        width: 100vw !important;
-        height: 470px !important;
-        position: absolute !important;
-        z-index: 10 !important;
-        transform: translateY(-69px) !important;
-        border-bottom: 2px solid var(--color-1);
     }
 }
 

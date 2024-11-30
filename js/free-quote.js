@@ -25,9 +25,9 @@ const steps = {
     2: {
         title: 'Measurement',
         fields: [
-            { label: 'Width (cm)', id: 'width', required: true },
-            { label: 'Length (cm)', id: 'length', required: true },
-            { label: 'Height (cm)', id: 'height', required: true }
+            { label: 'Width (Ft)', id: 'width', required: true },
+            { label: 'Length (Ft)', id: 'length', required: true },
+            { label: 'Height (Ft)', id: 'height', required: true }
         ],
         nextStep: 3,
         previousStep: 1
