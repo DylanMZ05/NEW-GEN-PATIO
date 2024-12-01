@@ -39,7 +39,7 @@ html, body {
     width: 100%;
 }
 
-.background-video {
+.background-video-desktop {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -1018,6 +1018,10 @@ ul, li {
     display: none;
 }
 
+.background-video-movil {
+    display: none;
+}
+
 @media (max-width: 1850px) {
     .carousel-item img {
         width: 33vw;
@@ -1094,6 +1098,20 @@ ul, li {
         justify-content: space-between;
     }
 
+    .background-video-movil {
+        display: flex;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -1;
+        transform: translate(-50%, -50%);
+        transform-origin: center;
+    }
+
     .gallery-section__apply a {
         padding: 7.5px 17px;
         font-size: 14px;
@@ -1127,6 +1145,9 @@ ul, li {
     }
 
 
+    .background-video-desktop {
+        display: none;
+    }
 
     .desktop {
         display: none;
@@ -1152,6 +1173,8 @@ ul, li {
 }
 
 @media (max-width: 767px) {
+    
+    
 
     .first-section {
         display: flex;
@@ -1270,6 +1293,10 @@ ul, li {
     }
 
     .desktop {
+        display: none;
+    }
+
+    .desktop-video {
         display: none;
     }
 }
